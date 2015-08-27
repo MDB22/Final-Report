@@ -1,0 +1,137 @@
+\documentclass[]{article}
+
+\usepackage{graphicx}
+\usepackage[margin=2cm]{geometry}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{fancyhdr}
+\usepackage{appendix}
+\usepackage{tabulary}
+\usepackage{rotating}
+\usepackage[style=ieee,backend=bibtex]{biblatex}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[tight]{shorttoc}
+
+\bibliography{refs}
+
+\newcommand{\ID}{CP-CBU-155}
+
+\let\Contentsline\contentsline
+\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\thepage}
+\rhead{\textbf{\ID}}
+
+%opening
+\title{Capstone Project
+	  \vfill
+	Final Report
+	\vfill
+	2015}
+\author{}
+\date{}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\begin{figure}
+		\centering
+		\includegraphics[width=100pt]{Images/emblem}
+		\label{fig:emblem}
+	\end{figure}
+\end{titlepage}
+
+\maketitle
+
+\begin{tabular}{ll}
+	Project Title: & Hybrid UAV Development for Emergency Response \\ 
+	\\
+	Date: & \date{\today} \\ 
+\end{tabular}
+\\
+\\
+
+\textbf{\textit{Project Team Information}}
+\\
+\\
+
+\begin{tabular}{ll}
+	Identifier: & \textbf{\ID} \\\\
+	Student workers: & \begin{tabular}[t]{@{}ll}
+		Matthew De Bono & 390758 \\ 
+		Alexander Daraio & 389844 \\ 
+		Wesley Lim & 391053 \\ 
+		Shanon Loveridge & 218041 \\ 
+	\end{tabular}  \\\\
+	Academic supervisor: & Colin Burvill \\\\ 
+	Academic examiner: & Saman Halgamuge\\\\
+	Industry Mentor: & Jonathon Manton, DEEE\\\\
+	Version: & 1.0 \\\\
+\end{tabular} 
+
+\vfill
+\vfill
+
+\newpage
+
+\section*{Acknowledgements}
+Can probably delete this section.
+
+\input{contents.tex}
+
+\newpage
+
+\section{Executive Summary}
+\input{executive.tex}
+
+\section{Introduction}
+\input{intro.tex}
+
+\section{Literature Review}
+\input{litreview.tex}
+
+\section{Remaining Sections}
+You are welcome to choose appropriate names for section headings.
+
+The main argument will begin with a section describing your team’s major activities, leading to the fulfilment of the objectives of your project.  A flow chart will provide a useful visual aid.
+
+Introduce the tasks that you were required to complete to satisfy the agreed project scope.  Itemise tasks whenever possible to assist cross-referencing with following sections (i.e. your contributions).
+
+Describe the development your ideas and strategies, the conceptual design and research methods used (as applicable), and why they were chosen (your literature review will be of value here).  
+
+Discuss any original contributions including, for example, modifications or extensions of published methods or associated knowledge.  Your team may have made a more humble, but still valuable, contribution, where you customised an existing method for your specific application.  Describe the benefits and, if applicable, deficiencies associated with your contributions.
+
+The criteria against which preferred concepts are identified should be discussed.  This aspect of your report, appropriately sectioned, will make extensive use of pictorial information (figures) and organised information (lists and tables).  
+
+Given Final Report submissions are normally not paper-based, all supporting material (figures, tables) in the main body should be easily read on a standard computer screen, for example:
+•	Text/font size should be consistent, 
+•	Do not change from portrait to landscape orientation 
+•	Maintain A4 size (i.e. no “fold outs” to accommodate A3 size) – Appendices can include different page sizes to accommodate, for example, large-format Gantt charts.
+
+The details of completed analyses and supporting calculations can be included in an Appendix, referred to, as required, from the main body of the report.  Summaries, flow charts identifying methodologies, and sample calculations should be included in the main body of the report.
+
+The process that you developed and then used to facilitate specific contributions may, itself, be one of your contributions (i.e. providing a framework for ongoing work by other practitioners or researchers).  This is worthy of inclusion as a section of the main body of the report.
+
+\section{Conclusions and Recommendations}
+\input{conclusions.tex}
+
+\newpage
+\input{references.tex}
+
+\appendix
+\newpage
+\section*{Appendix A}
+\input{appA}
+
+\newpage
+\section*{Appendix B}
+\input{appB}
+
+\section*{Appendix C}
+\input{appC}
+
+\end{document}
