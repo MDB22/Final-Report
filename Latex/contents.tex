@@ -1,10 +1,18 @@
+\todo[inline]{Make sure to uncomment line here to generate Table of Contents, then comment out again}
+%\tableofcontents
+
 \begingroup
+
+% Modify ToC item separation
 \makeatletter
+\renewcommand\@dotsep{10000}
 \patchcmd{\l@section}{%
 	\addvspace{1.0em \@plus\p@}% original code line
 }{%
-\addvspace{0.3em \@plus 0.3\p@}% substitute code line
+	\addvspace{0.5em \@plus 0.3\p@}% substitute code line
 }{}{}
 \makeatother
-\shorttoc{Contents}{1}
+
+% Generate ToC in document
+\shorttoc{Contents}{2}
 \endgroup
