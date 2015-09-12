@@ -4,12 +4,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Introduction}{3}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Literature Review}{3}{section.3}
+\contentsline {section}{\numberline {3}Literature Review}{4}{section.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Summary of UAV Challenge}{4}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Formulation of Design Requirements and Constraints}{4}{section.5}
+\contentsline {section}{\numberline {5}Picking Up From 2014}{4}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Remaining Sections}{4}{section.6}
+\contentsline {section}{\numberline {6}Formulation of Design Requirements and Constraints}{4}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Conclusions and Recommendations}{5}{section.7}
+\contentsline {section}{\numberline {7}Aircraft Design and Implementation}{5}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Autonomous Flight}{5}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Sensing}{5}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}All Flight Modes}{6}{subsection.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Vertical Take-Off and Landing}{6}{subsection.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Long Range Flight}{6}{subsection.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Finding Joe}{6}{subsection.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Planning}{7}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Transition}{7}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Tests and Failures}{7}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Remaining Sections}{7}{section.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Conclusions and Recommendations}{8}{section.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.1}Achievements}{8}{subsection.14.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2}Further Work}{8}{subsection.14.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.3}Recommendations}{8}{subsection.14.3}

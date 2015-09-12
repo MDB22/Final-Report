@@ -15,6 +15,7 @@
 \bibliography{refs}
 
 \newcommand{\ID}{CP-CBU-155}
+\newcommand{\IMAGEPATH}{../Images/}
 
 \let\Contentsline\contentsline
 \renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
@@ -39,7 +40,7 @@
 \begin{titlepage}
 	\begin{figure}
 		\centering
-		\includegraphics[width=100pt]{Images/emblem}
+		\includegraphics[width=100pt]{\IMAGEPATH emblem}
 		\label{fig:emblem}
 	\end{figure}
 \end{titlepage}
@@ -82,41 +83,44 @@ Team CP-CBU-155 would like to acknowledge several contributions to the project:
 
 Melbourne School of Engineering for providing the workspace to complete the project, Colin Burvill and Saman Halgamuge for their guidance and supervision, Andrew Nolan and Jeff Hollingworth for their expertise and equipment, and the Phoenix Multicoptor teams for the laughs, advice and co-operation throughout the year.
 
-\input{contents.tex}
+\input{contents}
 
 \newpage
 \section{Executive Summary}
-\input{executive.tex}
+\input{executive}
 
 \section{Introduction}
-\input{intro.tex}
+\input{intro}
 
 \section{Literature Review}
-\input{litreview.tex}
+\input{litreview}
 
 \section{Summary of UAV Challenge}
-\input{UAVchallenge.tex}
+\input{UAVchallenge}
 
 \section{Picking Up From 2014}
-\input{project2014.tex}
+\input{project2014}
 
 \section{Formulation of Design Requirements and Constraints}
-\input{designreqs.tex}
+\input{designreqs}
 
 \section{Aircraft Design and Implementation}
-\input{design.tex}
+\input{design}
 
-\section{Sensor Systems}
-\input{sensors.tex}
+\section{Autonomous Flight}
+\input{autonomy}
 
-\section{Automation}
-\input{automation.tex}
+\section{Sensing}
+\input{sensors}
+
+\section{Planning}
+\input{planning}
 
 \section{Transition}
-\input{transition.tex}
+\input{transition}
 
 \section{Tests and Failures}
-\input{tests.tex}
+\input{tests}
 
 \section{Remaining Sections}
 \color{red}
@@ -143,10 +147,10 @@ The process that you developed and then used to facilitate specific contribution
 \color{black}
 
 \section{Conclusions and Recommendations}
-\input{conclusions.tex}
+\input{conclusions}
 
 \newpage
-\input{references.tex}
+\input{references}
 
 \appendix
 \newpage
