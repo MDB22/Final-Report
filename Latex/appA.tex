@@ -2,6 +2,18 @@
 Detailed work completed by the project team not included in the main body (calculations, sketches, details of activities not suited to the main body, e.g. raw data from experiments).
 \color{black}
 
-Angular momentum something something stuff:
-$H = I\omega$
-end equation.
+\textbf{Gyroscopic Effects:}\\
+
+Angular momentum of propellers: $H = I\omega$\\
+Maximum motor speed $\omega = 800*16.8*2\pi/60 = 1407.45rad/s$\\
+Prop Inertia $I = 1/12*M(L^2+B^2) = 1.16*10^-4kgm^2$ (Overestimate, as it assumes equilly distributed mass, and constant width)\\\\
+
+[diagram above] Using a small angle aproximation $\Delta H = \omega p*\Delta t*I*\omega$\\ 
+$\omega p$ = maximum servo rotation speed (procesion) = $60\deg/0.11s = 9.52rad/s$\\
+$dH/dt = \omega p*I*\omega = M = 1.55Nm$\\\\
+
+- [diagram above] Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, instead of putting a moment on the servos.\\
+- Max moment in the centre of the front shaft is $2M = 3.1Nm$. If this is less than the moment on the front bar at hover ($2/3*mass of drone * distance to prop$) than the shaft should be capable of withstanding the gyroscopic effects.\\
+For our set up this is the case as the gyroscopic moment is less than the weight of the plane on the front shaft $3.1Nm < 9.156Nm$. If it can withstand the weight, it should be able to withstand the gyroscopic moments easilly.
+
+
