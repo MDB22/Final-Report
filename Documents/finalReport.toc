@@ -26,18 +26,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.4}Finding Joe}{6}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Planning}{7}{section.10}
+\contentsline {section}{\numberline {10}Planning - Finding Joe}{7}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Object Detection}{7}{subsection.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}Path Planning}{7}{subsection.10.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11}Transition}{7}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Tests and Failures}{8}{section.12}
+\contentsline {section}{\numberline {12}Tests and Failures}{9}{section.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Remaining Sections}{8}{section.13}
+\contentsline {section}{\numberline {13}Remaining Sections}{10}{section.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Conclusions and Recommendations}{9}{section.14}
+\contentsline {section}{\numberline {14}Conclusions and Recommendations}{10}{section.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}Achievements}{9}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.1}Achievements}{10}{subsection.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}Further Work}{9}{subsection.14.2}
+\contentsline {subsection}{\numberline {14.2}Further Work}{10}{subsection.14.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3}Recommendations}{9}{subsection.14.3}
+\contentsline {subsection}{\numberline {14.3}Recommendations}{10}{subsection.14.3}
