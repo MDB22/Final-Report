@@ -1,30 +1,27 @@
 \documentclass[]{article}
 
-\usepackage{graphicx}
+% Formatting packages
 \usepackage{fancyhdr}
 \usepackage[margin=2cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
-\usepackage{appendix}
-\usepackage[style=ieee,backend=bibtex]{biblatex}
 \usepackage{hyperref}
-\usepackage{float}
 \usepackage[tight]{shorttoc}
+
+% Figure packages
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Helpful packages
 \usepackage[color=yellow]{todonotes}
 \usepackage{color}
-\usepackage{subcaption}
+\usepackage[toc,page]{appendix}
+\usepackage[style=ieee,backend=bibtex]{biblatex}
 
 \bibliography{refs}
 
 \newcommand{\ID}{CP-CBU-155}
 \newcommand{\IMAGEPATH}{../Images/}
-
-\let\Contentsline\contentsline
-\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\thepage}
-\rhead{\textbf{\ID}}
 
 %opening
 \title{Capstone Project
@@ -151,18 +148,20 @@ The process that you developed and then used to facilitate specific contribution
 \input{conclusions}
 
 \newpage
-\input{references}
-
 \appendix
+
 \newpage
-\section*{Appendix A}
+
+\section{Stuff}
 \input{appA}
 
 \newpage
-\section*{Appendix B}
+\section{Something}
 \input{appB}
 
-\section*{Appendix C}
-\input{appC}
+\section{Test}
+\input{appC}	
+
+\input{references}
 
 \end{document}
