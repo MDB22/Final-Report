@@ -35,44 +35,7 @@
 
 \begin{document}
 	
-\begin{titlepage}
-	\begin{figure}
-		\centering
-		\includegraphics[width=100pt]{\IMAGEPATH emblem}
-		\label{fig:emblem}
-	\end{figure}
-\end{titlepage}
-
-\maketitle
-
-\begin{tabular}{ll}
-	Project Title: & Hybrid UAV Development for Emergency Response \\ 
-	\\
-	Date: & \date{\today} \\ 
-\end{tabular}
-\\
-\\
-
-\textbf{\textit{Project Team Information}}
-\\
-\\
-
-\begin{tabular}{ll}
-	Identifier: & \textbf{\ID} \\\\
-	Student workers: & \begin{tabular}[t]{@{}ll}
-		Matthew De Bono & 390758 \\ 
-		Alexander Daraio & 389844 \\ 
-		Wesley Lim & 391053 \\ 
-		Shanon Loveridge & 218041 \\ 
-	\end{tabular}  \\\\
-	Academic supervisor: & Colin Burvill \\\\ 
-	Academic examiner: & Saman Halgamuge\\\\
-	Industry Mentor: & Jonathon Manton, DEEE\\\\
-	Version: & 1.0 \\\\
-\end{tabular} 
-
-\vfill
-\vfill
+\input{titlePage}
 
 \newpage
 
@@ -128,7 +91,7 @@ Team CP-CBU-155 would like to make the following acknowledgements:
 \color{red}
 You are welcome to choose appropriate names for section headings.
 
-The main argument will begin with a section describing your team's major activities, leading to the fulfillment of the objectives of your project.  A flow chart will provide a useful visual aid.
+The main argument will begin with a section describing your team's major activities, leading to the fulfillment of the objectives of your project.  A flow chart will provide a useful visual aid. \cite{ref:Arcturus}
 
 Introduce the tasks that you were required to complete to satisfy the agreed project scope. Itemise tasks whenever possible to assist cross-referencing with following sections (i.e. your contributions).
 
@@ -146,12 +109,15 @@ Given Final Report submissions are normally not paper-based, all supporting mate
 The details of completed analyses and supporting calculations can be included in an Appendix, referred to, as required, from the main body of the report.  Summaries, flow charts identifying methodologies, and sample calculations should be included in the main body of the report.
 
 The process that you developed and then used to facilitate specific contributions may, itself, be one of your contributions (i.e. providing a framework for ongoing work by other practitioners or researchers).  This is worthy of inclusion as a section of the main body of the report.
-\color{black}
+\color{black} 
 
 \section{Conclusions and Recommendations}
 \input{conclusions}
 
 \newpage
+
+\input{references}
+
 \appendix
 
 \newpage
@@ -168,8 +134,5 @@ The process that you developed and then used to facilitate specific contribution
 
 \section{Analysis of 2014 Model}
 \input{appD}	
-	
-
-\input{references}
 
 \end{document}
