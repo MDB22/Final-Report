@@ -6,3 +6,5 @@
 *.xml
 *.gz
 *.rej
+Latex/finalReport-blx.bib
+Latex/finalReport.toc
