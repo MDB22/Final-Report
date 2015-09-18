@@ -8,51 +8,59 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Summary of UAV Challenge}{5}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Picking Up From 2014}{5}{section.5}
+\contentsline {section}{\numberline {5}Formulation of Design Requirements and Constraints}{5}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Formulation of Design Requirements and Constraints}{5}{section.6}
+\contentsline {section}{\numberline {6}Aircraft Design and Implementation}{6}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Aircraft Design and Implementation}{6}{section.7}
+\contentsline {subsection}{\numberline {6.1}2014 Design}{6}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Configuration}{7}{subsection.7.1}
+\contentsline {subsection}{\numberline {6.2}Configuration}{6}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}3D Printing}{7}{subsection.7.2}
+\contentsline {subsection}{\numberline {6.3}Design Plan}{7}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Calibration}{7}{subsection.7.3}
+\contentsline {subsection}{\numberline {6.4}3D Printing}{7}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Testing}{7}{subsection.7.4}
+\contentsline {subsection}{\numberline {6.5}Calibration}{7}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Autonomous Flight}{7}{section.8}
+\contentsline {subsection}{\numberline {6.6}Testing}{7}{subsection.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Sensing}{7}{section.9}
+\contentsline {section}{\numberline {7}Autonomous Flight}{7}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}All Flight Modes}{7}{subsection.9.1}
+\contentsline {section}{\numberline {8}Sensing}{7}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Vertical Take-Off and Landing}{8}{subsection.9.2}
+\contentsline {subsection}{\numberline {8.1}All Flight Modes}{7}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Long Range Flight}{8}{subsection.9.3}
+\contentsline {subsection}{\numberline {8.2}Vertical Take-Off and Landing}{8}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Finding Joe}{8}{subsection.9.4}
+\contentsline {subsection}{\numberline {8.3}Long Range Flight}{8}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Planning - Finding Joe}{8}{section.10}
+\contentsline {subsection}{\numberline {8.4}Finding Joe}{8}{subsection.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Object Detection}{8}{subsection.10.1}
+\contentsline {section}{\numberline {9}Planning - Finding Joe}{8}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Path Planning}{9}{subsection.10.2}
+\contentsline {subsection}{\numberline {9.1}Object Detection}{8}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Transition}{9}{section.11}
+\contentsline {subsection}{\numberline {9.2}Path Planning}{9}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Tests and Failures}{11}{section.12}
+\contentsline {section}{\numberline {10}Transition}{9}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Remaining Sections}{11}{section.13}
+\contentsline {subsection}{\numberline {10.1}Why Transition?}{9}{subsection.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Conclusions and Recommendations}{12}{section.14}
+\contentsline {subsection}{\numberline {10.2}Parts}{9}{subsection.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}Achievements}{12}{subsection.14.1}
+\contentsline {subsection}{\numberline {10.3}Gyroscopic Forces}{11}{subsection.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}Further Work}{12}{subsection.14.2}
+\contentsline {subsection}{\numberline {10.4}System Design}{11}{subsection.10.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3}Recommendations}{12}{subsection.14.3}
+\contentsline {section}{\numberline {11}Remaining Sections}{11}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Conclusions and Recommendations}{12}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.1}Achievements}{12}{subsection.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2}Further Work}{12}{subsection.12.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.3}Recommendations}{12}{subsection.12.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A}Stuff}{13}{appendix.A}
 \defcounter {refsection}{0}\relax 
