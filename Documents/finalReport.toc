@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.3}Long Range Flight}{6}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Finding Joe}{6}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.4}Finding Joe}{7}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10}Planning - Finding Joe}{7}{section.10}
 \defcounter {refsection}{0}\relax 
@@ -32,9 +32,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2}Path Planning}{7}{subsection.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Transition}{7}{section.11}
+\contentsline {section}{\numberline {11}Transition}{9}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Tests and Failures}{9}{section.12}
+\contentsline {section}{\numberline {12}Tests and Failures}{10}{section.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13}Remaining Sections}{10}{section.13}
 \defcounter {refsection}{0}\relax 
@@ -51,3 +51,5 @@
 \contentsline {section}{\numberline {B}Something}{13}{appendix.B}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {C}Test}{13}{appendix.C}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D}Analysis of 2014 Model}{13}{appendix.D}
