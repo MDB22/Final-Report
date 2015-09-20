@@ -1,35 +1,72 @@
-This project is titled ``Hybrid UAV Development for Emergency Response''. This project is being completed under MAS (Melbourne Autonomous Systems); MAS is the official entrant into the UAV  Challenge Medical Express 2016. \color{red} The project entails the design and development of a novel, hybrid UAV, which is capable of autonomous flight \color{black}. \\
+\subsection{Context}
+\todo[inline]{Get references}
+Drones, or UAVs, are not new technologies. UAVs are currently used extensively, for both offensive and defensive operations, by militaries across the globe. There is also a strong push for UAVs in commercial applications, such as package delivery and crop monitoring, and an ever-growing population of hobbyists, adventurers and athletes using drone-mounted cameras to capture everything from weddings to skiing down mountains.\\
 
-The primary objectives of the project were the following:
-\begin{enumerate}
-	\item Develop a UAV system to meet the requirements of the UAV Challenge
-	\item Achieve a functional UAV prototype, to be developed further in 2016
-	\item Introduce design novelty \\
+\todo[inline]{Add more negatives/problems}
+However, there are several applications that are infeasible for current drone technology. Rotor-based aircraft like the DJI Phantom (Figure \ref{fig:lidar}) are highly maneuverable, easy to control, and can be launched from almost any location, but as a result of their large power demands have very limited range/endurance. This makes them difficult to use in applications requiring long distance travel, such as package delivery.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=150pt]{\IMAGEPATH /Aircraft/djiPhantom}
+	\caption{DJI Phantom, a commercially available UAV}
+	\label{fig:dji}
+\end{figure}
+
+\todo[inline]{Add more negatives/problems}
+Wing-based aircraft such as those based on the Skywalker X8 frame (Figure \ref{fig:x8}) can achieve much greater travel distances as a result of higher efficiency flight. However, winged aircraft require open spaces to land safely, making them difficult to use in cramped or obstacle-rich applications such as low-altitude search near cities or forests.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=160pt]{\IMAGEPATH /Aircraft/x8}
+	\caption{Skywalker X8 airframe, a common hobby starter}
+	\label{fig:x8}
+\end{figure}
+ 
+The UAV Challenge is a competition organised by the Queensland University of Technology and the CSIRO. It is held every 2 years, and aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and seeks to overcome some of the issues raised above. The objectives of the 2016 Challenge are to use unmanned aircraft to assist in a medical emergency.\\
+
+Competitors must develop an aircraft than can fly to a known location (up to 30km) through specific transit corridors, search for and correctly identify ``Outback Joe'', land close to him to accept a pre-prepared blood sample, and then fly back to base. All of these actions must be completed within an hour, and must be autonomous; that is, after receiving the ``start'' signal the aircraft must have no human input.\\
+
+\todo[inline]{Not sure if this section fits in intro}
+The time period of the competition extends from registration (before 2nd September, 2015) to final competition (week starting 19th of September, 2016), spanning over 1 year. Table \ref{tab:challenge} highlights the key dates and corresponding stages of the UAV Challenge.\\
+
+\todo[inline]{Add completed to D1 once we get the response}
+\begin{table}[!ht]
+	\caption{UAV Challenge Timeline}
+	\label{tab:challenge}
+	\centering
+	\begin{tabular}{ | l | l | }
+		\hline
+		\textbf{Events} & \textbf{Date} \\ \hline \hline
+		Registration and Deliverable 1: Short Technical Report & 2nd September 2015 \\ \hline
+		Deliverable 2: Technical Report and Video & 13th April 2016 \\ \hline
+		Deliverable 3: Autonomous Flight Record & 3rd August 2016 \\ \hline
+		Final ``Go/No-Go'' decision for teams & 10th August 2016 \\ \hline
+		Medical Express Challenge & Week starting 19th September 2016 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{\ID Contributions}
+This project involves the development of an autonomous Unmanned Aerial Vehicle (UAV) with the capabilities to compete in the 2016 UAV Challenge. From the task specified above, \ID have identified a number of design and performance requirements necessary for an aircraft to be successful in the Challenge:
+\begin{enumerate}[label=\bfseries R\arabic*:] \itemsep-2pt
+	\item Capacity to switch between automated and manual flight modes through user commands
+	\item Payload receipt and transportation back to base
+	\item Take-off and landing in obstacle-rich environments (i.e. without runway)
+	\item Total flight travel distance of at least 60km
+	\item Total flight duration of at least 60 minutes
+	\item Automated in-flight identification of a target
 \end{enumerate}
 
-A successful UAV capable of search and rescue applications will incorporate the following features:
-\begin{itemize}
-	\item Payload receipt and transportation back to base
-	\item Automated target identification of an uncommon (non high-visibility) target
-	\item Capacity to switch between Vertical Take Off and Landing (VTOL) and traditional fixed-wing flight modes
-	\item Capacity to switch between automated and manual flight modes through user commands
-	\item A total flight travel distance of at least 60km
-	\item A total flight duration of at least 60 minutes\\
-\end{itemize}
+\todo[inline]{Might remove some of these in final}
+Given the requirements and the timeline of the Challenge above, \ID sought to develop a working prototype with which to enter the 2016 UAV Challenge. As such, the following objectives were selected for the project:
+\begin{enumerate}[label=\bfseries O\arabic*:] \itemsep-2pt
+	\item Register for the 2016 UAV Challenge
+	\item Provide a Bill of Materials for UAV development
+	\item Development of a novel hybrid flight system, incorporating both Vertical Take-Off and Landing (VTOL) and Fixed-Wing flight modes, to achieve \textbf{R3}, \textbf{R4} and \textbf{R5}
+	\item Development, documentation and implementation of autonomous flight controls
+	\item Development of a low-cost, medium-range sensor system to enable object detection and path planning
+	\item Development of in-flight search and obstacle avoidance mechanisms to achieve \textbf{R6}
+	\item Establish a strong foundation for Capstone student teams to continue work in 2016
+\end{enumerate}
 
-This years team was tasked to provide a solid starting point for which next years team can build upon to realise the challenge requirements and goals. Specific deliverables were selected by the team to develop throughout the year in order to realise UAV Challenge objectives.
-\begin{itemize}
-	\item \textbf{Transition System:} The development of a novel transistion system which allows the aircraft to switch between VTOL and fixed-wing flight modes
-	\item \textbf{Flight Autonomy:} The development, documentation and implementation of automated flight controls
-	\item \textbf{Object Detection and Avoidance:} The development of a low-cost medium range sensor system to enable object detection and path routing
-\end{itemize}
-
-\color{red}
-WHAT DOES OUR AIRCRAFT BRING TO THE RESEARCH COMMUNITY
-\begin{itemize}
-	\item Low cost autonomous aircraft
-	\item Hybrid flight modes
-	\item Long range AND long flight time in a single unit
-	\item Intelligent drone flight (not just ``follow me'' behaviour)
-	\item Uncountable applications beyond medical transport
-\end{itemize}
+The remaining sections of the report will discuss the work conducted by \ID in developing a working prototype for the UAV Challenge, beginning with formulating design requirements and constraints from the UAV Challenge specification. The following sections will discuss the various domains of the aircraft, including design, flight and planning systems, and sensing systems, with a particular focus on the novel transition system for hybrid flight. The report will end with conclusions and recommendations for future work.

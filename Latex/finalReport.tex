@@ -1,11 +1,18 @@
 \documentclass[]{article}
 
+% Compilation and document writing packages
+\usepackage[toc,page]{appendix}
+\usepackage[style=ieee,backend=bibtex]{biblatex}
+
 % Formatting packages
 \usepackage{fancyhdr}
 \usepackage[margin=2cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
 \usepackage{hyperref}
 \usepackage[tight]{shorttoc}
+
+% List packages
+\usepackage{enumitem}
 
 % Figure packages
 \usepackage{graphicx}
@@ -15,12 +22,10 @@
 % Helpful packages
 \usepackage[color=yellow]{todonotes}
 \usepackage{color}
-\usepackage[toc,page]{appendix}
-\usepackage[style=ieee,backend=bibtex]{biblatex}
 
 \bibliography{refs}
 
-\newcommand{\ID}{CP-CBU-155}
+\newcommand{\ID}{CP-CBU-155 }
 \newcommand{\IMAGEPATH}{../Images/}
 
 %opening
@@ -51,17 +56,17 @@ Team CP-CBU-155 would like to make the following acknowledgements:
 \input{contents}
 
 \newpage
+
 \section{Executive Summary}
 \input{executive}
+
+\newpage
 
 \section{Introduction}
 \input{intro}
 
 \section{Literature Review}
 \input{litreview}
-
-\section{Summary of UAV Challenge}
-\input{UAVchallenge}
 
 \section{Formulation of Design Requirements and Constraints}
 \input{designreqs}
