@@ -22,7 +22,7 @@ Discuss briefly and reference the appendix
 \subsection{Configuration and Component Selection}
 
 
-The specifications for parts to fit the design were modeled using eCalc [ADD APPEN], as recommended by the drone building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in [ADD APPEN].
+The specifications for parts to fit the design were modeled using eCalc \red{[ADD APPEN]}, as recommended by the drone building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in \red{[ADD APPEN]}.
 	 \begin{itemize}
 		\item[Configuration:] 	To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. It was realized that a selection of the motors would need to be capable of being rotated forward too support the transition function and for such a purpose a `tri-copter' formation was selected.\\
 		A Y-3 configuration was selected over a Y-6 configuration, as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose.\\
@@ -30,13 +30,13 @@ The specifications for parts to fit the design were modeled using eCalc [ADD APP
 	
 		\item[Airframe:] 	In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated,fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was  well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
 	
-		\item[Motor:] The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by [CITE VID] to achieve long range flight.
+		\item[Motor:] The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
 	
-		\item[Propellers:] Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in [ADD APEN]. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fibre.
+		\item[Propellers:] Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fibre.
 	
 		\item[Battery:] The primary concern for maximising flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current protoype, two in parallel are being used. 
 	
-		\item[Flight Controller:] Following the discussion presented in [CONTRoLLER COMPARISON CITE], the PixHawk flight controller was found to be more powerful and faster, and more importantly, easier to reconfigure and add software to.
+		\item[Flight Controller:] Following the discussion presented in \cite{ref:controller_comparison}, the PixHawk flight controller was found to be more powerful and faster, and more importantly, easier to reconfigure and add software to.
 		
 		\item[MORE ITEMS?:]
 	\end{itemize}
@@ -51,13 +51,13 @@ The direction in which a design is 3D printed plays a part in where its strength
 
 In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone.\\
 
-See Table [REF] for all 3D printed parts, iterations and settings.  [WILL MAKE TABLE SOON].
+See Table \red{[REF]} for all 3D printed parts, iterations and settings.  \red{[WILL MAKE TABLE SOON]}.
 
 	
 
 \subsection{Calibration}
 \begin{itemize}
-	\item[Motor and Propeller Balancing:] In order to eliminate vibrations generated from propellers they must be balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. A non-destructive method was preferred, so small pieces of tape were added to the propellers using the balancing apparatus shown in figure [ADD FIGURE] to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. Based on this app, we were also able to determine that motor vibrations were negligible comparitively.
+	\item[Motor and Propeller Balancing:] In order to eliminate vibrations generated from propellers they must be balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. A non-destructive method was preferred, so small pieces of tape were added to the propellers using the balancing apparatus shown in figure \red{[ADD FIGURE]} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. Based on this app, we were also able to determine that motor vibrations were negligible comparitively.
 	\item[Mass Balancing:]  The center of gravity of the new aircraft may be changed by repositioning the batteries (the heaviest items to be carried). The CoG needed to meet two specifications:
 	\\\\The center of mass had to be at the center of thrust of the VTOL. As there are two propellers in the front and one in the back this would be one third of the distance from the front propellers to the back propeller (approximately 30cm from the front motors), resulting in an equal moment about the center of gravity. This would allow all motors to produce the same amount of thrust without causing the aircraft to tilt.
 	\\\\The centre of mass also had to be at the centre of lift, which for Skywalker X-8 is given as 44cm from the nose of the aircraft. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.
