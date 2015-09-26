@@ -26,24 +26,13 @@
 
 \bibliography{refs}
 
-\newif\ifprinttodo
 \newcommand{\ID}{CP-CBU-155 }
 \newcommand{\IMAGEPATH}{../Images/}
 \newcommand{\red}[1] {
-	\ifprinttodo
 		\color{red}
 		#1
 		\color{black}
-	\fi
 }
-\newcommand{\todomessage}[1] {
-	\ifprinttodo
-		\todo[inline]{#1}
-	\fi
-}
-
-%\printtodofalse
-\printtodotrue
 
 %opening
 \title{Capstone Project
@@ -105,7 +94,8 @@ Team CP-CBU-155 would like to make the following acknowledgments:
 \input{planning}
 
 \section{Remaining Sections}
-\red{You are welcome to choose appropriate names for section headings.
+\color{red}
+You are welcome to choose appropriate names for section headings.
 
 The main argument will begin with a section describing your team's major activities, leading to the fulfillment of the objectives of your project.  A flow chart will provide a useful visual aid.
 
@@ -124,7 +114,8 @@ Given Final Report submissions are normally not paper-based, all supporting mate
 
 The details of completed analyses and supporting calculations can be included in an Appendix, referred to, as required, from the main body of the report.  Summaries, flow charts identifying methodologies, and sample calculations should be included in the main body of the report.
 
-The process that you developed and then used to facilitate specific contributions may, itself, be one of your contributions (i.e. providing a framework for ongoing work by other practitioners or researchers).  This is worthy of inclusion as a section of the main body of the report.}
+The process that you developed and then used to facilitate specific contributions may, itself, be one of your contributions (i.e. providing a framework for ongoing work by other practitioners or researchers).  This is worthy of inclusion as a section of the main body of the report.
+\color{black} 
 
 \section{Conclusions and Recommendations}
 \input{conclusions}
