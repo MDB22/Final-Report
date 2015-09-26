@@ -14,31 +14,30 @@
 \end{itemize}
 \end{itemize}}
  
-\subsection{Configuration and Component Selection}
-The specifications for parts to fit the design were modeled using eCalc \red{[ADD APPEN]}, as recommended by the drone building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in \red{[ADD APPEN]}.
+\subsection{Basic Configuration}
+The specifications for parts to fit the design were first modeled using eCalc \red{[ADD APPEN]}, as recommended by the drone building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in \red{[ADD APPEN]}.
 	 \begin{itemize}
-		\item[Configuration:] 	To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. It was realized that a selection of the motors would need to be capable of being rotated forward too support the transition function and for such a purpose a `tri-copter' formation was selected.\\
+		\item[Configuration:] 	To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. It was realized that a selection of the motors would need to be capable of being rotated forward to support the transition function and for such a purpose a `tri-copter' formation was selected.\\
 		A Y-3 configuration was selected over a Y-6 configuration, as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose.\\
 		The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.\\
 	
 		\item[Airframe:] 	In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated,fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was  well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
 		
-		\item[Carbon Fibre Poles \& Supports:] (Screw hole orientation)
-		
-		\item[Servos:]
+		\item[Carbon Fibre Poles and Supports:] The hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attactched, all holes in the rod due to fastening were drilled parallel to the base of the drone in order to minimise any reductions in strength (as the top and bottom of the poles have tesnsile and compressive stresses when hovering).
+			
 	
 		\item[Motor:] The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
 	
 		\item[Propellers:] Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fibre.
 	
+		\item[Servos:] A servo at the front of the plane, that rotates the front pole was chosen as the best option for the transition system. A servo was also required at the back of the plane to rotate the back shaft for yaw. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5v, which has shown to be more than enough. 
+		
 		\item[Battery:] The primary concern for maximising flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current protoype, two in parallel are being used. 
 	
 		\item[Flight Controller:] Following the discussion presented in \cite{ref:controller_comparison}, the PixHawk flight controller was found to be more powerful and faster, and more importantly, easier to reconfigure and add software to.
 		
-	
-		\item[Item?:]
 	\end{itemize}
-\subsection{Design Plan}
+\subsection{Hardware Architecture}
 \red{Basically how we intend to meet every requirement for the challenge. Put in circuit diagrams here, archetecture, information regarding long range network transmitters, and basic intro to sensors, automation and transition. Basically introducing what the overall plan looks like and what we have covered from that. Maybe do a chart or table or something.}
 
 \subsection{3D Printing}
@@ -57,18 +56,16 @@ See Table \red{[REF]} for all 3D printed parts, iterations and settings.  \red{[
 	\item[Motor and Propeller Balancing:] In order to eliminate vibrations generated from propellers they must be balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. A non-destructive method was preferred, so small pieces of tape were added to the propellers using the balancing apparatus shown in figure \red{[ADD FIGURE]} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. Based on this app, we were also able to determine that motor vibrations were negligible comparitively.
 	\item[Mass Balancing:]  The center of gravity of the new aircraft may be changed by repositioning the batteries (the heaviest items to be carried). The CoG needed to meet two specifications:
 	\\\\The center of mass had to be at the center of thrust of the VTOL. As there are two propellers in the front and one in the back this would be one third of the distance from the front propellers to the back propeller (approximately 30cm from the front motors), resulting in an equal moment about the center of gravity. This would allow all motors to produce the same amount of thrust without causing the aircraft to tilt.
-	\\\\The centre of mass also had to be at the centre of lift, which for Skywalker X-8 is given as 44cm from the nose of the aircraft. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.
-	\item[ESC Calibration:]
-	\item[Accelerometer and Compass:]
-	\item[Power Module Voltage:]
-	\item[Radio Calibration:]
-	\item[PID Tuning:]
+	\\\\The centre of mass also had to be at the centre of lift, which for Skywalker X-8 is given as 44cm from the nose of the aircraft. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.[VALIDATION FROM CALCULATIONS]
+	\item[ESC Calibration:] The receiver and pixhawk signal were calibrated into the electronic speed controllers (ESCs) by setting a minimum and maximum motor throttle. This was done by programming the ESCs simultaneuously using the manufacturors manual. 
+	\item[Pixhawk Calibration:] The inbuilt compass and accelerometer of the pixhawk required tuning each time the internal configuration of the drone changed in order to ensure level flight. This is achieved through setting points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
+	\item[PID Tuning:] The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the drone, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom drone. This involved holding the drone in altitude hold mode while the drone tested responses and set the very best PID parameters. This was later verified by checking flight logs, see \red{[ADD LOG STUFF]}. When the wings were finally added, as the inertia, disturbances and weight of the plane changed, an auto-tune was required again see \red{[ADD LOG STUFF]}.
 		
 \end{itemize}
 \subsection{Testing}
 \begin{itemize}
 \item[Prototype 1 "Scorpion":] Validation, small tests...etc
-\item[Testing Mechanisms:] Table, rope, small courtyard tests, motor tests...etc
+\item[Testing Mechanisms:] Table, rope, small courtyard tests, motor tests, wire and solder test...etc
 \item[Iterative Design] Through testing, a number of problems with the craft have been tweaked and resolved
 \item\begin{itemize}
 		\item[Thrust:]
