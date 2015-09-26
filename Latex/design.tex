@@ -17,21 +17,21 @@
 \color{black}
  
 \subsection{Configuration and Component Selection}
-The specifications for parts to fit the design were modeled using eCalc \red{[ADD APPEN]}, as recommended by the drone building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in \red{[ADD APPEN]}.
+The specifications for parts to fit the design were modeled using eCalc \red{[ADD APPEN]}, as recommended by the hobbyist aircraft building community. The site has a vast collection of empirical data for motors, propellers, batteries and configurations and boasts an accuracy of plus or minus 10\% for all calculations. Details of the modeling can be found in \red{[ADD APPEN]}.
 	 \begin{itemize}
 		\item[Configuration:] 	To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. It was realized that a selection of the motors would need to be capable of being rotated forward too support the transition function and for such a purpose a `tri-copter' formation was selected.\\
 		A Y-3 configuration was selected over a Y-6 configuration, as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose.\\
 		The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.\\
 	
-		\item[Airframe:] 	In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated,fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was  well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
+		\item[Airframe:] 	In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
 		
-		\item[Carbon Fibre Poles \& Supports:] (Screw hole orientation)
+		\item[Carbon fiber Poles \& Supports:] (Screw hole orientation)
 		
 		\item[Servos:]
 	
 		\item[Motor:] The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
 	
-		\item[Propellers:] Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fibre.
+		\item[Propellers:] Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
 	
 		\item[Battery:] The primary concern for maximising flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current protoype, two in parallel are being used. 
 	
@@ -45,12 +45,12 @@ The specifications for parts to fit the design were modeled using eCalc \red{[AD
 basically how we intend to meet every requirement for the challenge. Put in circuit diagrams here, archetecture, information regarding long range network transmitters, and basic intro to sensors, automation and transition. Basically introducing what the overall plan looks like and what we have covered from that. Maybe do a chart or table or something
 \color{black}
 \subsection{3D Printing}
-In order to develop the Skywalker X8 into the custom hybrid that was envisioned, a number of components have required 3D modelling and printing. The parts need to not only be functional, but be light, and durable enough to last many flights and any hard landings.\\
-
-The direction in which a design is 3D printed plays a part in where its strength and weaknesses lie, and the most likely mode of failure. Each print was orientated in such a way to maximise the strength of the layers for the forces and moments being applied.\\
-
+In order to enable proper stable and robust mounting of all motors and mounting systems, custom prototyping using 3D printed parts and iterative design was utilized to fit within the X-8 frame. The major components of design were split up into the `Motor Mounts', the `Front  Mounting System' and the `Back Mounting System'.\\
+The Motor Mounts were designed to secure each motor to it's corresponding mounting pole, and while the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tighening the fasteners and a hose clamp was used to ensure an equally distributed squeezing force was applied from the mount to the pole.\\
+The Front Mounting System was designed to incorporate the transition system, while also being stable enough to withstand disturbances associated with being placed at the front of the aircraft.
+The Back Mounting System needed to incorporate the yaw servo-motor system
+The direction in which a design is 3D printed plays a vital role in where its strength and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
 In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone.\\
-
 See Table \red{[REF]} for all 3D printed parts, iterations and settings.  \red{[WILL MAKE TABLE SOON]}.
 
 	
@@ -74,8 +74,8 @@ See Table \red{[REF]} for all 3D printed parts, iterations and settings.  \red{[
 \item[Testing Mechanisms:] Table, rope, small courtyard tests, motor tests...etc
 \item[Iterative Design] Through testing, a number of problems with the craft have been tweaked and resolved
 \item\begin{itemize}
-		\item[Thrust:]
-		\item[Vibrations:]
+		\item[Thrust:] Thrust tests were performed on each selected propellor in order to get a quantitive ranking on their effectiveness.
+		\item[Vibrations:] Numerous vibration related problems and set-backs were encountered during testing and evaluation. An assortment of nyloc-nuts and spring-washers were utilized in order to fasten components together in a vibration resistant manner.
 		\item[Motor Mounts:]
 		\item[Gears:]
 		\item[Wires and Solder:] (this one is very recent, have good plans for resolution)
