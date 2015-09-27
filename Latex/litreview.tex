@@ -56,7 +56,7 @@ The Aerosense AS-DT01-E\cite{ref:sony} (Figure \ref{fig:sony}) is an autonomous 
 \end{figure}
 
 \subsubsection*{FireFLY6}
-Finally, the FireFLY6\cite{ref:firefly6} (Figure \ref{fig:firefly6}) is a remote control hybrid VTOL/fixed-wing aircraft consisting of six propellers arranged in 3 sets of two (Y6 configuration), which can achieve 20-30 minutes of flight time, seven minutes of hover, and a cruising speed of 54km/h. The FireFLY6's design can be easily replicated on an existing airframe like the Skywalker X8, making it an ideal concept for the Medical Express challenge.\\
+Finally, the FireFLY6\cite{ref:firefly6} (Figure \ref{fig:firefly6}) is a remote control hybrid VTOL/fixed-wing aircraft consisting of six propellers arranged in 3 sets of two (Y6 configuration). This design can achieve 20-30 minutes of flight time, seven minutes of hover, and a cruising speed of 54km/h, and would be a strong contender in the UAV Challenge.
 
 \begin{figure}[!h]
 	\centering
@@ -73,4 +73,6 @@ The addition of a flight controller to the aircraft permits autonomous flight ca
 The PixHawk flight controller has several flight control systems readily available for many types of aircraft (including fixed-wing and VTOL), but as of yet has no control system designed for a hybrid aircraft. Fortunately, the PX4 firmware (on which the PixHawk is based) is Open Source\cite{ref:ardupilotgit}, with several resources available\cite{ref:firmware1,ref:firmware2} to allow hobbyists and developers to customize the behaviour of their aircraft.
 
 \subsection{Proposed Design}
-\todomessage{New section to explain design decisions based on lit review}
+Given the aircraft designs presented above, the most suitable option for this project is the FireFLY6. The FireFLY6's motor configuration can be easily replicated using a Skywalker X8. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame.\\
+
+The initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with six motors in Y6 configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.
