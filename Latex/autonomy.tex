@@ -1,6 +1,23 @@
-\color{red}
-\begin{itemize}
+\label{sec:flight}
+\red{\begin{itemize}
 	\item Can possibly merge this with another section
 	\item Introduce the various flight modes (VTOL [Take-off and landing], Fixed wing [Main flight mode], Search [Identify Joe] for later sections
-\end{itemize}
-\color{black}
+\end{itemize}}
+
+The Medical Express mission can be broken down into a small number of discrete flight maneuvers:
+\begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
+	\item Vertical take-off to cruising height, and landing
+	\item Fixed-wing flight, navigating through waypoints
+	\item Aerial search
+\end{enumerate}
+
+Using these maneuvers, completing the mission can be described as completing the sequence of actions\\
+\begin{tabular}[!ht]{r l}
+	\textbf{M1:} & Mission start after being armed\\
+	\textbf{M2:} & Navigate to Joe's location\\
+	\textbf{M3:} & Aerial search to identify Joe\\
+	\textbf{M1:} & Land near Joe to collect blood\\
+	\textbf{M1:} & Take-off after being re-armed\\
+	\textbf{M2:} & Navigate back to base\\
+	\textbf{M1:} & Land at base
+\end{tabular}
