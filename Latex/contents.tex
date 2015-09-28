@@ -1,18 +1,21 @@
 \todomessage{Make sure to uncomment line here to generate Table of Contents, then comment out again}
-%\tableofcontents
 
-\begingroup
-
-% Modify ToC item separation
-\makeatletter
-\renewcommand\@dotsep{10000}
-\patchcmd{\l@section}{%
-	\addvspace{1.0em \@plus\p@}% original code line
-}{%
+\iffinal
+	\begingroup
+	
+	% Modify ToC item separation
+	\makeatletter
+	\renewcommand\@dotsep{10000}
+	\patchcmd{\l@section}{%
+		\addvspace{1.0em \@plus\p@}% original code line
+	}{%
 	\addvspace{0.6em \@plus 0.3\p@}% substitute code line
-}{}{}
-\makeatother
-
-% Generate ToC in document
-\shorttoc{Contents}{1}
-\endgroup
+	}{}{}
+	\makeatother
+	
+	% Generate ToC in document
+	%\shorttoc{Contents}{1}
+	\endgroup
+\else
+	\tableofcontents
+\fi

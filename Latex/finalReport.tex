@@ -26,24 +26,26 @@
 
 \bibliography{refs}
 
-\newif\ifprinttodo
+\newif\iffinal
 \newcommand{\ID}{CP-CBU-155 }
 \newcommand{\IMAGEPATH}{../Images/}
 \newcommand{\red}[1] {
-	\ifprinttodo
+	\iffinal
+	\else
 		\color{red}
 		#1
 		\color{black}
 	\fi
 }
 \newcommand{\todomessage}[1] {
-	\ifprinttodo
+	\iffinal
+	\else
 		\todo[inline]{#1}
 	\fi
 }
 
-\printtodofalse
-%\printtodotrue
+%\finaltrue
+\finalfalse
 
 %opening
 \title{Capstone Project
