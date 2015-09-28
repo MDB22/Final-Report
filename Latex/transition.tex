@@ -1,19 +1,18 @@
-\color{red}
-(alex)
+\red{(alex)
 \begin{itemize}
 \item all the stuff done
 \item tests to prove it worked. Gyroscope equations
 \item Anything that broke as a result of not testing something, or anything that resulted in modification to Dragonfly, write it as if we performed a test, then made the change, rather than ``oh that broke, what happened?''
 \item information pertaining to future test flights
-\end{itemize}
-\color{black}
+\end{itemize}}
+
 \subsection{Why Transition?}
 In order to complete the objectives, long range flight would be required. This is why a transition system was necessary to implement, allowing the VTOL drone to fly forwards, both faster and more efficiently. This will hopefully allow the drone to fly for the required 1 hour flight time needed in deliverable 2, and allow it to travel for over 60 km that is required for the task. 
 
 \subsection{Parts}
 The plane was designed from the beginning to deal with transition. What was decided was that two propellers of the VTOL copter would rotate forwards, creating a forward thrust and generating lift on the wings.  Before implementation however, a few physical considerations needed to be thought through.
 \\\\
-Firstly, a combination of wings and front motors capable of flight were required.  For this the Skywalker X8 seemed to be a commonly used drone that worked well, and the motors chosen (Turnigy SK3-3542-800) were the same ones chosen by others online user some who have achieved over 142km of flight with the Skywalker(link?). To ensure that it would definitely not stall mid-flight, the motors were checked on e-calc \color{red}[PUT IN APPENDIX REFERENCE TO ECALC]\color{black}, and they had an estimated stall speed of 32km/h with this combination, and a cruising speed of 82km/h.  The performance was also compared against other motors. 
+Firstly, a combination of wings and front motors capable of flight were required.  For this the Skywalker X8 seemed to be a commonly used drone that worked well, and the motors chosen (Turnigy SK3-3542-800) were the same ones chosen by others online user some who have achieved over 142km of flight with the Skywalker(link?). To ensure that it would definitely not stall mid-flight, the motors were checked on eCalc (see Appendix \ref{sec:ecalc}), and they had an estimated stall speed of 32km/h with this combination, and a cruising speed of 82km/h.  The performance was also compared against other motors. 
 
 \subsection{Gyroscopic Forces}
 An analysis of the gyroscopic forces acting on the motors during transition was needed to be done to determine the configuration of rotating motors, the strength of the shaft in between the two motors, and the torque required to make the transition. The calculations (see Appendix \ref{sec:AppA}) showed that gyroscopic forces would create a moment perpendicular to the direction of rotation based on the direction of the motor angular velocity. To counteract this, two propellers on the front spinning in opposite directions would create zero net moment, and therefore the drone would be able to remain straight after transition. This was already the plan as counter rotating propellers also create a zero net angular momentum from the front in VTOL mode, making control much easier.  From this, the total moment created by this gyroscopic motion was 3.1Nm in the centre of the shaft, however for our rotation speed, this was less than the moment gravity exerted on the shaft while the motors were hovering, which was 9.156Nm. Lastly, the transition system would need to hold the propellers steady for any other gyroscopic forces. In particullar if the plane rolls too fast, it would create a moment in the front. Due to the counter-rotating front motors however, these forces again would be opposite and counteracting. The front servo would therefore receive no counter moment in flight. An arbitrary servo was chosen at 9kg/cm (0.88Nm), through testing it was found behave satisfactory against frictional or other unknown forces. This was verified by holding the drone down in tests and ensuring transition was possible at full motor speed.
