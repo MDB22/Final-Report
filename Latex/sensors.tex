@@ -1,34 +1,34 @@
 \label{sec:sensing}
-Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the use of each sensor during a mission, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flight}. 
+Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor during a mission, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flight}. 
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=300pt]{\IMAGEPATH sensors}
-	\caption{Onboard sensing capabilities for Prototype \#1}
+	\caption{Onboard sensing capabilities, and mounting location, for Prototype \#2}
 	\label{fig:sensing}
 \end{figure}
 
 \subsection{All Stages}
-\subsubsection*{Raspberry Pi}
-The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning, and object detection. It will also pull flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
 
 \subsubsection*{PixHawk Flight Controller}
-The PixHawk will control the aircraft's flight functionality, such as controlling motors and ailerons, and executing flight paths and commands from the Raspberry Pi.
+As discussed previously, the PixHawk flight controller will control the aircraft's flight functionality, such as controlling motors and ailerons, and executing flight paths and commands.
+
+\subsubsection*{Raspberry Pi}
+The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; enabling higher level behaviour, such as path planning and sensing, requires a separate microcontroller such as a Raspberry Pi. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning, and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
 
 \subsection{Vertical Take-Off and Landing (M1)}
-\subsubsection*{Ultrasonic Module}
-The ultrasonic module will be mounted underneath the aircraft. The GPS and altimeter will provide altitude measurements during fixed-wing flight; the ultrasonic will augment these by providing a more reliable and controllable height measurement during rotor-based flight, assisting with search and landing.
+\subsubsection*{Ultrasonic Sensor}
+The PixHawk comes equipped with a GPS module and altimeter, both of which can provide altitude during flight. However, GPS is inherently inaccurate (up to $\pm$5m), and the performance of the altimeter depends heavily on environmental factors such as temperature. To augment these measurements, an ultrasonic sensor will be mounted underneath the aircraft. The ultrasonic sensor will be controlled by the Raspberry Pi, and will augment these measurements by providing a more reliable and controllable height measurement during rotor-based flight, assisting with search and landing.
 
 \subsection{Fixed-Wing Flight (M2)}
 \subsubsection*{PixHawk Sensors}
-It also has several in-built or plug-and-play sensors, including a 3-axis accelerometer, altimeter, compass, and GPS. The PixHawk will provide the aircraft's telemetry to the Raspberry Pi and the base station, which will be augmented by the additional sensors below.
+During fixed-wing flight, it is imperative that the aircraft maintain a reliable measurement of its position to avoid the Challenge's GeoFence boundaries. If at any point an aircraft breaches a boundary, it must immediately terminate its flight. In addition to the GPS and altimeter mentioned above, the PixHawk is also equipped with a 3-axis accelerometer and compass. Each of these sensors will enable the PixHawk to keep track of the aircraft's position during flight.
 
 \subsection{Aerial Search (M3)}
-\subsubsection*{Webcam}
-The webcam will be mounted beneath the nose of the aircraft. It will provide vision for the aircraft's obstacle avoidance manoeuvers, and will form the basis for identifying Joe using his hat and blue jeans.
-
 \subsubsection*{LiDAR}
-The LiDAR will be mounted in the nose of the aircraft. The LiDAR can only measure the range of objects directly in front of it, so it will be mounted on a dual servo system that allows it to sweep a hemisphere in front of the aircraft, as shown in Figure \ref{fig:lidar}. It will provide a 3D map of the environment in front of the aircraft, and will assist in path planning and obstacle avoidance.
+During the aerial search stage the aircraft will be in low-altitude flight, putting it at risk of collision with trees, buildings, and other obstacles. To mitigate this risk, the aircraft will need to map the world around it to identify hazards. A LiDAR was chosen over a second ultrasonic sensor as it is capable of measuring larger distances, and with greater accuracy.\\
+
+The LiDAR will be mounted in the nose of the aircraft. The LiDAR can only measure the range of objects directly in front of it, so it will be mounted on a dual servo system that allows it to sweep a hemisphere in front of the aircraft, as shown in Figure \ref{fig:lidar}. This will allow the generation of a 3D map of the environment in front of the aircraft, and will assist in path planning and obstacle avoidance.
 
 \begin{figure}[!ht]
 	\centering
@@ -37,16 +37,36 @@ The LiDAR will be mounted in the nose of the aircraft. The LiDAR can only measur
 	\label{fig:lidar}
 \end{figure}
 
-\subsection{Testing}
-\red{\begin{itemize}
-		\item Ultrasonic not terribly reliable, maybe some test data
-		\item Same test with LiDAR
-		\item Testing with GPS, Compass, other sensors
-	\end{itemize}}
-	
-	
-	
-\subsubsection*{GPS and Compass:}  
-During several flight tests it became evident that the 3DR compass within the GPS module was inaccurate and sporadic as a result of the strong magnetic field created within the aircraft.\\
+\subsubsection*{Webcam}
+The only information provided to teams regarding Outback Joe is his love of akubra hats and blue jeans. In order to detect Joe, the aircraft must be mounted with a visual sensor, such as a webcam. The webcam will be mounted beneath the nose of the aircraft, and will form the basis for identifying Joe using his hat and blue jeans, as well as providing real-time vision for the aircraft's obstacle avoidance maneuvers.
 
-It was avoided by placing the compass outside of the drone shell.
+\subsection{Testing}
+\subsubsection*{Ultrasonic and LiDAR}
+In order to ensure that the performance of the distance sensors purchased was adequate for the aircraft, both sensors were calibrated using the setup shown in Figure \ref{fig:sensortests}. A series of obstacles were positioned at distances of 50cm, 1m and 5m, and 100 data points collected for each obstacle. The results of the calibration tests, shown in Figure \ref{fig:sensortestresults},  indicate that \red{conclusion needed}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=100pt]{\IMAGEPATH emblem}
+	\caption{Calibration setup for ultrasonic and LiDAR sensors}
+	\label{fig:sensortests}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{\IMAGEPATH emblem}
+		\caption{Distance measurements from ultrasonic sensor}
+	\end{subfigure} %
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{\IMAGEPATH emblem}
+		\caption{Distance measurements from LiDAR}
+	\end{subfigure}
+	
+	\caption{Calibration of distance sensors}
+	\label{fig:sensortestresults}
+\end{figure}
+	
+\subsubsection*{GPS and Compass}  
+During several flight tests it became evident that the data provided by the GPS and compass were wildly inaccurate, giving measurements that varied by up to $\pm$20m and $\pm$15$^\circ$ respectively. At any point during flight there may be up to 120A passing through the aircraft's internal circuitry, creating a large EM disturbance, in addition to the EM radiation from the other electronics. Given that both of these devices are susceptible to EM radiation\cite{ref:gpsinterference}, the module was mounted outside of the drone shell (as suggested by \cite{ref:gpsposition}), away from the electronics, resulting in the expected performance of $\pm$5m and $\pm$5$^\circ$ respectively.
