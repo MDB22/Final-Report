@@ -1,4 +1,8 @@
-The Medical Express mission can be broken down into a small number of discrete flight maneuvers:
+In order to participate in the UAV Challenge, any aircraft must be autonomous; an aircraft may only interact with a human to be armed or disarmed at the beginning and end of the challenge.
+
+\subsection{Breaking Down the Challenge}
+\label{sec:flight}
+The Medical Express mission can be broken down into three discrete flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
 	\item Vertical take-off to cruising height, and landing
 	\item Fixed-wing flight, navigating through waypoints
@@ -6,12 +10,18 @@ The Medical Express mission can be broken down into a small number of discrete f
 \end{enumerate}
 
 Using these maneuvers, completing the mission can be described as completing the sequence of actions\\
-\begin{tabular}[!ht]{r l}
-	\textbf{M1:} & Mission start after being armed\\
-	\textbf{M2:} & Navigate to Joe's location\\
-	\textbf{M3:} & Aerial search to identify Joe\\
-	\textbf{M1:} & Land near Joe to collect blood\\
-	\textbf{M1:} & Take-off after being re-armed\\
-	\textbf{M2:} & Navigate back to base\\
-	\textbf{M1:} & Land at base
-\end{tabular}
+\begin{tabular}{r l l}
+	1. & Mission start after being armed & (\textbf{M1}) \\ 
+	2. & Navigate to Joe's location & (\textbf{M2}) \\ 
+	3. & Aerial search to identify Joe & (\textbf{M3}) \\ 
+	4. & Land near Joe to collect blood & (\textbf{M1}) \\ 
+	5. & Take-off after being re-armed & (\textbf{M1}) \\ 
+	6. & Navigate back to base & (\textbf{M2}) \\ 
+	7. & Land at base & (\textbf{M1}) \\ 
+\end{tabular} 
+
+\subsection{Development}
+\red{Autonomy on Raspberry Pi}
+
+\subsection{Testing}
+\red{Software in the Loop}
