@@ -1,17 +1,9 @@
 \red{\begin{itemize}
-\item Basically PR1(prototype/printing/etc) (WES)
+
 \item Extra stuff... legs, new gears, glued on parts and changed placements for wings(Alex))
-\item testing:validation(how we knew we could fly), iterative design (designs changed through testing (like the back gears)), and problems (like the motor, power module and radio, their effect, and how they were resolved), link to diary (as there were significatn set backs)... mention optimal 3D print orientations were investigated to strengthen against most possible failure modes.
-\item \begin{itemize}
-	\item when we started flying really low (wes) 
-	\item machines and mechanisms we tested on to make sure it wouldn’t break (wes) 
-	\item flight tests and tweaks in courtyard (wes) 
-	\item major flight tests that worked well (july 3 and September 6) 
-	\item Tuning 
-	\item Data LOGS!!! 
-	\item Major crashes and broken parts (Either don't include this, or frame it in a positive note. We can't have a section on failures.)
-	\item final transition
-\end{itemize}
+
+
+
 \end{itemize}}
 
 \red{Some of these sections are already in the lit review, like the decision on flight controller}
@@ -26,14 +18,9 @@ A Y-3 configuration was selected over a Y-6 configuration, as it would lead to a
 \subsubsection*{Airframe}
 In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
 		
-\subsubsection*{Carbon Fiber Poles \& Supports}
-\red{Screw hole orientation}
-		
-\subsubsection*{Servos}
 		
 \subsubsection*{Carbon Fiber Poles and Supports}
-\red{Repeated name?}
-The hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attactched, all holes in the rod due to fastening were drilled parallel to the base of the drone in order to minimise any reductions in strength (as the top and bottom of the poles have tesnsile and compressive stresses when hovering).
+SThe hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attactched, all holes in the rod due to fastening were drilled parallel to the base of the drone in order to minimise any reductions in strength (as the top and bottom of the poles have tesnsile and compressive stresses when hovering).
 	
 \subsubsection*{Motor}
 The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
@@ -80,31 +67,5 @@ The inbuilt compass and accelerometer of the pixhawk required tuning each time t
 
 \subsubsection*{PID Tuning}
 The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the drone, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom drone. This involved holding the drone in altitude hold mode while the drone tested responses and set the very best PID parameters. This was later verified by checking flight logs, see \red{[ADD LOG STUFF]}. When the wings were finally added, as the inertia, disturbances and weight of the plane changed, an auto-tune was required again see \red{[ADD LOG STUFF]}.
-		
-\subsection{Testing}
-\subsubsection*{Prototype 1 "Scorpion"}
-Validation, small tests...etc
 
-\subsubsection*{Testing Mechanisms}
-Table, rope, small courtyard tests, motor tests, wire and solder test...etc
 
-\subsubsection*{Iterative Design}
-\todomessage{This list would look better as its own subsection, maybe as 4.6?}
-Through testing, a number of problems with the aircraft have been tweaked and resolved
-
-\begin{table}[!hl]
-	\begin{tabular}{l l}
-		Thrust: & Thrust tests were performed on each selected propellor in order to get a quantitive ranking on their effectiveness.\\
-		Vibrations: & Numerous vibration related problems and set-backs were encountered during testing and evaluation. An assortment of nyloc-nuts and spring-washers were utilized in order to fasten components together in a vibration resistant manner.\\
-		Motor Mounts: & \\
-		Gears: & \\
-		Wires and Soldering: & (this one is very recent, have good plans for resolution)\\
-		Radio Failure & \\
-		Motor Failure: & \\
-		Power Module Failure: & \\
-		GPS and Compass: & (basically how we moved the GPS away from the ESC in order to avoid the magnetic field of the alternating current)
-	\end{tabular}
-\end{table}
-
-\subsubsection*{Most Recent Results}
-(Hopefully Transition)
