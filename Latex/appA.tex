@@ -24,19 +24,34 @@ In addition to cost, the modifications necessary to make such a plane would be s
 	
 Last year's project was designed for a very different challenge where VTOL was not required. It was also designed as a multi-platform craft, where the fixed wing was designed for manufacture, something we certainly don't plan on doing this year with the wing. With consideration to all of the above points, we believe that purchasing a foam model airframe for UAV development is the best course of action in for the \ID.
 
+\subsection{Stall Speed}
+\label{sec:stall}
+As lift(N): $L = C_l\times1/2\times\rho\times A\times V^2$\\\\
+Airspeed ($ms^{-1})$:\\
+$V= \sqrt{\frac{2\times L}{C_l\times \rho \times A}}$\\
+$V = 12.66ms^{-1} = 45.5kmh^{-1}$\\\\
+Where:\\
+Required lift: $L = 4kg \times ms^{-2} = 39.24N$\\
+Air density at sea level: $\rho = 1.225 kgm^{-1}$\\
+Area of Skywalker Wings: $A = 0.8m^2$\\
+Minimum coefficient of lift \red{reference table below this)}: $C_l = 0.5$
+
+
+
 \subsection{Gyroscopic Effects}
 \label{sec:gyro}
 Angular momentum of propellers: $H = I\omega$\\
-Maximum motor speed $\omega = 800\times16.8\times2\pi/60 = 1407.45rad/s$\\
-Prop Inertia $I = 1/12\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimate, as it assumes equally distributed mass, and constant width)\\\\
+Maximum motor speed $\omega = 800\times16.8\times\frac{2\pi}{60} = 1407.45rads^{-1}$\\
+Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimate, as it assumes equally distributed mass, and constant width)\\\\
 
-[diagram above] Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
-$\omega_p$ = Maximum servo rotation speed (procession) = $60^o/0.11s = 9.52rad/s$\\
-$dH/dt = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
+\red{[diagram above]} Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
+$\omega_p$ = Maximum servo rotation speed (procession) = $frac{60^o}{0.11s} = 9.52rads^{-1}$\\
+$\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
 
-- [diagram above] Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, instead of putting a moment on the servos.\\
-- Max moment in the centre of the front shaft is $2M = 3.1Nm$. If this is less than the moment on the front bar at hover ($2/3$ $\times $ mass of drone $\times$ distance to prop) then the shaft should be capable of withstanding the gyroscopic effects.\\
-For our set up this is the case as the gyroscopic moment is less than the weight of the plane on the front shaft $3.1Nm < 9.156Nm$. If it can withstand the weight, it should be able to withstand the gyroscopic moments easilly.
+\red{[diagram above]} Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, rather than placing a moment on the servos.\\\\
+Max moment in the centre of the front shaft is $2M = 3.1Nm$. If this is less than the moment on the front bar at hover ($2/3$ $\times M \times d$) then the shaft should be capable of withstanding the gyroscopic effects, as the moment created is less than that created by the weight of the plane at hover.\\
+
+$3.1Nm < 9.156Nm$, therefore It should be able to withstand the gyroscopic moments easilly.
 
 \subsection{eCalc Modelling}
 \label{sec:ecalc}
