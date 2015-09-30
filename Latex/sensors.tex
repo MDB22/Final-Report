@@ -1,5 +1,5 @@
 \label{sec:sensing}
-Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor during a mission, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flight}. 
+Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor during a mission, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flight}. At the time of writing, only some of the sensors mentioned below have been physically mounted to the aircraft, but each sensor's position on the aircraft has been incorporated into the aircraft's design.
 
 \begin{figure}[!ht]
 	\centering
@@ -14,7 +14,7 @@ Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are ava
 As discussed previously, the PixHawk flight controller will control the aircraft's flight functionality, such as controlling motors and ailerons, and executing flight paths and commands.
 
 \subsubsection*{Raspberry Pi}
-The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; enabling higher level behaviour, such as path planning and sensing, requires a separate microcontroller such as a Raspberry Pi. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning, and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
+The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; to enable higher level behaviour, such as path planning and sensing, requires a separate microcontroller such as a Raspberry Pi. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
 
 \subsection{Vertical Take-Off and Landing (M1)}
 \subsubsection*{Ultrasonic Sensor}
@@ -28,7 +28,7 @@ During fixed-wing flight, it is imperative that the aircraft maintain a reliable
 \subsubsection*{LiDAR}
 During the aerial search stage the aircraft will be in low-altitude flight, putting it at risk of collision with trees, buildings, and other obstacles. To mitigate this risk, the aircraft will need to map the world around it to identify hazards. A LiDAR was chosen over a second ultrasonic sensor as it is capable of measuring larger distances, and with greater accuracy.\\
 
-The LiDAR will be mounted in the nose of the aircraft. The LiDAR can only measure the range of objects directly in front of it, so it will be mounted on a dual servo system that allows it to sweep a hemisphere in front of the aircraft, as shown in Figure \ref{fig:lidar}. This will allow the generation of a 3D map of the environment in front of the aircraft, and will assist in path planning and obstacle avoidance.
+The LiDAR will be mounted in the nose of the aircraft. As it can only measure the range of objects directly in front of it, the LiDAR will be mounted on a system of two servos that allow it to sweep a hemisphere in front of the aircraft, as shown in Figure \ref{fig:lidar}. This will allow the generation of a 3D map of the environment in front of the aircraft, and will assist in path planning and obstacle avoidance.
 
 \begin{figure}[!ht]
 	\centering
@@ -38,7 +38,7 @@ The LiDAR will be mounted in the nose of the aircraft. The LiDAR can only measur
 \end{figure}
 
 \subsubsection*{Webcam}
-The only information provided to teams regarding Outback Joe is his love of akubra hats and blue jeans. In order to detect Joe, the aircraft must be mounted with a visual sensor, such as a webcam. The webcam will be mounted beneath the nose of the aircraft, and will form the basis for identifying Joe using his hat and blue jeans, as well as providing real-time vision for the aircraft's obstacle avoidance maneuvers.
+The only information provided to teams regarding Outback Joe is his love of akubra hats and blue jeans. In order to detect Joe, the aircraft must be mounted with a visual sensor, such as a webcam. The webcam will be mounted beneath the nose of the aircraft, and will form the basis for identifying Joe using his hat and blue jeans, as well as providing real-time vision for the aircraft's obstacle avoidance maneuvers. The development of ``Joe detection'' algorithms was not completed this year, and is discussed further in Section \ref{sec:futurework}.
 
 \subsection{Testing}
 \subsubsection*{Ultrasonic and LiDAR}

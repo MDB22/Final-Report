@@ -1,9 +1,20 @@
-\subsection{Object Detection}
-In order for the aircraft to safely navigate while searching for Joe, it must first know where it is safe to move in the environment. State-of-the-art autonomous vehicles commonly use Red-Green-Blue-Depth cameras, allowing them to get both visual and depth/distance information simultaneously; while these cameras are powerful, they are also expensive. Instead, a low-cost option combining data from the camera and LiDAR sensors shown in Section \ref{sec:sensing} was chosen to approximate an RGB-D camera.\\
+\subsection{Environment Mapping}
+In order for the aircraft to safely navigate while searching for Joe, it must first understand the environment it is moving in. State-of-the-art autonomous vehicles commonly use Red-Green-Blue-Depth cameras\cite{ref:rgbd}, allowing them to collect both visual and depth/distance information simultaneously, such as the image shown in Figure \ref{fig:rgbd}. While these cameras are powerful, they are also expensive, with the cheapest unit found to cost almost \$5000\cite{ref:rgbdcost}. Instead, a low-cost approach was chosen that combines data from the camera and LiDAR shown in Section \ref{sec:sensing} in order to approximate the capability of an RGB-D camera.\\
 
-Object detection is initiated once the aircraft reaches the remote landing site. Figure \ref{fig:scan} shows the progression of data acquisition using the LiDAR.\\
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=200pt]{\IMAGEPATH rgbd}
+	\caption{An example of RGB-Depth data}
+	\label{fig:rgbd}
+\end{figure}
 
-\begin{figure}
+Mapping is initiated once the aircraft begins maneuver M3, as described in Section \ref{sec:flight}. During this maneuver, the LiDAR will scan the area in front of the aircraft, ranging from $\pm$85$^\circ$ in the horizontal direction, in 5$^\circ$ increments, and from 20$^\circ$ below to 90$^\circ$ above the aircraft, in 1.25$^\circ$ increments. At each increment, the LiDAR will calculate the distance to the nearest object in space.\\
+
+Rather than store each of these distance measurements as points in space, the data is stored in the form of an occupancy grid. The world around the aircraft is discretized into 10cm cells (or voxels), and when the LiDAR detects an object at a point in space, the corresponding voxel in the grid is then ``filled''; this approach will make real-time path planning and obstacle avoidance algorithms computationally feasible on the Raspberry Pi by reducing the volume of data to be processed.\\
+
+Figure \ref{fig:scan} shows the progression of data acquisition using the LiDAR. When the aircraft first enters maneuver M3, the occupancy grid is initially empty, as no data has been acquired (Figure \ref{fig:scaninit}). The occupancy grid is gradually filled as the LiDAR performs its sweep, with Figures \ref{fig:scanten} and \ref{fig:scanminute} showing 10s and 60s of data acquisition respectively. This data will then be filtered (to remove isolated voxels) and clustered (to generate larger ``obstacles'') in order to generate a safe flight path.
+
+\begin{figure}[!ht]
 	\centering
 	\begin{subfigure}[b]{0.50\textwidth}
 		\includegraphics[width=\textwidth]{\IMAGEPATH Data/voxelize0s}
@@ -22,14 +33,6 @@ Object detection is initiated once the aircraft reaches the remote landing site.
 		\caption{60s of data acquisition}
 		\label{fig:scanminute}
 	\end{subfigure}
-	\caption{Scanning the environment with the LiDAR}
+	\caption{Scanning the environment with the LiDAR; data is coloured according to height above ground}
 	\label{fig:scan}
 \end{figure}
-
-Elaborate:
-\begin{itemize}
-	\item Initially empty occupancy map (Figure \ref{fig:scaninit})
-	\item LiDAR identifies distances from aircraft, which are converted to ``occupied'' cells/voxels in the map (Figure \ref{fig:scanten})
-	\item Once a reasonable amount of data has been acquired (Figure \ref{fig:scanminute}), the map is filtered to eliminate ``isolated'' voxels
-	\item The resulting map is then grouped into ``supervoxels'', large areas that the aircraft cannot traverse
-\end{itemize}
