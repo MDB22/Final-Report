@@ -10,9 +10,17 @@
 \red{Higher level stuff should go first.\\}
 \red{Reference the design from the winning team last year, and the stuff they have that we still need (ie rocket m5)\\}
 \red{Basically how we intend to meet every requirement for the challenge. Put in circuit diagrams here, archetecture, information regarding long range network transmitters, and basic intro to sensors, automation and transition. Basically introducing what the overall plan looks like and what we have covered from that. Maybe do a chart or table or something.}
+Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned for the current and future teams.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=400pt]{\IMAGEPATH hardware_architecture}
+	\caption{Architecture diagram for aircraft hardware}
+	\label{fig:hardwarearch}
+\end{figure}
 
 \subsection{Basic Configuration}
-The initial design of the aircraft was first modeled using eCalc\cite{ref:ecalc}, a commonly used web tool in the drone building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modeling process can be found in Appendix \ref{sec:ecalc}.
+The initial design of the aircraft was first modeled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modeling process can be found in Appendix \ref{sec:ecalc}.
 
 \subsubsection*{Configuration}
 To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. It was realized that a selection of the motors would need to be capable of being rotated forward to support the transition function and for such a purpose a `tri-copter' formation was selected.\\
@@ -24,7 +32,7 @@ In order to begin design and development on critical subsystems, a pre-designed 
 		
 		
 \subsubsection*{Carbon Fiber Poles and Supports}
-SThe hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attactched, all holes in the rod due to fastening were drilled parallel to the base of the drone in order to minimise any reductions in strength (as the top and bottom of the poles have tesnsile and compressive stresses when hovering).
+The hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attactched, all holes in the rod due to fastening were drilled parallel to the base of the aircraft in order to minimise any reductions in strength (as the top and bottom of the poles have tensile and compressive stresses when hovering).
 	
 \subsubsection*{Motor}
 The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
@@ -33,7 +41,7 @@ The motors chosen needed to efficiently hover, but at the same time be able to c
 Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
 	
 \subsubsection*{Servos}
-A servo at the front of the plane, that rotates the front pole was chosen as the best option for the transition system. A servo was also required at the back of the plane to rotate the back shaft for yaw. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5v, which has shown to be more than enough. 
+A servo at the front of the aircraft, that rotates the front pole was chosen as the best option for the transition system. A servo was also required at the back of the aircraft to rotate the back shaft for yaw. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5v, which has shown to be more than enough. 
 		
 \subsubsection*{Battery}
 The primary concern for maximising flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current protoype, two in parallel are being used. 
@@ -44,16 +52,24 @@ Following the discussion presented in \cite{ref:controller_comparison}, the PixH
 \subsection{3D Printing}
 In order to enable proper stable and robust mounting of all motors and mounting systems, custom prototyping using 3D printed parts and iterative design was utilized to fit within the X-8 frame. The major components of design were split up into the `Motor Mounts', the `Front  Mounting System' and the `Back Mounting System'.\\
 
-The Motor Mounts were designed to secure each motor to it's corresponding mounting pole, and while the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tighening the fasteners and a hose clamp was used to ensure an equally distributed squeezing force was applied from the mount to the pole.\\
+The Motor Mounts were required to secure each motor to it's corresponding mounting pole, and while the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tighening the fasteners and a hose clamp was used to ensure that an equally distributed squeezing force was applied from the mount to the pole.\\
 
-The Front Mounting System was designed to incorporate the transition system, while also being stable enough to withstand disturbances associated with being placed at the front of the aircraft.
-The Back Mounting System needed to incorporate the yaw servo-motor system. The direction in which a design is 3D printed plays a vital role in where its strength and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
+The Front Mounting System was required to incorporate the transition system, while also being stable enough to withstand disturbances associated with being placed at the front of the aircraft. As such, it was designed to fit completely within the Skywalker X8's front recess, this was to ensure that the entire Front Mounting System was supported and that any lateral lode on the front mounting pole would be traferred through the entire aircraft.\\
 
-In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. See Table \red{[REF]} for all 3D printed parts, iterations and settings.  \red{[WILL MAKE TABLE SOON]}.
+The Back Mounting System was required to incorporate the yaw servo-motor system and also keep the back motor pole perpendicular to the front motor pole. A multi webbed design was chosen to keep the pole aligned in conjunction with tail ring, and housing for the servo was incorporated to ensure that the 
+
+The direction in which a design is 3D printed plays a vital role in where its strength and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
+In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. See Table \red{[REF]} for current iteration of all 3D printed parts, and appendix ??? for all iterations and settings.  \red{[WILL MAKE TABLE SOON]}.
 
 \subsection{Calibration}
 \subsubsection*{Motor and Propeller Balancing}
-In order to eliminate vibrations generated from propellers they must be balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. A non-destructive method was preferred, so small pieces of tape were added to the propellers using the balancing apparatus shown in figure \red{[ADD FIGURE]} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. Based on this app, we were also able to determine that motor vibrations were negligible comparitively.
+To eliminate vibrations generated from propellers they were first balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. As a non-destructive method was preferred, small pieces of tape were added to the propellers using the balancing apparatus shown in figure \ref{fig:propbalancing} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. Based on this app, we were also able to determine that motor vibrations were negligible comparitively.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=300pt]{\IMAGEPATH prop_balancer}
+	\caption{Propeller balancing apparatus, with propeller and taped to improve balance}
+	\label{fig:propbalancing}
+\end{figure}
 
 \subsubsection*{Mass Balancing}
 The center of gravity (CoG) of the new aircraft may be changed by repositioning the batteries (the heaviest items to be carried). The CoG needed to meet two specifications:
@@ -64,9 +80,9 @@ The center of gravity (CoG) of the new aircraft may be changed by repositioning 
 The receiver and pixhawk signal were calibrated into the electronic speed controllers (ESCs) by setting a minimum and maximum motor throttle. This was done by programming the ESCs simultaneuously using the manufacturors manual.
 
 \subsubsection*{Pixhawk Calibration}
-The inbuilt compass and accelerometer of the pixhawk required tuning each time the internal configuration of the drone changed in order to ensure level flight. This is achieved through setting points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
+The inbuilt compass and accelerometer of the pixhawk required tuning each time the internal configuration of the aircraft changed in order to ensure level flight. This is achieved through setting points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
 
 \subsubsection*{PID Tuning}
-The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the drone, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom drone. This involved holding the drone in altitude hold mode while the drone tested responses and set the very best PID parameters. This was later verified by checking flight logs, see \red{[ADD LOG STUFF]}. When the wings were finally added, as the inertia, disturbances and weight of the plane changed, an auto-tune was required again see \red{[ADD LOG STUFF]}.
+The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the aircraft, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom aircraft. This involved holding the aircraft in altitude hold mode while the aircraft tested responses and set the very best PID parameters. This was later verified by checking flight logs, see \red{[ADD LOG STUFF]}. When the wings were finally added, as the inertia, disturbances and weight of the aircraft changed, an auto-tune was required again see \red{[ADD LOG STUFF]}.
 
 
