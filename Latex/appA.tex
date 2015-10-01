@@ -3,7 +3,7 @@
 
 \subsection{Analysis of 2014 Aircraft}
 \label{sec:lastYear}
-Research suggests that a Y6 configuration, with 3 sets of 2 coaxial motors (2 pairs at the front, 1 at the rear), is the best setup for this task, as shown on the FireFLY6 in Figure 7 above. However, due to its weight and construction, this is not possible on the 2014 model. Instead, it will have to be fitted in quadrotor formation, with four motors and rotors attached under the fuselage (Figure 4). To hover the aircraft (22kg) with 4 (3.5kg) motors, even when equipped with 20 inch (50cm) propellers, in air with density 1.168 kg/m3 would require\\
+Research \red{Any references to add here?} suggests that a Y6 configuration, with 3 sets of 2 coaxial motors (2 pairs at the front, 1 at the rear), is the best setup for this task, as shown on the FireFLY6 in Figure \ref{fig:firefly6} above. However, due to its weight and construction, this is not possible on the 2014 model. Instead, it will have to be fitted in quadrotor formation, with four motors and rotors attached under the fuselage, as in Figure \ref{fig:arcturus}. To hover the aircraft (22kg) with 4 (3.5kg) motors equipped with 20 inch (50cm) propellers, in air with density 1.168 kg/m3 would require\\
 
 \begin{tabular}{r c l}
 	$P$ & $=$ & $N_{motors} \times v_{air} \times F_{thrust}$\\
@@ -14,16 +14,15 @@ Research suggests that a Y6 configuration, with 3 sets of 2 coaxial motors (2 pa
 \end{tabular}
 \vspace{6pt}
 	
-This requirement assumes it is under ideal conditions (100 percent motor and rotor efficiency). It would be incredibly difficult to find a motor with the capabilities required, and at a reasonable price.
-More significant however is the battery required. Even if the battery weight is neglected, under a 10 cell (37 Volt) load, 200A would be required just to hover. This would be incredibly dangerous and under real conditions it would be much higher. Flight time wtih the available batteries would be extremely short. On the largest 10 cell batteries available at hobbyking, Zippy Compact 5800mAH, this would only amount to 100 seconds of flight time. The mission would require at least 4 for the VTOL take off and landing procedures alone. This would equate to 736AUD and 5kg of extra weight.
+This requirement assumes it is under ideal conditions (100 percent motor and rotor efficiency). It would be incredibly difficult to find a motor with the capabilities required, and at a reasonable price. More significant however is the battery required. Even if the battery weight is neglected, under a 10 cell (37 Volt) load, 200A would be required just to hover. This would be incredibly dangerous and under real conditions it would be much higher. Flight time with the available batteries would be extremely short. On the largest 10 cell batteries available at hobbyking, Zippy Compact 5800mAH, this would only amount to 100 seconds of flight time. The mission would require at least 4 for the VTOL take off and landing procedures alone. This would equate to 736AUD and 5kg of extra weight.\\
 
-In addition to cost and flight time, the modifications necessary to make such a plane would be significantly more difficult, as the supports would need to hold much more weight, and the plane itself is made of wood and not foam. The design of the hybrid craft on the larger plane would have a significant amount of aerodynamic drag and be less efficient. It would look something like The Arcturus, see Figure \ref{fig:arcturus}.
+In addition to cost and flight time, the modifications necessary to make such a plane would be significantly more difficult, as the supports would need to hold much more weight, and the plane itself is made of wood and not foam. The design of the hybrid craft on the larger plane would have a significant amount of aerodynamic drag and be less efficient. It would look something like the Arcturus, see Figure \ref{fig:arcturus}.\\
 	
-Last year's project was designed for a very different challenge where VTOL was not required. It was also designed as a multi-platform craft, where the fixed wing was designed for manufacture, something that was not plannned in this year's scope. With consideration to all of the above points, it is believed that purchasing a foam model airframe for UAV development was the best course of action for \ID.
+Last year's project was designed for a very different challenge where VTOL was not required. It was also designed as a multi-platform craft, where the fixed wing was designed for manufacture, something that was not planned in this year's scope. With consideration to all of the above points, it is believed that purchasing a foam model airframe for UAV development was the best course of action for \ID.
 
 \subsection{Stall Speed}
 \label{sec:stall}
-As lift(N): $L = C_l\times1/2\times\rho\times A\times V^2$\\\\
+As lift(N): $L = 1/2\times C_l\times\rho\times A\times V^2$\\\\
 Airspeed ($ms^{-1})$:\\
 $V= \sqrt{\frac{2\times L}{C_l\times \rho \times A}}$\\
 $V = 12.66ms^{-1} = 45.5kmh^{-1}$\\\\
@@ -68,35 +67,35 @@ $3.1Nm < 9.156Nm$, therefore It should be able to withstand the gyroscopic momen
 
 \subsection{eCalc Modelling}
 \label{sec:ecalc}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc1}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc1}
 	\caption{Fixed-wing performance, 11 inch props}
 \end{figure}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc2}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc2}
 	\caption{VTOL performance, 11 inch props}
 \end{figure}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc3}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc3}
 	\caption{Fixed-wing performance, 12 inch props}
 	\label{fig:fixed}
 \end{figure}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc4}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc4}
 	\caption{VTOL performance, 12 inch props}
 	\label{fig:vtol}
 \end{figure}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc7}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc7}
 	\caption{Fixed-wing performance, 12 inch props, 3 batteries}
 \end{figure}
-\begin{figure}[]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc8}
+	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc8}
 	\caption{VTOL performance, 12 inch props, 3 batteries}
 \end{figure}
