@@ -38,7 +38,7 @@ The hybrid frame was created using a combination of two 12mm carbon fibre poles 
 The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
 	
 \subsubsection*{Propellers}
-Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \red{[ADD APEN]}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
+Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
 	
 \subsubsection*{Servos}
 A servo at the front of the aircraft, that rotates the front pole was chosen as the best option for the transition system. A servo was also required at the back of the aircraft to rotate the back shaft for yaw. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5v, which has shown to be more than enough. 
@@ -59,7 +59,8 @@ The Front Mounting System was required to incorporate the transition system, whi
 The Back Mounting System was required to incorporate the yaw servo-motor system and also keep the back motor pole perpendicular to the front motor pole. A multi-webbed design was developed to keep the pole aligned in conjunction with the supplied Skywalker X8 tail ring support. Housing for the yaw servo-motor was built into the Back Mounting System to ensure a backlash-free mating between the that the XXX
 
 The direction in which a design is 3D printed plays a vital role in where its strength and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
-In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. See Table \red{[REF]} for current iteration of all 3D printed parts, and appendix ??? for all iterations and settings.  \red{[WILL MAKE TABLE SOON]}.
+In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. See Table \red{[REF]} for current iteration of all 3D printed parts, and appendix ??? for all iterations and settings. 
+\todomessage{Need 3d printed parts table here. Reference it above}
 
 \subsection{Calibration}
 \subsubsection*{Motor and Propeller Balancing}
@@ -74,8 +75,8 @@ To eliminate vibrations generated from propellers they were first balanced, whic
 \subsubsection*{Mass Balancing}
 The center of gravity (CoG) of the new aircraft may be changed by repositioning the batteries (the heaviest items to be carried). The CoG needed to meet two specifications:
 	\\\\The center of mass had to be at the center of thrust of the VTOL. As there are two propellers in the front and one in the back this would be one third of the distance from the front propellers to the back propeller (approximately 30cm from the front motors), resulting in an equal moment about the center of gravity. This would allow all motors to produce the same amount of thrust without causing the aircraft to tilt.
-	\\\\The centre of mass also had to be at the centre of lift, which for Skywalker X-8 is given as 44cm from the nose of the aircraft. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.\red{[VALIDATION FROM CALCULATIONS]}
-	
+	\\\\The centre of mass also had to be at the centre of lift, which for Skywalker X-8 is given as 44cm from the nose of the aircraft. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.
+	\todomessage{Add calculation to validate if time}
 \subsubsection*{ESC Calibration}
 The receiver and pixhawk signal were calibrated into the electronic speed controllers (ESCs) by setting a minimum and maximum motor throttle. This was done by programming the ESCs simultaneuously using the manufacturors manual.
 
@@ -83,6 +84,19 @@ The receiver and pixhawk signal were calibrated into the electronic speed contro
 The inbuilt compass and accelerometer of the pixhawk required tuning each time the internal configuration of the aircraft changed in order to ensure level flight. This is achieved through setting points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
 
 \subsubsection*{PID Tuning}
-The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the aircraft, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom aircraft. This involved holding the aircraft in altitude hold mode while the aircraft tested responses and set the very best PID parameters. This was later verified by checking flight logs, see \red{[ADD LOG STUFF]}. When the wings were finally added, as the inertia, disturbances and weight of the aircraft changed, an auto-tune was required again see \red{[ADD LOG STUFF]}.
+The Pixhawk comes with in built PID paramaters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the aircraft, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom aircraft. This involved holding the aircraft in altitude hold mode while the aircraft tested responses and set the very best PID parameters. This was later verified by checking flight logs, for example Figure \ref{fig:tune1} shows untuned roll against to tuned roll for a disturbance . As shown in Figure \ref{fig:tune2}, when the wings were finally added the inertia, disturbances and weight of the aircraft changed significantly, and although there is more noise and overshoot, the original autotune still kept stability. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH tuned_untuned}
+	\caption{Left: Untuned roll with significant oversoot. Right: Tuned roll.\\Blue = Desired, Red = Measured}
+	\label{fig:tune1}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH tune_wings}
+	\caption{Left half: Without wings. Right half: With wings.\\ Orange = Altitude}
+	\label{fig:tune2}
+\end{figure}
 
 

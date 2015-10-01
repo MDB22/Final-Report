@@ -17,7 +17,7 @@ Research suggests that a Y6 configuration, with 3 sets of 2 coaxial motors (2 pa
 This requirement assumes it is under ideal conditions (100 percent motor and rotor efficiency). It would be incredibly difficult to find a motor with the capabilities required, and at a reasonable price.
 More significant however is the battery required. Even if the battery weight is neglected, under a 10 cell (37 Volt) load, 200A would be required just to hover. This would be incredibly dangerous and under real conditions it would be much higher. Flight time wtih the available batteries would be extremely short. On the largest 10 cell batteries available at hobbyking, Zippy Compact 5800mAH, this would only amount to 100 seconds of flight time. The mission would require at least 4 for the VTOL take off and landing procedures alone. This would equate to 736AUD and 5kg of extra weight.
 
-In addition to cost and flight time, the modifications necessary to make such a plane would be significantly more difficult, as the supports would need to hold much more weight, and the plane itself is made of wood and not foam. The design of the hybrid craft on the larger plane would have a significant amount of aerodynamic drag and be less efficient, as it would be built like \red{[reference big ugly plane]}. 
+In addition to cost and flight time, the modifications necessary to make such a plane would be significantly more difficult, as the supports would need to hold much more weight, and the plane itself is made of wood and not foam. The design of the hybrid craft on the larger plane would have a significant amount of aerodynamic drag and be less efficient. It would look something like The Arcturus, see Figure \ref{fig:arcturus}.
 	
 Last year's project was designed for a very different challenge where VTOL was not required. It was also designed as a multi-platform craft, where the fixed wing was designed for manufacture, something that was not plannned in this year's scope. With consideration to all of the above points, it is believed that purchasing a foam model airframe for UAV development was the best course of action for \ID.
 
@@ -31,9 +31,17 @@ Where:\\
 Required lift: $L = 4kg \times ms^{-2} = 39.24N$\\
 Air density at sea level: $\rho = 1.225 kgm^{-1}$\\
 Area of Skywalker Wings: $A = 0.8m^2$\\
-Worse case coefficient of lift during level flight \red{reference table below this)}: $C_l = 0.5$
+Worst case coefficient of lift when attempting to climb (see Figure \ref{fig:lift})  
+: $C_l = 0.5$
+\\\\
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=300pt]{\IMAGEPATH lift_coeff}
+	\caption{Skywalker X8 lift coefficient (green) vs angle of attack}
+	\label{fig:lift}
+\end{figure}
 
-
+\todomessage{reference the graph, and order it better}
 
 \subsection{Gyroscopic Effects}
 \label{sec:gyro}
@@ -41,14 +49,52 @@ Angular momentum of propellers: $H = I\omega$\\
 Maximum motor speed $\omega = 800\times16.8\times\frac{2\pi}{60} = 1407.45rads^{-1}$\\
 Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimate, as it assumes equally distributed mass, and constant width)\\\\
 
-\red{[diagram above]} Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
+\begin{figure}[!h]
+	\includegraphics[width=100pt]{\IMAGEPATH angular_momentum}
+\end{figure}
+
+Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
 $\omega_p$ = Maximum servo rotation speed (procession) = $frac{60^o}{0.11s} = 9.52rads^{-1}$\\
 $\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
 
-\red{[diagram above]} Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, rather than placing a moment on the servos.\\\\
+\begin{figure}[!h]
+	\includegraphics[width=100pt]{\IMAGEPATH moments}
+\end{figure}
+
+ Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, rather than placing a moment on the servos.\\\\
 Max moment in the centre of the front shaft is $2M = 3.1Nm$. If this is less than the moment on the front bar at hover ($2/3$ $\times M \times d$) then the shaft should be capable of withstanding the gyroscopic effects, as the moment created is less than that created by the weight of the plane at hover.\\
 
 $3.1Nm < 9.156Nm$, therefore It should be able to withstand the gyroscopic moments easilly.
 
 \subsection{eCalc Modelling}
 \label{sec:ecalc}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc1}
+	\caption{}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc2}
+	\caption{}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc3}
+	\caption{}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc4}
+	\caption{}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc5}
+	\caption{}
+\end{figure}
+\begin{figure}[]
+	\centering
+	\includegraphics[width=500pt]{\IMAGEPATH /Ecalc/eCalc6}
+	\caption{}
+\end{figure}
