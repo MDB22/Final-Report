@@ -58,15 +58,15 @@ Finally, the FireFLY6\cite{ref:firefly6} (Figure \ref{fig:firefly6}) is a remote
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=160pt]{\IMAGEPATH /Aircraft/firefly6}
-	\caption{FireFLY6}
+	\caption{FireFLY6}r
 	\label{fig:firefly6}
 \end{figure}
 
 \subsection{Flight Systems}
-
 \subsubsection*{Airframe}
+Given the aircraft presented above, the most suitable design for this project is the FireFLY6. Purchasing a FireFLY6 with the performance requirements to compete in the Challenge would cost approximately \$4100. An alternative is to purchase a hobby airframe, such as the Skywalker X8\cite{ref:x8} and design an aircraft to emulate the design of the FireFLY6.\\
 
-\todomessage{Coefficient of lift reference and 142 km video reference. Matt look at deisgn section and dont double up}
+The X8 is capable of up to 155km of flight\cite{ref:range}, which far exceeds the requirements for the UAV Challenge, and can easily be used to replicate the FireFLY6's motor configuration. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame. Appendix \ref{sec:scope} presents a detailed analysis of several design options, comparing the purchase of various FireFly6 models to several designs based on a Skywalker X8.
 
 \subsubsection*{Flight Control}
 The addition of a flight controller to the aircraft permits autonomous flight capabilities, including way point planning and motor control. The most viable (and well supported) options are the PixHawk\cite{ref:pixhawk}, APM 2.6\cite{ref:ardupilot}, and PX4\cite{ref:px4}. In order to achieve reliable and safe autonomous flight the controller must be fast and have sufficient storage for additional firmware/software to extend its capabilities. A comparison of each option may be found in \cite{ref:controller_comparison}, showing that given its larger memory storage, faster processor, and additional capabilities such as in-built gyroscopes and accelerometers, the PixHawk is the best choice for this project.
@@ -75,6 +75,4 @@ The addition of a flight controller to the aircraft permits autonomous flight ca
 The PixHawk flight controller has several flight control systems readily available for many types of aircraft (including fixed-wing and VTOL), but as of yet has no control system designed for a hybrid aircraft. Fortunately, the PX4 firmware (on which the PixHawk is based) is Open Source\cite{ref:ardupilotgit}, with several resources available\cite{ref:firmware1,ref:firmware2} to allow hobbyists and developers to customize the behaviour of their aircraft.
 
 \subsection{Proposed Design}
-Given the aircraft designs presented above, the most suitable option for this project is the FireFLY6. The FireFLY6's motor configuration can be easily replicated using a Skywalker X8. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame.\\
-
-The initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with six motors in Y6 configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.
+Based on the discussion above, the initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with six motors in Y6 configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.

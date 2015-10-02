@@ -107,13 +107,14 @@ The inbuilt compass and accelerometer of the Pixhawk required tuning each time t
 \subsubsection*{PID Tuning}
 The Pixhawk comes with in built PID parameters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the aircraft, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom aircraft. This involved holding the aircraft in altitude hold mode while the aircraft tested responses and set the very best PID parameters. This was later verified by checking flight logs, for example Figure \ref{fig:tune1} shows untuned roll against to tuned roll for a disturbance . As shown in Figure \ref{fig:tune2}, when the wings were finally added the inertia, disturbances and weight of the aircraft changed significantly, and although there is more noise and overshoot, the original auto tune still kept stability. 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=500pt]{\IMAGEPATH /Data/tuned_untuned}
 	\caption{Left: Untuned roll with significant overshoot. Right: Tuned roll.\\Blue = Desired, Red = Measured}
 	\label{fig:tune1}
 \end{figure}
-\begin{figure}[!h]
+
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=500pt]{\IMAGEPATH /Data/tune_wings}
 	\caption{Left half: Without wings. Right half: With wings.\\ Orange = Altitude}
