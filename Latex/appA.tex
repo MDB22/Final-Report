@@ -33,9 +33,9 @@ Area of Skywalker Wings: $A = 0.8m^2$\\
 Worst case coefficient of lift when attempting to climb (see Figure \ref{fig:lift})  
 : $C_l = 0.5$
 \\\\
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=300pt]{\IMAGEPATH lift_coeff}
+	\includegraphics[width=300pt]{\IMAGEPATH /Data/lift_coeff}
 	\caption{Skywalker X8 lift coefficient (green) vs angle of attack}
 	\label{fig:lift}
 \end{figure}
@@ -48,16 +48,22 @@ Angular momentum of propellers: $H = I\omega$\\
 Maximum motor speed $\omega = 800\times16.8\times\frac{2\pi}{60} = 1407.45rads^{-1}$\\
 Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimate, as it assumes equally distributed mass, and constant width)\\\\
 
-\begin{figure}[!h]
-	\includegraphics[width=100pt]{\IMAGEPATH angular_momentum}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=200pt]{\IMAGEPATH /Diagrams/angular_momentum}
+	\caption{Change in angular momentum during transition}
+	\label{fig:momentum}
 \end{figure}
 
 Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
 $\omega_p$ = Maximum servo rotation speed (procession) = $frac{60^o}{0.11s} = 9.52rads^{-1}$\\
 $\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
 
-\begin{figure}[!h]
-	\includegraphics[width=100pt]{\IMAGEPATH moments}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=100pt]{\IMAGEPATH /Diagrams/moments}
+	\caption{Angular moments produced by aircraft motors}
+	\label{fig:moments}
 \end{figure}
 
  Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, rather than placing a moment on the servos.\\\\

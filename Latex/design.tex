@@ -14,12 +14,12 @@ Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned f
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=400pt]{\IMAGEPATH hardware_architecture}
+	\includegraphics[width=400pt]{\IMAGEPATH /Diagrams/hardware}
 	\caption{Architecture diagram for aircraft hardware}
 	\label{fig:hardwarearch}
 \end{figure}
 
-\todomessage{Give a breif run down on what is required by each component in order to complete the challenge}
+\todomessage{Give a brief run down on what is required by each component in order to complete the challenge}
 
 \subsection{Basic Configuration}
 The initial design of the aircraft was first modeled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modeling process can be found in Appendix \ref{sec:ecalc}. Figure \ref{fig:fixed} and Figure \ref{fig:vtol} show the final specifications for the configuration chosen on eCalc for the current prototype. Before any testing or calculation, this gives a good estimation of how well the aircraft will complete objectives. With an estimated 17.5 minutes of hover time and a climb rate of $9.9ms^{-1}$, this should be signiciantly more than enough for the two take off and landing manoeuvers required, leaving some power for the flight in between. Although eCalc gives a cruising speed of fixed wing flight, it does not give an estimation of maximum flight time while cruising (as power could be saved at level flight). This would have to be gathered from recorded data after transition.
@@ -66,10 +66,10 @@ In order to achieve a ``true'' circle shape and thus lower friction for mated pa
 
 \subsection{Calibration}
 \subsubsection*{Motor and Propeller Balancing}
-To eliminate vibrations generated from propellers they were first balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. As a non-destructive method was preferred, small pieces of tape were added to the propellers using the balancing apparatus shown in figure \ref{fig:propbalancing} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. From this app it was also determined that motor vibrations were negligible comparitively.
-\begin{figure}[!h]
+To eliminate vibrations generated from propellers they were first balanced, which is accomplished by either adding (using tape, or similar) or removing (shaving off material) mass from either side of a propeller. As a non-destructive method was preferred, small pieces of tape were added to the propellers using the balancing apparatus shown in figure \ref{fig:propbalancing} to ensure the mass distribution was equal.  Seismograph testing (using a free app) of the propellers before and after balancing showed a very obvious decrease in vibrations. From this app it was also determined that motor vibrations were negligible comparatively.
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=300pt]{\IMAGEPATH prop_balancer}
+	\includegraphics[width=300pt]{\IMAGEPATH /Prototype/prop_balancer}
 	\caption{Propeller balancing apparatus, with propeller and taped to improve balance}
 	\label{fig:propbalancing}
 \end{figure}
@@ -90,13 +90,13 @@ The Pixhawk comes with in built PID paramaters ready to be modified for all requ
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH tuned_untuned}
+	\includegraphics[width=500pt]{\IMAGEPATH /Data/tuned_untuned}
 	\caption{Left: Untuned roll with significant oversoot. Right: Tuned roll.\\Blue = Desired, Red = Measured}
 	\label{fig:tune1}
 \end{figure}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=500pt]{\IMAGEPATH tune_wings}
+	\includegraphics[width=500pt]{\IMAGEPATH /Data/tune_wings}
 	\caption{Left half: Without wings. Right half: With wings.\\ Orange = Altitude}
 	\label{fig:tune2}
 \end{figure}
