@@ -6,6 +6,7 @@
 *.xml
 *.gz
 *.rej
+*.pdf
 Latex/finalReport-blx.bib
 Latex/finalReport.toc
-*.pdf
+!scope.pdf
