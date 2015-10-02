@@ -22,6 +22,7 @@ Last year's project was designed for a very different challenge where VTOL was n
 
 \subsection{Stall Speed}
 \label{sec:stall}
+The stall speed was calculated using the Coefficient of Lift. This was taken from [reference] for the Skywalker X8.
 As lift(N): $L = 1/2\times C_l\times\rho\times A\times V^2$\\\\
 Airspeed ($ms^{-1})$:\\
 $V= \sqrt{\frac{2\times L}{C_l\times \rho \times A}}$\\
@@ -105,3 +106,98 @@ $3.1Nm < 9.156Nm$, therefore It should be able to withstand the gyroscopic momen
 	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc8}
 	\caption{VTOL performance, 12 inch props, 3 batteries}
 \end{figure}
+
+\newpage
+
+\subsection{3D Printed Models}
+\label{sec:print}
+\begin{table}[!htbp]
+	\centering
+	\caption{Modelling iterations for motor mounts}
+	\begin{tabulary}{\textwidth}{|l|L|}
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=200pt]{\IMAGEPATH Modelling/MotorMount1}} &
+		\vspace{40pt} Initial designs of the motor mounts cased the motor in a small indent and had a hole through the center of the mount to carry wires. It was printed to give best fit to the pole while also using as little material as possible.
+		It failed during testing at both 30\% and 100\% fill just before the start of the fillet between the pole and the motor. \\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=200pt]{\IMAGEPATH Modelling/MotorMount2}} &
+		\vspace{40pt} The second design fixed the weak point by not only extending the pole support into the flat mounting section, but also by removing the indent on the flat section.
+		Another boost of strength was given by printing the mount flat, rather than upright, resulting in grains that ran orthogonal to previous lines of weakness and not parallel with them.
+		When side screws were then tightened to increase friction, they split the mount due to the new weakness in the orientation. \\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=200pt]{\IMAGEPATH Modelling/MotorMount3}} &
+		\vspace{40pt} The current design for the motor mounts removed the side tabs that were meant to provide increased friction onto the motor pole. These were replaced by a rounded section in which a hose clamp is used to grip the mount to the pole. This design was printed on its side (round edge on the table) which through testing was found to have the most strength\\ 
+		\hline
+	\end{tabulary} 
+	\label{tab:3D_motor}
+\end{table}
+
+\newpage
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Modelling iterations for front mounts}
+	\begin{tabulary}{\textwidth}{|l|L|}
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount1}} &
+		\vspace{40pt} The initial design of the front pole mount was for the first hover tests that were planned. They fit wihtin the chasm in the front of the X8 with the carbon fibre rods fitting through to the outter sections of the plane. Screws at the back were initially used to give suport.\\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount2}} &
+		\vspace{40pt} The second and third designs as seen here were modified in order to fit the servo for the transition system. It was found that putting a servo within the mount increased strength and accuracy, and decreased vibrations through the shaft immensely. \\ 
+		\hline
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount3}} &
+		\vspace{40pt} The third and final design included fillets for extra lateral strength. \\ 
+		\hline 
+	\end{tabulary} 
+	\label{tab:front_mount}
+\end{table}
+
+\newpage
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Modelling iterations for back mounts}
+	\begin{tabulary}{\textwidth}{|l|L|}
+		\hline
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/BackMount1}} &
+		\vspace{40pt} The first back pole mount design was used for the scorpion. Initially, it also served as a basic front pole mount. The back servo was mounted external to the shaft using zip ties and screws, hence it was not very stable.  \\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/BackMount2}} &
+		\vspace{40pt} Once the testing on the "Scorpion" was over, a mount for the "Dragonfly" was created. This mount houses the servo, increasing stability and robustness. It also has 3 points of pole support in order to counter the moment and force created by the single propeller. \\ 
+		\hline 
+	\end{tabulary} 
+	\label{tab:back_mount}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Gear, Legs and Front Ring Designs}
+	\begin{tabulary}{\textwidth}{|l|L|}
+		\hline
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/PoleGear}} &
+		\vspace{40pt} The final design of the pole gear has holes to bolt into the shaft and is capable of 100 degrees of rotation. These are put on both rods attached to the aircraft, assisting with both transition in the front and the yaw mechanism in the back.  \\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/ServoGear}} &
+		\vspace{40pt} The final servo gear was made to attach to the specific servo horn in 3 places. This allowed it to utilise the teeth of the servo, giving it very little slip.\\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/SideRing}} &
+		\vspace{40pt} The side rings added an extra point of support for the front pole, and gave less friction between the foam and the carbon fibre rods. \\ 
+		\hline 
+		\centering
+		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/Leg}} &
+		\vspace{40pt} The leg design for the "Dragonfly" was made to stabilise the roll rotation while on the ground in order to keep the front propellers safe. The design  does not impede on the aerodynamic performance, as they rotate backwards during transition to fixed wing, nor does it impede on the back propeller which stays level while on the ground, and can freely rotate.   \\ 
+		\hline 
+	\end{tabulary} 
+	\label{tab:minor}
+\end{table}
