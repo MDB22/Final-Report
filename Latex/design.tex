@@ -19,8 +19,6 @@ Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned f
 	\label{fig:hardwarearch}
 \end{figure}
 
-
-
 \subsection{Basic Configuration}
 The initial design of the aircraft was first modelled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modelling process can be found in Appendix \ref{sec:ecalc}. Figure \ref{fig:fixed} and Figure \ref{fig:vtol} show the final specifications for the configuration chosen on eCalc for the current prototype. Before any testing or calculation, this gives a good estimation of how well the aircraft will complete objectives. With an estimated 17.5 minutes of hover time and a climb rate of $9.9ms^{-1}$, this should be signiciantly more than enough for the two take off and landing manoeuvers required, leaving some power for the flight in between. Although eCalc gives a cruising speed of fixed wing flight, it does not give an estimation of maximum flight time while cruising (as power could be saved at level flight). This would have to be gathered from recorded data after transition.
 
@@ -55,11 +53,32 @@ Following the discussion presented in \cite{ref:controller_comparison}, the PixH
 In order to enable proper stable and robust mounting of all motors and mounting systems, custom prototyping using 3D printed parts and iterative design was utilized to fit within the X-8 frame. The major components of design were split up into the `Motor Mounts', the `Front  Mounting System' and the `Back Mounting System'. Minor systems and all iterations are shown in Appendix \ref{sec:print}.\\
 
 The Motor Mounts were required to secure each motor to it's corresponding mounting pole. While the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tighening the fasteners and a hose clamp was used to ensure that an equally distributed squeezing force was applied from the mount to the pole.\\
-\todomessage{Wes add fig}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=160pt]{\IMAGEPATH Modelling/MotorMount3}
+	\caption{Current iteration of the Motor Mount}
+	\label{fig:designmotormount}
+\end{figure}
+	
 The Front Mounting System was required to incorporate the transition system, while also being stable enough to withstand disturbances associated with being placed at the front of the aircraft. As such, it was designed to fit completely within the Skywalker X8's front recess, this was to ensure that the entire Front Mounting System was supported and that any lateral lode on the front mounting pole (i.e. incoming wind / still air) would be transferred through the entire aircraft and not just on the Front Mounting System itself.\\
-\todomessage{Wes add fig}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount3}
+	\caption{Current iteration of the Front Mounting System}
+	\label{fig:designfrontmount}
+\end{figure}
+	
 The Back Mounting System was required to incorporate the yaw servo-motor system and also keep the back motor pole perpendicular to the front motor pole. A multi-webbed design was developed to keep the pole aligned in conjunction with the supplied Skywalker X8 tail ring support. Housing for the yaw servo-motor was built into the Back Mounting System to ensure a backlash-free mating between the gear and the pole.\\
-\todomessage{Wes add fig}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=160pt]{\IMAGEPATH Modelling/BackMount2}
+	\caption{Current iteration of the Back Mounting System}
+	\label{fig:designbackmount}
+\end{figure}
+		
 The direction in which a design is 3D printed plays a vital role in where its strength and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
 In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. 
 
