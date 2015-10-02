@@ -1,7 +1,6 @@
-In order to participate in the UAV Challenge, any aircraft must be autonomous; an aircraft may only interact with a human to be armed or disarmed at the beginning and end of the challenge.
-
 \subsection{Breaking Down the Challenge}
 \label{sec:flight}
+Any aircraft participating in the UAV Challenge must be autonomous, only interacting with a human to be armed or disarmed at the beginning and end of the mission. In order to develop 
 The Medical Express mission can be broken down into three discrete flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
 	\item Vertical take-off to cruising height, and landing
@@ -23,6 +22,14 @@ Using these maneuvers, completing the mission can be described as completing the
 \subsection{Development}
 Figure \ref{fig:softwarearchitecture} shows the autonomous flight and intelligence architecture implemented on the aircraft.
 
+\red{Considerations:
+	
+	time cost -> prototype style / separate each module (allows cut off were we get to with some functionality)
+	Extendibility -> for future years
+	Concurrency -> Multiprocessing
+	Latency -> processes polling / non blocking io etc
+}
+
 \red{Autonomy on Raspberry Pi}
 
 \red{\begin{itemize}
@@ -36,7 +43,7 @@ Figure \ref{fig:softwarearchitecture} shows the autonomous flight and intelligen
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=200pt]{\IMAGEPATH emblem}
+	\includegraphics[width=350pt]{\IMAGEPATH /Diagrams/software}
 	\caption{High level software architecture}
 	\label{fig:softwarearchitecture}
 \end{figure}
