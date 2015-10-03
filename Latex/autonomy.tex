@@ -3,7 +3,7 @@
 Any aircraft participating in the UAV Challenge must be autonomous, only interacting with a human to be armed or disarmed at the beginning and end of the mission. In order to develop 
 The Medical Express mission can be broken down into three discrete flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
-	\item Vertical take-off to cruising height, and landing
+	\item Hover flight, including vertical take-off to cruising height, and landing
 	\item Fixed-wing flight, navigating through waypoints and keeping within GeoFence boundaries
 	\item Aerial search
 \end{enumerate}
@@ -54,8 +54,9 @@ Figure \ref{fig:softwarearchitecture} shows the autonomous flight and intelligen
 	\caption{Interaction between software modules}
 	\label{fig:softwareinteraction}
 \end{figure}
+
 \subsection{Testing}
-\red{Software in the Loop}
+Before being implemented on the prototype aircraft, the autonomous flight modules were first tested in a simulated aircraft using ArduPilot's Software in the Loop capabilities\cite{ref:sitl}. Figure \ref{fig:sitl} shows a screenshot of the mission simulation, where the virtual aircraft was successfully tested with the software discussed above, executing a simple mission consisting of takeoff to 10m, forward flight of 10m, and landing.
 
 \begin{figure}[!ht]
 	\centering
