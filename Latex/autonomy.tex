@@ -38,7 +38,7 @@ Figure \ref{fig:softwarearchitecture} shows the autonomous flight and intelligen
 	\item Monitoring status of aircraft such as position, velocity (uavstate.py)
 	\item Monitoring status of world such position of obstacles, waypoints (worldstate.py)
 	\item Logging of flight conditions, sensing and motion (logging.py)
-	\item Unsure what interface.py does
+	\item Communicate with base station (interface.py)
 \end{itemize}}
 
 \begin{figure}[!ht]
@@ -48,6 +48,12 @@ Figure \ref{fig:softwarearchitecture} shows the autonomous flight and intelligen
 	\label{fig:softwarearchitecture}
 \end{figure}
 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=350pt]{\IMAGEPATH /Diagrams/interaction}
+	\caption{Interaction between software modules}
+	\label{fig:softwareinteraction}
+\end{figure}
 \subsection{Testing}
 \red{Software in the Loop}
 
