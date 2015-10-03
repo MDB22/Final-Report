@@ -1,3 +1,5 @@
+\label{sec:transition}
+
 \red{\begin{itemize}
 \item more about software?
 \item information pertaining to future test flights
@@ -21,6 +23,7 @@ From this, the total moment created by this gyroscopic motion was 3.1Nm in the c
 The front servo would therefore receive no counter moment in flight. An arbitrary servo was chosen at 8.65kg/cm (0.85Nm), through testing it was found to behave satisfactorily against frictional or other unknown forces. This was verified by holding the drone down in tests and ensuring transition was possible at full motor speed.
 
 \subsection{System Design}
+\label{sec:controller}
 For implementation a 1:1 gear \red{ref to gears section in appendix} system attached between the servo and motor shafts was installed (see Figure \ref{fig:gearsys}). This allowed for full rotation of the servo, and maximum accuracy.  Through testing of PWM values, it was set up to rotate by 90 degrees as required. A new mode was created through the open source Pixhawk firmware called “Fixed-Wing”, and possible transition from the VTOL modes was also set-up. This was created such that when a switch on the controller is turned, the front pole and motors rotate forwards 90 degrees, the VTOL control systems turn off, and the fixed wing control systems take over.\\
 
 \begin{figure}[!ht]
@@ -35,7 +38,7 @@ So far, a manual fixed wing mode has been created. It turns off VTOL control sys
 \subsection{Testing}
 A number of steps needed to be taken to transition into fixed wing mode: 
 \red{given manual transition controls}
-\todomessage{firefly instruction vid reference https://www.youtube.com/watch?v=VPUSLzj02dA}
+\todomessage{firefly instruction vid reference }
 
 \begin{itemize}
 \item In altitude hold keep the throttle at 50\% and move the aircraft forwards to create some initial speed
