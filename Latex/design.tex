@@ -11,14 +11,7 @@ The addition of a flight controller to the aircraft permits autonomous flight ca
 The PixHawk flight controller has several flight control systems readily available for many types of aircraft (including fixed-wing and VTOL), but as of yet has no control system designed for a hybrid aircraft. Fortunately, the PX4 firmware (on which the PixHawk is based) is Open Source\cite{ref:ardupilotgit}, with several resources available\cite{ref:firmware1,ref:firmware2} to allow hobbyists and developers to customize the behaviour of their aircraft.
 
 \subsubsection*{Proposed Design}
-Based on the discussion above, the initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.
-
-\subsection{Hardware Architecture}
-\red{Higher level stuff should go first.\\}
-\red{Reference the design from the winning team last year, and the stuff they have that we still need (ie rocket m5)\\}
-\red{Basically how we intend to meet every requirement for the challenge. Put in circuit diagrams here, archetecture, information regarding long range network transmitters, and basic intro to sensors, automation and transition. Basically introducing what the overall plan looks like and what we have covered from that. Maybe do a chart or table or something.}
-
-Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned for the current and future teams.
+Based on the discussion above, the initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight. Figure \ref{fig:hardwarearch} shows a high level overview of the hardware architecture planned for the current and future teams.
 
 \begin{figure}[!h]
 	\centering
@@ -28,7 +21,9 @@ Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned f
 \end{figure}
 
 \subsection{Basic Configuration}
-The initial design of the aircraft was first modelled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modelling process can be found in Appendix \ref{sec:ecalc}. Figure \ref{fig:fixed} and Figure \ref{fig:vtol} show the final specifications for the configuration chosen on eCalc for the current prototype. Before any testing or calculation, this gives a good estimation of how well the aircraft will complete objectives. With an estimated 17.5 minutes of hover time and a climb rate of $9.9ms^{-1}$, this was determined to be significantly more than enough for the two take off and landing maneuvers required, leaving enough power for the fixed-wing flight in-between. Although eCalc gives a cruising speed of fixed wing flight, it does not give an estimation of maximum flight time while cruising (as power could be saved at level flight).
+The initial design of the aircraft was first modelled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modelling process can be found in Appendix \ref{sec:ecalc}.\\
+
+In Appendix \ref{sec:ecalc} Figures \ref{fig:fixed} and \ref{fig:vtol} show the final specifications for the configuration chosen on eCalc for the current prototype. Before any testing or calculation, this gives a good estimation of how well the aircraft will complete objectives. With an estimated 17.5 minutes of hover time and a climb rate of $9.9ms^{-1}$, this was determined to be significantly more than enough for the two take off and landing maneuvers required, leaving enough power for the fixed-wing flight in-between. Although eCalc gives a cruising speed of fixed wing flight, it does not give an estimation of maximum flight time while cruising (as power could be saved at level flight).
 
 \subsubsection*{Layout}
 To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. Having seen the capabilities of the FireFLY6 aircraft, a tri-coptor formation of the motors was selected.\\
@@ -48,7 +43,6 @@ The motors chosen needed to efficiently hover, but at the same time be able to c
 	
 \subsubsection*{Propellers}
 Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less weight and drag), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
-\todomessage{allude to tests planned from the start}
 	
 \subsubsection*{Servo-motors}
 Servo-motors were required to enable front transition system functionality and the back yaw system. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5V, which was shown to be more than the required amount. 
