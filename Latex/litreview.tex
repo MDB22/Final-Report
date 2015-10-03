@@ -1,6 +1,6 @@
 \subsection{Mission Breakdown}
 \label{sec:flightmaneuvers}
-The Medical Express mission can be broken down into three discrete flight maneuvers:
+The Medical Express mission can be broken down into three distinct flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
 	\item Hover flight, including vertical take-off to cruising height, and landing
 	\item Fixed-wing flight, navigating through waypoints and keeping within GeoFence boundaries
@@ -18,13 +18,13 @@ Using these maneuvers, completing the mission can be described as completing the
 	7. & Land at base & (\textbf{M1}) \\ 
 \end{tabular}\\
 
-Executing this mission on a purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes. Analysis of the 2014 design, a purely fixed-wing aircraft, showed that converting it to a hybrid aircraft would not result in a suitable design for the Challenge. Given the aircraft's weight, adding the necessary equipment would add over 5kg, cost over \$500, and would result in less than 60 seconds of flight time. It was therefore decided the 2014 model would not be suitable for the 2016 competition; a detailed analysis can be found in Appendix \ref{sec:lastYear}.\\
+Executing this mission on a purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes. Analysis of the aircraft developed by the 2014 team (see Appendix \ref{sec:lastYear} for full details) showed that converting it the purely fixed-wing aircraft to a hybrid would not result in a design capable of competing in the UAV Challenge. Given the aircraft's weight, fitting it with flight equipment (motors, supports, power) to provide VTOL capabilities would add over 5kg, cost over \$500, and would result in less than 60 seconds of flight time. It was therefore decided the 2014 model would not be suitable for the 2016 competition, and several alternative solutions were investigated.\\
 
-As this project involves the development of a novel aircraft platform, there is a lack of academic literature that is relevant to the problem at hand. This review will instead collate examples of commercial and hobby systems that were used to inspire and guide the development of the aircraft.\\
+As this project involves the development of a novel UAV platform, there is a lack of academic literature that is relevant to the problem at hand. This review will instead collate examples of commercial and hobby systems that were used to motivate the design of the UAV developed in this project.\\
 
 \subsection{Aircraft Design}
 \subsubsection*{Arcturus Jump}
-The Arcturus Jump\cite{ref:arcturus} (Figure \ref{fig:arcturus}) is a quad-copter/fixed-wing hybrid, with propellers mounted across the wings for VTOL, and a propeller at the front for fixed-wing flight. Modifying an existing airframe to emulate this design would be straightforward, but the addition of the support structure for VTOL flight would add significant weight to the aircraft, decreasing thrust and maneuverability, and increasing drag. These factors make an aircraft of this design unlikely to achieve \textbf{R4} (60km endurance) and \textbf{R5} (60min of flight) of the UAV Challenge.
+The Arcturus Jump\cite{ref:arcturus} (Figure \ref{fig:arcturus}) is a quad-copter/fixed-wing hybrid, with propellers mounted across the wings for VTOL, and a propeller at on the nose for fixed-wing flight. Modifying an existing airframe to emulate this design would be straightforward, but the addition of the support structure for VTOL flight would add significant weight to the aircraft, decreasing thrust and maneuverability, and increasing drag. These factors make an aircraft of this design unlikely to achieve requirements \textbf{R4} and \textbf{R5} of the UAV Challenge.
 
 \begin{figure}[!h]
 	\centering
@@ -34,7 +34,7 @@ The Arcturus Jump\cite{ref:arcturus} (Figure \ref{fig:arcturus}) is a quad-copte
 \end{figure}
 
 \subsubsection*{X PlusOne}
-The X PlusOne\cite{ref:xplusone} (Figure \ref{fig:xplusone}) is an incredibly fast and efficient hybrid with four front-facing propellers. It is extremely small and light, and would be relatively cheap to build, but is too small to replicate with an existing airframe. However, based on the activities of the 2014 UAV team, designing a completely new airframe would take a significant amount of time, and is not advised for this project.
+The X PlusOne\cite{ref:xplusone} (Figure \ref{fig:xplusone}) is an incredibly fast and efficient hybrid with four front-facing propellers. It is extremely small and light, and would be relatively cheap to build, but is too small to replicate with an existing airframe. Based on the activities of the 2014 UAV team, designing a completely new airframe would take a significant amount of time, and is not advised for this project.
 
 \begin{figure}[!ht]
 	\centering
@@ -63,7 +63,7 @@ The TBS Caipirinha\cite{ref:caipirinha} (Figure \ref{fig:caipirinha}) is traditi
 \end{figure}
 
 \subsubsection*{Aerosense AS-DT01-E}
-The Aerosense AS-DT01-E\cite{ref:sony} (Figure \ref{fig:sony}) is an autonomous hybrid VTOL/fixed-wing aircraft being developed by Sony Mobile in partnership with Japanese company ZMP. While the prototype aircraft would be an ideal candidate for the Challenge, as with the X PlusOne the design and construction of the airframe would be time consuming, and is not advised for this project.
+The Aerosense AS-DT01-E\cite{ref:sony} (Figure \ref{fig:sony}) is an autonomous hybrid VTOL/fixed-wing aircraft under development by Sony Mobile in partnership with Japanese company ZMP. While the prototype aircraft would be an ideal candidate for the Challenge, as with the X PlusOne the design and construction of the airframe would be time consuming, and is not advised for this project.
 
 \begin{figure}[!ht]
 	\centering
@@ -73,7 +73,7 @@ The Aerosense AS-DT01-E\cite{ref:sony} (Figure \ref{fig:sony}) is an autonomous 
 \end{figure}
 
 \subsubsection*{FireFLY6}
-Finally, the FireFLY6\cite{ref:firefly6} (Figure \ref{fig:firefly6}) is a remote control hybrid VTOL/fixed-wing aircraft consisting of six propellers arranged in 3 sets of two (Y6 configuration). This design can achieve 20-30 minutes of flight time, seven minutes of hover, and a cruising speed of 54km/h, and would be a strong contender in the UAV Challenge.
+Finally, the FireFLY6\cite{ref:firefly6} (Figure \ref{fig:firefly6}) is a remote control hybrid VTOL/fixed-wing aircraft consisting of six propellers arranged in 3 sets of two (Y6 configuration). This design can achieve 20-30 minutes of flight time, seven minutes of hover, and a cruising speed of 54km/h, and with modification would be a strong contender in the UAV Challenge.
 
 \begin{figure}[!h]
 	\centering
