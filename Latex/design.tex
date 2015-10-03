@@ -31,12 +31,12 @@ Figure \ref{fig:hardwarearch} shows the hardware architecture that was planned f
 The initial design of the aircraft was first modelled using eCalc\cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modelling process can be found in Appendix \ref{sec:ecalc}. Figure \ref{fig:fixed} and Figure \ref{fig:vtol} show the final specifications for the configuration chosen on eCalc for the current prototype. Before any testing or calculation, this gives a good estimation of how well the aircraft will complete objectives. With an estimated 17.5 minutes of hover time and a climb rate of $9.9ms^{-1}$, this was determined to be significantly more than enough for the two take off and landing maneuvers required, leaving enough power for the fixed-wing flight in-between. Although eCalc gives a cruising speed of fixed wing flight, it does not give an estimation of maximum flight time while cruising (as power could be saved at level flight).
 
 \subsubsection*{Layout}
-To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. Having seen the FireFLY6 aircraft, a tri-coptor formation of the motors was selected.\\
+To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. Having seen the capabilities of the FireFLY6 aircraft, a tri-coptor formation of the motors was selected.\\
 		
 A tri-coptor Y-3 configuration (three motors positioned in the shape of a `Y') was selected over a Y-6 (six motors), as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose. The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.
 
 \subsubsection*{Airframe}
-Through research, (see [ref]) the Skywalker X8 was chosen as a pre-designed `off the shelf' airframe. It offers a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, well reviewed and available quickly from Australian suppliers. As it was made out of EPO foam also made it easy to modify into the required hybrid frame. Design and development of critical subsystems started from here] 
+Through research, (see [ref]) the Skywalker X8 was chosen as a pre-designed `off the shelf' airframe. It offers a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, and available  from Australian suppliers. The fact that it is made out of EPO foam also made it easy to modify into the required hybrid frame. Design and development of critical subsystems started from here] 
 \todomessage{reference lit review x8 choice?}
 		
 		
@@ -54,8 +54,7 @@ Modelling using eCalc suggested that smaller propellers provide better performan
 Servo-motors were required to enable front transition system functionality and the back yaw system. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5V, which was shown to be more than the required amount. 
 		
 \subsubsection*{Batteries}
-The primary concern for maximizing flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current prototype, two in parallel are being used. 
-\todomessage{is this the first mention of LiPo? if so state full name}
+The primary concern for maximizing flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional Lithium Polymer batteries. For flight testing the current prototype, two in parallel are being used. 
 	
 \subsubsection*{Flight Controller}
 Following the discussion presented in \cite{ref:controller_comparison}, the PixHawk flight controller was found to be more powerful and faster, and more importantly, easier to reconfigure and add software to.
