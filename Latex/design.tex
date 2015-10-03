@@ -1,5 +1,4 @@
 \red{\begin{itemize}
-\item \textbf{Make this section ``here is our initial design, and why'', everything we did before our first test flight}
 \item \textbf{Then the next section is where we discuss what changed \underline{once we got stuff in the air}}
 \item Extra stuff... legs, new gears, glued on parts and changed placements for wings(Alex))
 \end{itemize}}
@@ -28,24 +27,26 @@ To achieve the novel transition system sought after from the start of the projec
 A Y-3 configuration was selected over a Y-6 configuration, as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose. The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.
 
 \subsubsection*{Airframe}
-In order to begin design and development on critical subsystems, a pre-designed `off the shelf' airframe was desired; for this purpose a Skywalker X-8 Flying Wing was selected as it offered a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, well reviewed and available quickly from Australian suppliers. Being made out of foam also made it wasy to modify into the required hybrid frame.
+Through research, (see [ref]) the Skywalker X8 was chosen as a pre-designed `off the shelf' airframe. It offers a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, well reviewed and available quickly from Australian suppliers. As it was made out of EPO foam also made it easy to modify into the required hybrid frame. Design and development of critical subsytems started from here] 
 \todomessage{reference lit review x8 choice?}
 		
 		
 \subsubsection*{Carbon Fiber Poles and Supports}
-The hybrid frame was created using a combination of two 12mm carbon fibre poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attached, all holes in the rod due to fastening were drilled parallel to the base of the aircraft in order to minimise any reductions in strength (as the top and bottom of the poles have tensile and compressive stresses when hovering).
+The hybrid frame was created using a combination of two 12mm carbon fiber poles (front and back) and 3D printed mounts and supports. As gear systems, mounts and legs needed to be attached, all holes in the rod due to fastening were drilled parallel to the base of the aircraft in order to minimize any reductions in strength (as the top and bottom of the poles have tensile and compressive stresses when hovering).
 	
 \subsubsection*{Motor}
 The motors chosen needed to efficiently hover, but at the same time be able to cruise in fixed wing mode using minimal battery power. As such, the Turnigy SK3 3542 800kv motors were chosen. They are efficient, well priced, well reviewed and very effective at completing both objectives. They were also the motors used by \red{[CITE VID]} to achieve long range flight.
 	
 \subsubsection*{Propellers}
-Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
+Modeling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less drag, weight), but larger propellers are better suited for VTOL (more thrust), with modeling presented in \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
+\todomessage{elude to tests planned from the start}
 	
 \subsubsection*{Servos}
 A servo at the front of the aircraft, that rotates the front pole was chosen as the best option for the transition system. A servo was also required at the back of the aircraft to rotate the back shaft for yaw. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5v, which has shown to be more than enough. 
 		
 \subsubsection*{Battery}
-The primary concern for maximising flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current prototype, two in parallel are being used. 
+The primary concern for maximizing flight time/range is by reducing weight. Multistar 8000 mAh batteries were selected as they allow for a much higher capacity at a lighter weight than conventional LiPo batteries. For flight testing the current prototype, two in parallel are being used. 
+\todomessage{is this the first mention of LiPo? if so state full name}
 	
 \subsubsection*{Flight Controller}
 Following the discussion presented in \cite{ref:controller_comparison}, the PixHawk flight controller was found to be more powerful and faster, and more importantly, easier to reconfigure and add software to.
@@ -53,7 +54,7 @@ Following the discussion presented in \cite{ref:controller_comparison}, the PixH
 \subsection{3D Printing}
 In order to enable proper stable and robust mounting of all motors and mounting systems, custom prototyping using 3D printed parts and iterative design was utilized to fit within the X-8 frame. The major components of design were split up into the `Motor Mounts', the `Front  Mounting System' and the `Back Mounting System'. Minor systems and all iterations are shown in Appendix \ref{sec:print}.\\
 
-The Motor Mounts were required to secure each motor to it's corresponding mounting pole. While the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tighening the fasteners and a hose clamp was used to ensure that an equally distributed squeezing force was applied from the mount to the pole.\\
+The Motor Mounts were required to secure each motor to it's corresponding mounting pole. While the basic design was straight forward, a couple of design iterations were required in order to come up with a truly robust design. Cylindrical inserts (also 3D printed) were utilized in order to prevent the crushing of the carbon fiber rod in the event of over tightening the fasteners and a hose clamp was used to ensure that an equally distributed squeezing force was applied from the mount to the pole.\\
 
 \begin{figure}[!ht]
 	\centering
@@ -103,6 +104,7 @@ The receiver and Pixhawk signal were calibrated into the electronic speed contro
 
 \subsubsection*{Pixhawk Calibration}
 The inbuilt compass and accelerometer of the Pixhawk required tuning each time the internal configuration of the aircraft changed in order to ensure level flight. This is achieved through setting points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
+\todomessage{add more complexity of task, more paramaters}
 
 \subsubsection*{PID Tuning}
 The Pixhawk comes with in built PID parameters ready to be modified for all required control applications.  There are many ways to tune the Pixhawk PIDs. For the aircraft, basic tuning was first performed by setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. Then as recommended by the platform, an auto-tune was then completed and implimented on the craft to ensure the best possible PID values for the custom aircraft. This involved holding the aircraft in altitude hold mode while the aircraft tested responses and set the very best PID parameters. This was later verified by checking flight logs, for example Figure \ref{fig:tune1} shows untuned roll against to tuned roll for a disturbance . As shown in Figure \ref{fig:tune2}, when the wings were finally added the inertia, disturbances and weight of the aircraft changed significantly, and although there is more noise and overshoot, the original auto tune still kept stability. 
