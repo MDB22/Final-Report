@@ -42,31 +42,7 @@ The only information provided to teams regarding Outback Joe is his love of akub
 
 \subsection{Testing}
 \subsubsection*{Ultrasonic and LiDAR}
-In order to ensure that the performance of the distance sensors purchased was adequate for the aircraft, both sensors were calibrated using the setup shown in Figure \ref{fig:sensortests}. A series of obstacles were positioned at distances of 50cm, 1m and 5m, and 100 data points collected for each obstacle. The results of the calibration tests, shown in Figure \ref{fig:sensortestresults},  indicate that \red{conclusion needed}.
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=100pt]{\IMAGEPATH emblem}
-	\caption{Calibration setup for ultrasonic and LiDAR sensors}
-	\label{fig:sensortests}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{0.4\textwidth}
-		\centering
-		\includegraphics[width=0.6\linewidth]{\IMAGEPATH emblem}
-		\caption{Distance measurements from ultrasonic sensor}
-	\end{subfigure} %
-	\begin{subfigure}{0.4\textwidth}
-		\centering
-		\includegraphics[width=0.6\linewidth]{\IMAGEPATH emblem}
-		\caption{Distance measurements from LiDAR}
-	\end{subfigure}
-	
-	\caption{Calibration of distance sensors}
-	\label{fig:sensortestresults}
-\end{figure}
+To test the performance of the distance sensors, both sensors were placed in front of a series of obstacles at distances of 50cm, 1m and 5m, and 100 data points were collected at each distance.
 	
 \subsubsection*{GPS and Compass}  
 During several flight tests it became evident that the data provided by the GPS and compass were wildly inaccurate, giving measurements that varied by up to $\pm$20m and $\pm$15$^\circ$ respectively. At any point during flight there may be up to 120A passing through the aircraft's internal circuitry, creating a large EM disturbance, in addition to the EM radiation from the other electronics. Given that both of these devices are susceptible to EM radiation\cite{ref:gpsinterference}, the module was mounted outside of the drone shell (as suggested by \cite{ref:gpsposition}), away from the electronics, resulting in the expected performance of $\pm$5m and $\pm$5$^\circ$ respectively.

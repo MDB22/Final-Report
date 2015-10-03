@@ -1,29 +1,27 @@
 \subsection{Context}
 Drones, or Unmanned Aerial Vehicles (UAVs), are not new technologies. UAVs are currently used extensively, for both offensive\cite{ref:offence} and defensive\cite{ref:defence} operations, by militaries across the globe. There is also a strong push for UAVs in commercial applications, such as package delivery\cite{ref:package} and agriculture\cite{ref:agriculture}, and an ever-growing population of hobbyists\cite{ref:hobby}, adventurers\cite{ref:adventure} and athletes\cite{ref:sport} using UAV-mounted cameras to capture everything from weddings to skiing down mountains. However, there are several applications where current UAV technology just can't compete.\\
 
-\todomessage{Add more negatives/problems}
-Rotor-based aircraft like the DJI Phantom (Figure \ref{fig:dji}) are highly maneuverable, easy to control, and can be launched from almost any location, but as a result of their large power demands have very limited range/endurance. This makes them difficult to use in applications requiring long distance travel, such as package delivery.
+Rotor-based aircraft like the DJI Phantom (Figure \ref{fig:dji}) are notorious for their  large power demands and low range/flight time, making them difficult to use in applications requiring long distance travel, such as package delivery. Wing-based aircraft such as the HobbyKing Tornado\cite{ref:tornado} (Figure \ref{fig:tornado}) can achieve much greater travel distances as a result of higher efficiency flight. The biggest drawback of these aircraft, though, is they require open spaces (runways) to land safely, making them difficult to use in cramped or obstacle-rich applications such as low-altitude search in cities and forests.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=150pt]{\IMAGEPATH /Aircraft/djiPhantom}
-	\caption{DJI Phantom, a commercially available UAV}
-	\label{fig:dji}
-\end{figure}
-
-\todomessage{Add more negatives/problems}
-Wing-based aircraft such as those based on the Skywalker X8 frame\cite{ref:x8} (Figure \ref{fig:x8}) can achieve much greater travel distances as a result of higher efficiency flight. The biggest drawback of these aircraft, though, is they require open spaces to land safely, making them difficult to use in cramped or obstacle-rich applications such as low-altitude search in cities and forests.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=160pt]{\IMAGEPATH /Aircraft/x8}
-	\caption{Skywalker X8 airframe, a popular choice for hobbyists}
-	\label{fig:x8}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=134pt]{\IMAGEPATH /Aircraft/djiPhantom}
+		\caption{DJI Phantom, a commercially available UAV}
+		\label{fig:dji}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=206pt]{\IMAGEPATH /Aircraft/tornado}
+		\caption{HobbyKing Tornado RC Plane}
+		\label{fig:tornado}
+	\end{minipage}
 \end{figure}
  
-The UAV Challenge\cite{ref:challenge}, organised by the Queensland University of Technology and the CSIRO, is a biennial competition that aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and charges teams with solving some of the issues raised above. Competitors must develop an aircraft that can fly to a known area (up to 30km away) through specific transit corridors, search for and correctly identify ``Outback Joe'', land close to him to accept a pre-prepared blood sample, and then fly back to base. All of these actions must be completed within one hour, and must be autonomous; that is, after receiving the ``start'' signal the aircraft must have no human input.\\
+The UAV Challenge\cite{ref:challenge}, organised by the Queensland University of Technology and the CSIRO, is a biennial competition that aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and charges teams with solving the issues raised above.\\
 
-The time period of the competition extends from registration (before 2nd September, 2015) to the final competition (week starting 19th of September, 2016), spanning over 1 year. Table \ref{tab:challenge} highlights the key dates and corresponding stages of the UAV Challenge.\\
+Competitors must develop an aircraft that can fly to a known area (up to 30km away) through specific transit corridors, search for and correctly identify ``Outback Joe'', land close to him in an obstacle-rich area to accept a pre-prepared blood sample, and then fly back to base. All of these actions must be completed within one hour, and must be autonomous; that is, after receiving the ``start'' signal the aircraft must have no human input. Table \ref{tab:challenge} highlights the key dates and corresponding stages of the UAV Challenge.\\
 
 \begin{table}[!ht]
 	\caption{UAV Challenge Timeline}

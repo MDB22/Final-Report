@@ -18,7 +18,7 @@ Figure \ref{fig:softwarearchitecture} shows the software architecture for the au
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=350pt]{\IMAGEPATH /Diagrams/software}
+	\includegraphics[width=340pt]{\IMAGEPATH /Diagrams/software}
 	\caption{High level software architecture}
 	\label{fig:softwarearchitecture}
 \end{figure}
@@ -27,7 +27,7 @@ Figure \ref{fig:softwareinteraction} shows the communication paths between the v
 
 One of the biggest dangers in parallel processing communication is data corruption or loss; one process attempts to read data from a link while another is modifying or writing to it. To prevent this, each process that connects with either a pipe or queue is provided with read and write ``locks''. When activated, the lock will prevent other processes from reading from, or writing to, the communication link before the current process is finished with it.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=380pt]{\IMAGEPATH /Diagrams/interaction}
 	\caption{Interaction between software modules}
@@ -37,9 +37,9 @@ One of the biggest dangers in parallel processing communication is data corrupti
 \subsection{Testing}
 Before being implemented on the prototype aircraft, the autonomous flight modules were first tested in a simulated aircraft using ArduPilot's Software in the Loop capabilities\cite{ref:sitl}. Figure \ref{fig:sitl} shows a screenshot of the mission simulation, where the virtual aircraft was successfully tested with the software discussed above, executing a simple mission consisting of a series of \textbf{M1} commands; takeoff to 10m, forward flight of 10m, and landing.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=200pt]{\IMAGEPATH emblem}
+	\includegraphics[width=400pt]{\IMAGEPATH /Diagrams/sitl}
 	\caption{Software in the Loop testing}
 	\label{fig:sitl}
 \end{figure}

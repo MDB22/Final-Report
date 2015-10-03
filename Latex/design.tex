@@ -1,8 +1,8 @@
-\subsection{Flight Systems}
+\subsection{Initial Design}
 \subsubsection*{Airframe}
-Given the aircrafts presented previously, the most suitable design for this project is the FireFLY6. However, even under expensive modifications, it may not be able to meet requirements \textbf{R4} and \textbf{R5}. An alternative was to purchase a hobby airframe, such as the Skywalker X8\cite{ref:x8} and design an aircraft to emulate the design of the FireFLY6.\\
+Given the aircraft presented previously, the most suitable design for this project is the FireFLY6. However, even under expensive modifications, it may not be able to meet requirements \textbf{R4} and \textbf{R5}. An alternative was to purchase a hobby airframe and design an aircraft to emulate the design of the FireFLY6.\\
 
-The X8 can easily be used to replicate the FireFLY6's motor configuration, and has sbeen shown to be capable of up to 155km of flight\cite{ref:range}, which far exceeds the requirements for the UAV Challenge. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame. Appendix \ref{sec:scope} presents a detailed analysis of several design options, comparing the purchase of various FireFly6 models to several designs based on the X8.
+The Skywalker X8\cite{ref:x8} is a commonly used airframe that can easily be used to replicate the FireFLY6's motor configuration, and has been shown to be capable of up to 155km of flight\cite{ref:range}, which far exceeds the requirements for the UAV Challenge. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame. Appendix \ref{sec:selection} presents a detailed analysis of several design options, comparing the purchase of various FireFly6 models to several designs based on the X8.
 
 \subsubsection*{Flight Control}
 The addition of a flight controller to the aircraft permits autonomous flight capabilities, including way point planning and motor control. The most viable (and well supported) options are the PixHawk\cite{ref:pixhawk}, APM 2.6\cite{ref:ardupilot}, and PX4\cite{ref:px4}. In order to achieve reliable and safe autonomous flight the controller must be fast and have sufficient storage for additional firmware/software to extend its capabilities. A comparison of each option may be found in \cite{ref:controller_comparison}, showing that given its larger memory storage, faster processor, and additional capabilities such as in-built gyroscopes and accelerometers, the PixHawk is the best choice for this project.
@@ -10,7 +10,7 @@ The addition of a flight controller to the aircraft permits autonomous flight ca
 \subsubsection*{Controller Development}
 The PixHawk flight controller has several flight control systems readily available for many types of aircraft (including fixed-wing and VTOL), but as of yet has no control system designed for a hybrid aircraft. Fortunately, the PX4 firmware (on which the PixHawk is based) is Open Source\cite{ref:ardupilotgit}, with several resources available\cite{ref:firmware1,ref:firmware2} to allow hobbyists and developers to customize the behaviour of their aircraft.
 
-\subsection{Proposed Design}
+\subsubsection*{Proposed Design}
 Based on the discussion above, the initial design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration, as with the FireFLY6. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.
 
 \subsection{Hardware Architecture}
@@ -33,7 +33,7 @@ The initial design of the aircraft was first modelled using eCalc\cite{ref:ecalc
 \subsubsection*{Layout}
 To achieve the novel transition system sought after from the start of the project, the optimal motor configuration was investigated for the job. Having seen the capabilities of the FireFLY6 aircraft, a tri-coptor formation of the motors was selected.\\
 		
-A tri-coptor Y-3 configuration (three motors positioned in the shape of a `Y') was selected over a Y-6 (six motors), as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being 'upgraded' to a Y-6 configuration if the need arose. The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.
+A tri-coptor Y-3 configuration (three motors positioned in the shape of a `Y') was selected over a Y-6 (six motors), as it would lead to a lighter and cheaper aircraft. However, the aircraft was designed to be capable of being ``upgraded'' to a Y-6 configuration if the need arose. The three motors would provide lift in VTOL mode, the front two motors being mounted vertically utilizing a mounting system capable of being rotated forwards $90^{\circ}$ to facilitate the transition system and fixed-wing flight. The rear motor mount system was designed to be tilted laterally through the use of a servo-motor to enable the yaw mechanism of the aircraft.
 
 \subsubsection*{Airframe}
 Through research, (see [ref]) the Skywalker X8 was chosen as a pre-designed `off the shelf' airframe. It offers a large amount of under canopy storage room, the greatest wingspan to weight ratio of the airframes investigated, fast low power cruise speeds, was stated to be capable of carrying a maximum all-up-weight (AUW) of greater than 3.5kg, was well priced, and available  from Australian suppliers. The fact that it is made out of EPO foam also made it easy to modify into the required hybrid frame. Design and development of critical subsystems started from here] 
@@ -48,7 +48,7 @@ The motors chosen needed to efficiently hover, but at the same time be able to c
 	
 \subsubsection*{Propellers}
 Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less weight and drag), but larger propellers are better suited for VTOL (more thrust), with modelling presented in \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber.
-\todomessage{elude to tests planned from the start}
+\todomessage{allude to tests planned from the start}
 	
 \subsubsection*{Servo-motors}
 Servo-motors were required to enable front transition system functionality and the back yaw system. Both servos chosen were Turnigy TGY-4409MDs, capable of 8.65kg.cm of torque at 5V, which was shown to be more than the required amount. 
