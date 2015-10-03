@@ -1,4 +1,24 @@
-The tasks required in the 2016 UAV Challenge are such that a purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes. Analysis of the 2014 design, a purely fixed-wing aircraft, showed that converting it to a hybrid aircraft would not result in a suitable design for the Challenge. Given the aircraft's weight, adding the necessary equipment would add over 5kg, cost over \$500, and would result in less than 60 seconds of flight time. It was therefore decided the 2014 model would not be suitable for the 2016 competition; a detailed analysis can be found in Appendix \ref{sec:lastYear}.\\
+\subsection{Mission Breakdown}
+\label{sec:flightmaneuvers}
+The Medical Express mission can be broken down into three discrete flight maneuvers:
+\begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
+	\item Hover flight, including vertical take-off to cruising height, and landing
+	\item Fixed-wing flight, navigating through waypoints and keeping within GeoFence boundaries
+	\item Aerial search
+\end{enumerate}
+
+Using these maneuvers, completing the mission can be described as completing the sequence of actions\\
+\begin{tabular}{r l l}
+	1. & Mission start after being armed & (\textbf{M1}) \\ 
+	2. & Navigate to Joe's location & (\textbf{M2}) \\ 
+	3. & Aerial search to identify Joe & (\textbf{M3}) \\ 
+	4. & Land near Joe to collect blood & (\textbf{M1}) \\ 
+	5. & Take-off after being re-armed & (\textbf{M1}) \\ 
+	6. & Navigate back to base & (\textbf{M2}) \\ 
+	7. & Land at base & (\textbf{M1}) \\ 
+\end{tabular} 
+
+Executing this mission on a  purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes. Analysis of the 2014 design, a purely fixed-wing aircraft, showed that converting it to a hybrid aircraft would not result in a suitable design for the Challenge. Given the aircraft's weight, adding the necessary equipment would add over 5kg, cost over \$500, and would result in less than 60 seconds of flight time. It was therefore decided the 2014 model would not be suitable for the 2016 competition; a detailed analysis can be found in Appendix \ref{sec:lastYear}.\\
 
 As this project involves the development of a novel aircraft platform, there is a lack of academic literature that is relevant to the problem at hand. This review will instead collate examples of commercial and hobby systems that were used to inspire and guide the development of the aircraft.\\
 
