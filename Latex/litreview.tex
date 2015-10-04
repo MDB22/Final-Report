@@ -2,7 +2,7 @@
 \label{sec:flightmaneuvers}
 The Medical Express mission can be broken down into three distinct flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
-	\item Hover flight, including vertical take-off to cruising height, and landing
+	\item Hover flight, including vertical take-off and landing
 	\item Fixed-wing flight, navigating through waypoints and keeping within GeoFence boundaries
 	\item Aerial search of target area to find Joe
 \end{enumerate}
@@ -10,7 +10,7 @@ The Medical Express mission can be broken down into three distinct flight maneuv
 Using these maneuvers, completing the mission can be described as completing the sequence of actions\\
 \begin{tabular}{r l l}
 	1. & Mission start after being armed & (\textbf{M1}) \\ 
-	2. & Navigate to Joe's location & (\textbf{M2}) \\ 
+	2. & Navigate to Joe's reported location & (\textbf{M2}) \\ 
 	3. & Aerial search to identify Joe & (\textbf{M3}) \\ 
 	4. & Land near Joe to collect blood & (\textbf{M1}) \\ 
 	5. & Take-off after being re-armed & (\textbf{M1}) \\ 
@@ -25,7 +25,7 @@ As this project involves the development of a novel UAV platform, there is a lac
 \subsection{Aircraft Design}
 \label{sec:litaircraft}
 \subsubsection*{Arcturus Jump}
-The Arcturus Jump \cite{ref:arcturus} (Figure \ref{fig:arcturus}) is a quad-copter/fixed-wing hybrid, with propellers mounted across the wings for VTOL, and a propeller at on the nose for fixed-wing flight. Modifying an existing airframe to emulate this design would be straightforward, but the addition of the support structure for VTOL flight would add significant weight to the aircraft, decreasing thrust and maneuverability, as well as increasing drag. These factors make an aircraft of this design unlikely to achieve requirements \textbf{R3} and \textbf{R4} of the UAV Challenge.
+The Arcturus Jump \cite{ref:arcturus} (Figure \ref{fig:arcturus}) is a quad-copter/fixed-wing hybrid, with propellers mounted across the wings for VTOL, and a propeller on the nose for fixed-wing flight. Modifying an existing airframe to emulate this design would be straightforward, but the addition of the support structure for VTOL flight would add significant weight to the aircraft, decreasing thrust and maneuverability, as well as increasing drag. These factors make an aircraft of this design unlikely to achieve requirements \textbf{R3} and \textbf{R4} of the UAV Challenge.
 
 \begin{figure}[!h]
 	\centering
