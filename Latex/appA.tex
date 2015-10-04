@@ -20,7 +20,191 @@ Last year's project was designed for a very different challenge where VTOL was n
 
 \subsection{Frame Selection}
 \label{sec:selection}
-\todomessage{Add tables from Scope}
+
+\subsubsection*{Part Costs}
+Tables \ref{tab:x8costs} and \ref{tab:fireflycosts} show the costs of a four different UAV designs, two based on the Skywalker X8, and two on the FireFLY6. Table \ref{tab:designperformance} shows the estimated performance of each design, and Tabels \ref{tab:metrics} and \ref{tab:evaluation} show the evaluation metrics and corresponding rating of each design, showing the X8 Maneuverability design to be the best option.
+
+\begin{landscape}
+\begin{table}[!htbp]
+	\centering
+	\caption{Part costs for Skywalker X8 designs, as shown in Scope of Works}
+	\begin{tabular}{|r|r|r|r|r|r|r|}
+		\hline 
+		\textbf{Item} & \textbf{X8 (Maneuverability)} & \textbf{Weight(g)} & \textbf{Cost} & \textbf{X8 (Endurance)} & \textbf{Weight(g)} & \textbf{Cost}\\
+		\hline
+		\textbf{Wing} & Skywalker X8 Wing & 880 & 281 & Skywalker X8 Wing & 880 & 281\\
+		\hline
+		\textbf{Battery} & 2 X Multistar 4s 10000MaH & 1600 & 180 & 2 X Multistar 4s 10000MaH & 1600 & 180\\
+		\hline
+		\textbf{Motor} & 6 X Turnigy Multistar 2508-700KV & 612 & 252 & 6 X Turnigy Multistar 4225-610KV & 516 & 234\\
+		\hline
+		\textbf{Prop} & 6 x 12x6 Carbon Fibre MR & 114 & 39 & 6 x 12x6 Carbon Fibre MR & 114 & 39\\
+		\hline
+		\textbf{ESC} & 6 x 30 A ESC & 150 & 40 & 6 x 20 A ESC & 102 & 40\\
+		\hline
+		\textbf{Flight Controls} & 2 x Pixhawk & 76 & 522 & 2 x Pixhawk & 76 & 522\\
+		\hline
+		\textbf{Servos} & 2 X 2.5 kg Standard Servo & 80 & 16 & 2 X 2.5 kg Standard Servo & 80 & 16\\
+		\hline
+		\textbf{RC TX/RX} & Can Program Ours & & 0 & Can Program Ours & & 0\\
+		\hline
+		\textbf{BEC} & CC BEC & 29 & 29 & CC BEC & 29 & 29\\
+		\hline
+		\textbf{Computer} & Raspberry Pi 2 & 45 & 46 & Raspberry Pi 2 & 45 & 46\\
+		\hline
+		\textbf{Camera} & HD Webcam (no plastic) & 15 & 100 & HD Webcam (no plastic) & 15 & 100\\
+		\hline
+		\textbf{LiDAR} & Lidar Lite & 17 & 120 & Lidar Lite & 17 & 120\\
+		\hline
+		\textbf{PPM Controller} & 3DR PPM  & 10 & 20 & 3DR PPM & 10 & 20\\
+		\hline
+		\textbf{Airspeed Sensor} & 3DR Sensor & 20 & 72 & 3DR Sensor & 20 & 72\\
+		\hline
+		\textbf{Accelerometer} & Included with Pixhawk & N/A & & Included with Pixhawk & N/A & \\
+		\hline
+		\textbf{GPS + Compass} & 3DR GPS + Compass & 30 & 105 & 3DR GPS + Compass & 30 & 105\\
+		\hline
+		\textbf{Mounts} & 3D Printed & 50 & N/A & 3D Printed & 50 & N/A\\
+		\hline
+		\textbf{Poles} & Carbon Fibre Poles & 150 & 50 & Carbon Fibre Poles & 150 & 50\\
+		\hline
+		\textbf{Hybrid system} &  & 50 & & & 50 & \\
+		\hline
+		\textbf{Gears} & 3D Printed & 50 & N/A & 3D Printed & 50 & N/A\\
+		\hline
+		\textbf{Heavy Servo} & 9kg Gear Servo & 51 & 35 & 9kg Gear Servo & 50 & 35\\
+		\hline
+		\textbf{Supports} & 3D Printed & 50 & N/A & 3D Printed & 50 & N/A\\
+		\hline
+		\textbf{Lipo Charger} & Owned & N/A & N/A & Owned & N/A & N/A\\
+		\hline
+		\textbf{Misc} & Wires, Payload & 50 & N/A & Wires, Payload & 50 & N/A\\
+		\hline
+		\textbf{Total} & & 4179 & 1907 &  & 4034 & 1889\\
+		\hline
+	\end{tabular} 
+	\label{tab:x8costs}
+\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[!htbp]
+		\centering
+		\caption{Parts costs for FireFLY6 designs, as shown in Scope of Works}
+		\begin{tabular}{|r|r|r|r|r|r|r|}
+			\hline
+			\textbf{Item}            & \textbf{FireFLY6 Pro Combo}   & \textbf{Weight(g)} & \textbf{Cost} & \textbf{FireFLY6} & \textbf{Weight(g)} & \textbf{Cost}\\
+			\hline
+			\textbf{Wing}            & FireFLY6 Pro Combo        & 4100       & 2635  & FireFLY6                  & 2700       & 656   \\
+			\hline
+			\textbf{Battery}         & 2 X Multistar 3s 5200MaH   &            & 82    & 2 X Multistar 3s 4000MaH   &            & 64    \\
+			\hline
+			\textbf{Motor}           & included                   &            &       & Power Pack                 &            & 525   \\
+			\hline
+			\textbf{Prop}            & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{ESC}             & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Flight} Controls & included                   &            &       & 2 x pixhawk                &            & 522   \\
+			\hline
+			\textbf{Servos}          & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{RC TX/RX}        & included                   &            &       & Spektrum Dx7s              &            & 328   \\
+			\hline
+			\textbf{BEC}             & included                   &            &       & CC BEC                     &            & 29    \\
+			\hline
+			\textbf{Computer}        & Raspberry Pi 2             &            & 46    & Raspberry Pi 2             &            & 46    \\
+			\hline`
+			\textbf{Camera}          & HD Webcam                  &            & 100   & HD Webcam                  &            & 100   \\
+			\hline
+			\textbf{LIDAR}           & Ultrasonic Sensor 3m range &            & 120   & Ultrasonic Sensor 3m range &            & 120   \\
+			\hline
+			\textbf{PPM Controller}  & included                   &            &       & 3DR PPM Controller         &            & 26    \\
+			\hline
+			\textbf{Airspeed Sensor} & included                   &            &       & 3DR Sensor                 &            & 72    \\
+			\hline
+			\textbf{Accelerometer}   & included                   &            &       & included with Pixhawk      &            &       \\
+			\hline
+			\textbf{GPS + Compass}   & included                   &            &       & 3DR GPS + compass          & 30         & 105   \\
+			\hline
+			\textbf{Mounts}          & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Poles}           & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Gears}           & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Heavy Servo}     & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Supports}        & included                   &            &       & included                   &            &       \\
+			\hline
+			\textbf{Lipo Charger}    & Owned                      &            &       & Owned                      &            &       \\
+			\hline
+			\textbf{Misc}            & Payload                    &            &       & Payload                    &            &       \\
+			\hline
+			\textbf{Total}           &                            & 4100       & 2983  &                            & 2730       & 2593  \\
+			\hline
+		\end{tabular} 
+		\label{tab:fireflycosts}
+	\end{table}
+\end{landscape}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Estimated performance specifications for UAV designs}
+	\begin{tabular}{|r|r|r|r|r|}
+		\hline
+										   & \textbf{X8 (Maneuverability)}    & \textbf{X8 (Endurance)} & \textbf{FireFLY6 Combo} & \textbf{FireFLY6}\\
+		\hline
+		\textbf{Flight Time (mins)}                 & 25             & 31              & 30               & 15       \\
+		\hline
+		\textbf{Hover Time (mins)}                  & 17.8           & 19.6            & 15               & 7        \\
+		\hline
+		\textbf{Fixed Wing Speed (km/h)} & 70             & 63              & 54               & 65       \\
+		\hline
+		\textbf{Hover Speed (km/h)}      & 28             & 5               & 5                & 20       \\
+		\hline
+		\textbf{Fixed-wing Range (km)}  & 29.17          & 32.55           & 27               & 16.25    \\
+		\hline
+		\textbf{Hover Range (km)}     & 20.97          & 24.25           & 18               & 4.64     \\
+		\hline
+		\textbf{Payload (g)} & 321            & 466             & 400              & 1,770.00 \\
+		\hline
+	\end{tabular}
+	\label{tab:designperformance}
+\end{table}
+
+\begin{table}[!htbp]]
+	\centering
+	\caption{Performance metrics}
+	\begin{tabular}{|r|l|l|}
+		\hline
+		\textbf{Performance Metric}      & \textbf{Max/Desired Characteristics}    & \textbf{Evaluation Function}  \\ \hline
+		\textbf{Aircraft cost}           & $c_{max}$ =\$most expensive option   & $e_1=1-c/c_{max}$                            \\ \hline
+		\textbf{Flight range}            & $r_{des}=20km$                      & $e_2=r/r_{des}$                              \\ \hline
+		\textbf{Aircraft weight}         & $m_{max}=$weight of heaviest option & $e_3=1-m/m_{max} $                           \\ \hline
+		\textbf{Hover velocity}          & $v_{des}=?$                         & $e_4=v/v_{des}$                              \\ \hline
+		\textbf{Payload}                 & $m_{payload} = m_{max}-m_{aircraft} $       & $m_{payload} \geq 500g: e_5=1$        \\		&                                & $m_{payload} < 500g: e_5 = m_{payload}/500 $ \\ \hline
+		\textbf{Overall} & & $ e_{total} = \sum_{i} w_i e_i$\\
+		\hline
+		\end{tabular}
+	\label{tab:metrics}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Evaluation}
+	\label{tab:evaluation}
+	\begin{tabular}{|r|r|r|r|r|r|}
+		\hline
+		\textbf{Performance Metric}       & \textbf{Weighting} & \textbf{X8 (Man):} & \textbf{X8 (End)} & \textbf{FireFLY6 Combo} & \textbf{FireFLY6} \\ \hline
+		\textbf{Aircraft Cost}            & 0.25               & 0.37                           & 0.37                    & 0                        & 0.13                      \\ \hline
+		\textbf{Flight range}             & 0.4                & 1.05                           & 1.21                    & 0.9                      & 0.23                      \\ \hline
+		\textbf{Max Aircraft weight}      & 0.1                & 0                              & 0.03                    & 0.02                     & 0.35                      \\ \hline
+		\textbf{Hover Manoeuvrability}    & 0.2                & 1                              & 0.18                    & 0.18                     & 0.71                      \\ \hline
+		\textbf{Payload}                  & 0.05               & 0.64                           & 0.93                    & 0.8                      & 1                         \\ \hline
+		\textbf{Total Performance Metric} &                    & 0.74                           & 0.66                    & 0.44                     & 0.35                      \\ \hline
+	\end{tabular}
+\end{table}
 
 \subsection{Propeller Performance Measurements}
 \label{sec:proptest}
@@ -28,12 +212,13 @@ Last year's project was designed for a very different challenge where VTOL was n
 	\centering
 	\caption{Measurements of propeller performance}
 	\begin{tabular}{|c|c|c|c|}
-		\hline Material & Dimensions & Measurements & Average Force (kg) \\ 
+		\hline 
+		Item & Dimensions & Measurements & Average Force (kg) \\ 
 		\hline Carbon fibre & 12$\times$6 & [1.685, 1.695, 1.692, 1.690. 1.700] & 1.692 \\ 
 		\hline Carbon fibre & 11$\times$5.5 & [0.635, 0.635, 0.635, 0.635, 0.635] & 0.635 \\ 
 		\hline APC (Plastic) & 12$\times$6 & [1.965, 2.030, 2.030, 2.020, 2.045] & 2.02 \\ 
 		\hline APC (Plastic) & 11$\times$5.5 & [1.645, 1.630, 1.625, 1.620 1.620] & 1.628 \\ 
-		\hline 
+		\hline
 	\end{tabular} 
 	\label{tab:props}
 \end{table}
