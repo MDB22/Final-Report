@@ -50,7 +50,7 @@ Using these maneuvers, completing the mission can be described as completing the
 Executing this mission on a purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes.
 
 \subsection{Proposed Design}
-The initial prototype design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, discussed in Section \ref{sec:sensing}, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.\\
+The initial prototype design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor Y-3 configuration. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.\\
 
 Figure \ref{fig:hardwarearch-exec} shows a high level overview of the hardware architecture planned for the current and future teams.
 
@@ -62,7 +62,7 @@ Figure \ref{fig:hardwarearch-exec} shows a high level overview of the hardware a
 \end{figure}
 
 \subsection{Why Transition?}
-In order for the UAV to complete the objectives listed previously, it must be capable of both long range flight and vertical take-off and landing. Implementing a transition system, rather than fit the UAV with both fixed-wing and VTOL flight systems, allows it to achieve this capability while also being lighter, and more aerodynamic. The transition systems is the foundation for achieving the range and endurance requirements of the UAV Challenge.
+In order for the UAV to complete the objectives, it must be capable of both long range flight and vertical take-off and landing. Implementing a transition system, rather than fit the UAV with both fixed-wing and VTOL flight systems, allows it to achieve this capability while also being lighter, and more aerodynamic. The transition systems is the foundation for achieving the range and endurance requirements of the UAV Challenge.
 
 \subsection{Software Development}
 Any aircraft participating in the UAV Challenge must be autonomous, only interacting with a human to be armed or disarmed at the beginning and end of the mission. A framework for autonomous flight was developed in Python for the Raspberry Pi, based on the following considerations:
@@ -102,7 +102,7 @@ One of the biggest dangers in parallel processing communication is data corrupti
 
 \subsection{Sensing}
 
-Figure \ref{fig:sensing-exec} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flightmaneuvers}. At the time of writing, only some of the sensors mentioned below have been physically mounted to the aircraft, but each sensor's position on the aircraft has been incorporated into the aircraft's design.
+Figure \ref{fig:sensing-exec} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor, and are separated according to the different stages of the UAV Challenge's mission. At the time of writing, only some of the sensors mentioned below have been physically mounted to the aircraft, but each sensor's position on the aircraft has been incorporated into the aircraft's design.
 
 \begin{figure}[!ht]
 	\centering
