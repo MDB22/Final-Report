@@ -12,7 +12,7 @@ The aircraft shown in Section \ref{sec:litaircraft} suggests that a Y-6 configur
 \end{tabular}
 \vspace{6pt}
 	
-This requirement assumes it is under ideal conditions (100 percent motor and rotor efficiency). It would be incredibly difficult to find a motor with the capabilities required, and at a reasonable price. More significant however is the battery required. Even if the battery weight is neglected, under a 10 cell (37 Volt) load, 200A would be required just to hover. This would be incredibly dangerous and under real conditions it would be much higher. Flight time with the available batteries would be extremely short. On the largest 10 cell batteries available at hobbyking, Zippy Compact 5800mAH, this would only amount to 100 seconds of flight time. The mission would require at least 4 for the VTOL take off and landing procedures alone. This would equate to 736AUD and 5kg of extra weight.\\
+This requirement assumes it is under ideal conditions (100 percent motor and rotor efficiency). It would be incredibly difficult to find a motor with the capabilities required, and at a reasonable price. More significant however is the battery required. Even if the battery weight is neglected, under a 10 cell (37V) load, 200A would be required just to hover. This would be incredibly dangerous and under real conditions it would be much higher. Flight time with the available batteries would be extremely short. On the largest 10 cell batteries available at hobbyking, Zippy Compact 5800mAH, this would only amount to 100 seconds of flight time. The mission would require at least 4 for the VTOL take off and landing procedures alone. This would equate to \$736AUD and 5kg of extra weight.\\
 
 In addition to cost and flight time, the modifications necessary to make such a plane would be significantly more difficult, as the supports would need to hold much more weight, and the plane itself is made of wood and not foam. The design of the hybrid craft on the larger plane would have a significant amount of aerodynamic drag and be less efficient. It would look something like the Arcturus, see Figure \ref{fig:arcturus}.\\
 	
@@ -40,12 +40,12 @@ Last year's project was designed for a very different challenge where VTOL was n
 
 \subsection{Stall Speed}
 \label{sec:stall}
-The stall speed was calculated using the Coefficient of Lift. This was taken from [reference] for the Skywalker X8.
+The stall speed was calculated using the Coefficient of Lift. This was taken from \cite{ref:x8aerodynamics} on the aerodynamics of the Skywalker X8.
 As lift(N): $L = 1/2\times C_l\times\rho\times A\times V^2$\\\\
 Airspeed ($ms^{-1})$:\\
 $V= \sqrt{\frac{2\times L}{C_l\times \rho \times A}}$\\
-$V = 12.66ms^{-1} = 45.5kmh^{-1}$\\\\
-Where:\\
+$V = 12.66ms^{-1} = 45.5kmh^{-1}$\\
+
 Required lift: $L = 4kg \times ms^{-2} = 39.24N$\\
 Air density at sea level: $\rho = 1.225 kgm^{-1}$\\
 Area of Skywalker Wings: $A = 0.8m^2$\\
@@ -147,7 +147,7 @@ However, the pole will experience a bending moment during transition. The maximu
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=200pt]{\IMAGEPATH Modelling/MotorMount3}} &
-		\vspace{40pt} The current design for the motor mounts removed the side tabs that were meant to provide increased friction onto the motor pole. These were replaced by a rounded section in which a hose clamp is used to grip the mount to the pole. This design was printed on its side (round edge on the table) which through testing was found to have the most strength\\ 
+		\vspace{40pt} The current design for the motor mounts removed the side tabs that were meant to provide increased friction onto the motor pole. These were replaced by a rounded section in which a hose clamp is used to grip the mount to the pole. This design was printed on its side (round edge on the table) which was found to have the most strength in testing.\\ 
 		\hline
 	\end{tabulary} 
 	\label{tab:3D_motor}
@@ -162,11 +162,11 @@ However, the pole will experience a bending moment during transition. The maximu
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount1}} &
-		\vspace{40pt} The initial design of the front pole mount was for the first hover tests that were planned. They fit wihtin the chasm in the front of the X8 with the carbon fibre rods fitting through to the outter sections of the plane. Screws at the back were initially used to give suport.\\ 
+		\vspace{40pt} The initial design of the front pole mount was for the first hover tests that were planned. They fit within the recess in the front of the X8 with the carbon fibre rods fitting through to the outer sections of the plane. Screws at the back were initially used to give support.\\ 
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount2}} &
-		\vspace{40pt} The second and third designs as seen here were modified in order to fit the servo for the transition system. It was found that putting a servo within the mount increased strength and accuracy, and decreased vibrations through the shaft immensely. \\ 
+		\vspace{40pt} The second design was modified in order to fit the servo for the transition system. It was found that putting a servo within the mount increased strength and accuracy, and decreased vibrations through the shaft significantly.\\ 
 		\hline
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/FrontMount3}} &
@@ -185,11 +185,11 @@ However, the pole will experience a bending moment during transition. The maximu
 		\hline
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/BackMount1}} &
-		\vspace{40pt} The first back pole mount design was used for the scorpion. Initially, it also served as a basic front pole mount. The back servo was mounted external to the shaft using zip ties and screws, hence it was not very stable.  \\ 
+		\vspace{40pt} The first back pole mount design was used on the Scorpion prototype. Initially, it also served as a basic front pole mount. The back servo was mounted external to the shaft using zip ties and screws, hence it was not very stable.  \\ 
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/BackMount2}} &
-		\vspace{40pt} Once the testing on the "Scorpion" was over, a mount for the "Dragonfly" was created. This mount houses the servo, increasing stability and robustness. It also has 3 points of pole support in order to counter the moment and force created by the single propeller. \\ 
+		\vspace{40pt} Once the testing on the Scorpion prototype was complete, the mount was redesigned for the Dragonfly. This mount houses the servo, increasing stability and robustness. It also has 3 points of pole support in order to counter the moment and force created by the propeller.\\ 
 		\hline 
 	\end{tabulary} 
 	\label{tab:back_mount}
@@ -202,19 +202,19 @@ However, the pole will experience a bending moment during transition. The maximu
 		\hline
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/PoleGear}} &
-		\vspace{40pt} The final design of the pole gear has holes to bolt into the shaft and is capable of 100 degrees of rotation. These are put on both rods attached to the aircraft, assisting with both transition in the front and the yaw mechanism in the back.  \\ 
+		\vspace{30pt} The final design of the pole gear has holes to bolt into the shaft and is capable of 100 degrees of rotation. These are put on both rods attached to the aircraft, assisting with both transition in the front and the yaw mechanism in the back.  \\ 
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/ServoGear}} &
-		\vspace{40pt} The final servo gear was made to attach to the specific servo horn in 3 places. This allowed it to utilise the teeth of the servo, giving it very little slip.\\ 
+		\vspace{30pt} The final servo gear was made to attach to the specific servo horn in 3 places. This allowed it to utilise the teeth of the servo, giving it very little slip.\\ 
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/SideRing}} &
-		\vspace{40pt} The side rings added an extra point of support for the front pole, and gave less friction between the foam and the carbon fibre rods. \\ 
+		\vspace{40pt} The side rings were used on the front shaft to provide an extra point of support for the front pole, and resulted in less friction between the foam and the carbon fiber rods. \\ 
 		\hline 
 		\centering
 		\raisebox{-\totalheight}{\includegraphics[width=160pt]{\IMAGEPATH Modelling/Leg}} &
-		\vspace{40pt} The leg design for the "Dragonfly" was made to stabilise the roll rotation while on the ground in order to keep the front propellers safe. The design  does not impede on the aerodynamic performance, as they rotate backwards during transition to fixed wing, nor does it impede on the back propeller which stays level while on the ground, and can freely rotate.   \\ 
+		\vspace{20pt} The leg design for the Dragonfly was made to stabilise the roll rotation while on the ground in order to keep the front propellers safe. The design does not impede on the aerodynamic performance (as they rotate backwards during transition to fixed wing), nor does it impede on the back propeller which stays level while on the ground, and can safely rotate.\\ 
 		\hline 
 	\end{tabulary} 
 	\label{tab:minor}
