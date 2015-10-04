@@ -30,7 +30,7 @@ Tables \ref{tab:x8costs} and \ref{tab:fireflycosts} show the costs of a four dif
 	\caption{Part costs for Skywalker X8 designs, as shown in Scope of Works}
 	\begin{tabular}{|r|r|r|r|r|r|r|}
 		\hline 
-		\textbf{Item} & \textbf{X8 (Maneuverability)} & \textbf{Weight(g)} & \textbf{Cost} & \textbf{X8 (Endurance)} & \textbf{Weight(g)} & \textbf{Cost}\\
+		\textbf{Item} & \textbf{X8 (Maneuverability)} & \textbf{Weight(g)} & \textbf{Cost (\$)} & \textbf{X8 (Endurance)} & \textbf{Weight(g)} & \textbf{Cost (\$)}\\
 		\hline
 		\textbf{Wing} & Skywalker X8 Wing & 880 & 281 & Skywalker X8 Wing & 880 & 281\\
 		\hline
@@ -93,7 +93,7 @@ Tables \ref{tab:x8costs} and \ref{tab:fireflycosts} show the costs of a four dif
 		\caption{Parts costs for FireFLY6 designs, as shown in Scope of Works}
 		\begin{tabular}{|r|r|r|r|r|r|r|}
 			\hline
-			\textbf{Item}            & \textbf{FireFLY6 Pro Combo}   & \textbf{Weight(g)} & \textbf{Cost} & \textbf{FireFLY6} & \textbf{Weight(g)} & \textbf{Cost}\\
+			\textbf{Item}            & \textbf{FireFLY6 Pro Combo}   & \textbf{Weight(g)} & \textbf{Cost (\$)} & \textbf{FireFLY6} & \textbf{Weight(g)} & \textbf{Cost (\$)}\\
 			\hline
 			\textbf{Wing}            & FireFLY6 Pro Combo        & 4100       & 2635  & FireFLY6                  & 2700       & 656   \\
 			\hline
@@ -208,6 +208,7 @@ Tables \ref{tab:x8costs} and \ref{tab:fireflycosts} show the costs of a four dif
 
 \subsection{Propeller Performance Measurements}
 \label{sec:proptest}
+Raw data from propeller thrust testing; see Section \ref{sec:thrust}.
 \begin{table}[!htbp]
 	\centering
 	\caption{Measurements of propeller performance}
@@ -230,7 +231,6 @@ As lift(N): $L = 1/2\times C_l\times\rho\times A\times V^2$\\\\
 Airspeed ($ms^{-1})$:\\
 $V= \sqrt{\frac{2\times L}{C_l\times \rho \times A}}$\\
 $V = 12.66ms^{-1} = 45.5kmh^{-1}$\\
-
 Required lift: $L = 4kg \times ms^{-2} = 39.24N$\\
 Air density at sea level: $\rho = 1.225 kgm^{-1}$\\
 Area of Skywalker Wings: $A = 0.8m^2$\\
@@ -245,7 +245,9 @@ Worst case coefficient of lift when attempting to climb (see Figure \ref{fig:lif
 
 \subsection{Gyroscopic Effects}
 \label{sec:gyro}
-Angularion momentum: $H = I\omega$\\
+Calculation of gyroscopic forces acting on the front motor shaft during transition.\\
+
+Angular momentum: $H = I\omega$\\
 
 Maximum motor speed $\omega = 800\times16.8\times\frac{2\pi}{60} = 1407.45rads^{-1}$\\
 
@@ -277,6 +279,8 @@ However, the pole will experience a bending moment during transition. The maximu
 
 \subsection{eCalc Modelling}
 \label{sec:ecalc}
+Detailed modelling performed with eCalc to select the best design for this project.\\
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=400pt]{\IMAGEPATH /Ecalc/eCalc1}
@@ -314,6 +318,8 @@ However, the pole will experience a bending moment during transition. The maximu
 
 \subsection{3D Printed Models}
 \label{sec:print}
+Development and iterative design of 3D models as a result of testing and failures.\\
+
 \begin{table}[!htbp]
 	\centering
 	\caption{Modelling iterations for motor mounts}
