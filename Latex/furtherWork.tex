@@ -1,24 +1,14 @@
-\subsubsection*{UAV Challenge}
+While \ID made strong progress in the development of a UAV for the 2016 UAV Challenge, there still remain several tasks for future teams to complete.
+
+\subsubsection*{UAV Challenge Tasks}
 \label{sec:futurework}
-Remaining submissions for UAV Challenge\\
-
-GeoFence boundaries and soft boundaries\\
-
-Prototype 3\\
+As shown in Table \ref{tab:challenge}, the remaining deadlines for the Challenge occur outside the scope of this project. It is then the responsibility of future teams to submit Deliverables \#2 and \#3. The UAV Challenge also specifies that all aircraft must fly within GeoFence boundaries, and immediately terminate flight if a crossing occurs. This capability does not exist on the current prototype. Of paramount importance though, is a successful transition test flight, which was unfortunately not achieved this year.
 
 \subsubsection*{Electronics}
-Electronics architecture - wiring, circuit boards\\
+The internal wiring for motors, PixHawk modules and especially sensors remains exposed and vulnerable within the X8's storage compartment. The electronics therefore need to be upgraded, either through the development of printed circuit boards, or by better storage and routing of cables within the airframe.
 
 \subsubsection*{Sensing}
-Install sensors on Prototype\\
-
-Improve 3D mapping with LiDAR\\
-
-Investigate thermal sensing\\
-
-Joe detection with camera\\
+The sensors discussed in Section \ref{sec:sensing} have each been tested individually, but have not yet been mounted to the UAV. The prototype will also need to be enhanced with computer vision and object detection algorithms in order for the UAV to be able to identify Joe's jeans or Akubra hat during flight.
 
 \subsubsection*{Path Planning}
-Planning module takes the occupancy grid, then generates a flight path the aircraft can traverse. Rescanning is performed if the aircraft moves out of the ``known'' area.
-
-Filtering and clustering of the occupancy grid.
+After the development of vision algorithms, future teams will also have to continue development of the UAV's intelligence systems. Currently, there is no capability for the Raspberry Pi to incorporate sensor data in it's flight planning, or to perform real-time adjustments of its flight path to react to obstacles. The LiDAR's 3D mapping algorithm must also be improved to incorporate filtering and clustering of the occupancy grid, in order for the UAV to successfully detect obstacles.

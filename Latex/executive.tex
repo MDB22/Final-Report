@@ -1,7 +1,5 @@
-\todo{finish this and use the sections as a guide}
-
 \subsection{Context}
-The UAV Challenge \cite{ref:challenge}, organised by the Queensland University of Technology and the CSIRO, is a biennial competition that aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and charges teams with solving the issues raised above.\\
+The UAV Challenge \cite{ref:challenge}, organised by the Queensland University of Technology and the CSIRO, is a biennial competition that aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and charges teams with solving some pressing issues in current UAV technologies.\\
 
 Competitors must develop an aircraft that can fly to a known area (up to 30km away) through specific transit corridors, search for and correctly identify ``Outback Joe'', land close to him in an obstacle-rich environment, accept a pre-prepared blood sample, and then fly back to base. All of these actions must be completed within one hour, and must be fully autonomous; that is, after receiving the ``start'' signal the aircraft must have no human input.
 
@@ -28,7 +26,7 @@ It is anticipated that there will be several Capstone student teams continuing d
 The remaining sections of the report will discuss the work conducted by \ID in developing a working prototype for the UAV Challenge, beginning with a brief review of existing approaches that motivated the design of the UAV developed in this project. The following sections will discuss the various development domains of the UAV, including its design, flight and planning systems, and sensing systems, with a particular focus on the novel transition system developed for hybrid flight.
 
 \subsection{Mission Breakdown}
-\label{sec:flightmaneuvers}
+\label{sec:flightmaneuvers_exec}
 The Medical Express mission can be broken down into three distinct flight maneuvers:
 \begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
 	\item Hover flight, including vertical take-off to cruising height, and landing
@@ -112,4 +110,26 @@ Figure \ref{fig:sensing-exec} outlines the on-board sensing capabilities that ar
 \end{figure}
 
 
-\subsection{Achievements, conclusion and recommendations}
+\subsection{Achievements}
+Through extensive design and development, \ID have successfully achieved objectives \textbf{O1-O4}, and developed a strong foundation for competing in the 2016 UAV Challenge. Registration for the UAV Challenge was completed in September with the submission of Deliverable \#1, a short technical overview of our proposed aircraft.\\
+
+Testing on the Dragonfly prototype proved that the aircraft was capable of sustained rotor-based flight, successfully achieving flight maneuver \textbf{M1}. The UAV is also equipped with a novel transition system, allowing it to convert between fixed-wing and VTOL flight modes at will, and providing benefits not found on either a purely fixed-wing or rotor-based aircraft. With the addition of the transition system, the prototype has the capability to land in any open terrain without a runway, unlike a regular fixed-wing aircraft, and has the capability to fly long-range or high-endurance missions, unlike a rotor-based aircraft.\\
+
+The UAV is also capable of autonomous flight maneuvers, using a Raspberry Pi to interface with sensors throughout the aircraft, to generate and send flight paths to the PixHawk flight controller. The autonomous flight controls were successfully tested in simulation and on a proxy aircraft, and are ready for testing on the Dragonfly prototype. The software framework that was developed is also readily extensible to add complex flight behaviour not found in commercial UAVs, such as search, obstacle avoidance, and object detection to achieve objective \textbf{O5}.\\
+
+Team \ID have successfully developed a cost-competitive autonomous UAV with flight, sensing and intelligence capabilities not found on current off-the-shelf products. While the UAV was designed in order to compete in the 2016 UAV Challenge, the novel flight system is cutting-edge research for autonomous aircraft, with applications ranging from emergency response, to delivery and transport, to defence, and far beyond.
+
+\subsection{Future Work}
+While \ID made strong progress in the development of a UAV for the 2016 UAV Challenge, there still remain several tasks for future teams to complete.
+
+\subsubsection*{UAV Challenge Tasks}
+The remaining deadlines for the Challenge occur outside the scope of this project. It is then the responsibility of future teams to submit Deliverables \#2 and \#3. The UAV Challenge also specifies that all aircraft must fly within GeoFence boundaries, and immediately terminate flight if a crossing occurs. This capability does not exist on the current prototype. Of paramount importance though, is a successful transition test flight, which was unfortunately not achieved this year.
+
+\subsubsection*{Electronics}
+The internal wiring for motors, PixHawk modules and especially sensors remains exposed and vulnerable within the X8's storage compartment. The electronics therefore need to be upgraded, either through the development of printed circuit boards, or by better storage and routing of cables within the airframe.
+
+\subsubsection*{Sensing}
+The sensors discussed in Section \ref{sec:sensing} have each been tested individually, but have not yet been mounted to the UAV. The prototype will also need to be enhanced with computer vision and object detection algorithms in order for the UAV to be able to identify Joe's jeans or Akubra hat during flight.
+
+\subsubsection*{Path Planning}
+After the development of vision algorithms, future teams will also have to continue development of the UAV's intelligence systems. Currently, there is no capability for the Raspberry Pi to incorporate sensor data in it's flight planning, or to perform real-time adjustments of its flight path to react to obstacles. The LiDAR's 3D mapping algorithm must also be improved to incorporate filtering and clustering of the occupancy grid, in order for the UAV to successfully detect obstacles.
