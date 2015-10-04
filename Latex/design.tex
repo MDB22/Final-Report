@@ -1,12 +1,11 @@
-\subsection{Initial Design}
+\subsection{Component Investigation and Selection}
 \subsubsection*{Airframe}
 Given the aircraft presented previously, the most suitable design for this project is the FireFLY6. However, even under expensive modifications, it may not be able to meet requirements \textbf{R3} and \textbf{R4}. An alternative was to purchase a hobby airframe and design an aircraft to emulate the design of the FireFLY6.\\
 
 The Skywalker X8 \cite{ref:x8} is a commonly used airframe that can easily be used to replicate the FireFLY6's motor configuration, and has been shown to be capable of up to 155km of flight \cite{ref:range}, which far exceeds the requirements for the UAV Challenge. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame, with large under canopy storage for components, and the best wingspan to weight ratio of the airframes researched for development.\\
 
-Appendix \ref{sec:selection} presents a detailed analysis of several design options, comparing the purchase of various FireFLY6 models to several designs based on the X8. Estimations of the X8's flight performance was modeled using eCalc \cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. Examples of the modelling process can be found in Appendix \ref{sec:ecalc}.\\
+Appendix \ref{sec:selection} presents a detailed analysis of several design options, comparing the purchase of various FireFLY6 models to several designs based on the X8. Estimations of the X8's flight performance was modeled using eCalc \cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. The X8 configuration was shown to be the most suitable option, outperforming the FireFLY6 in cost, flight time, and manoeuvrability, with an expected payload of 3.5kg. Even if requirements are not met, this prototype will none the less form a strong basis for competing in the UAV Challenge and continued development \\
 
-The X8 was shown to be the most suitable option, outperforming the FireFLY6 in cost ($\approx$\$1900), flight range (up to 29km in fixed-wing), hover flight time (17.8 minutes) and maneuverability (up to 28km/hr in VTOL), with an expected payload capability of 3.5kg. While these performance estimations do not meet all the requirements discussed in the previous section, the initial prototype will form a strong basis for competing in the UAV Challenge and continued development. More detailed performance estimations are shown in Figures \ref{fig:fixed} and \ref{fig:vtol} of Appendix \ref{sec:ecalc}, and discussion of the UAV's expected flight characteristics shown in Appendix \ref{sec:stall}.
 
 \subsubsection*{Flight Control}
 The addition of a flight controller to the aircraft permits autonomous flight capabilities, including way point planning and motor control. The most viable (and well supported) options are the PixHawk \cite{ref:pixhawk}, APM 2.6 \cite{ref:ardupilot}, and PX4 \cite{ref:px4}. In order to achieve reliable and safe autonomous flight the controller must be fast and have sufficient storage for additional firmware/software to extend its capabilities. A comparison of each option may be found in \cite{ref:controller_comparison}, showing that given its larger memory storage, faster processor, and additional capabilities such as in-built gyroscopes and accelerometers, the PixHawk is the best choice for this project.
@@ -22,8 +21,8 @@ The front motors were designed to be mounted such that they could be rotated for
 \subsubsection*{Supports and Mounting}
 The airframe was designed to incorporate a combination of off-the-shelf carbon fiber parts and 3D printed plastic parts to provide the frame needed to mount the motors, internal supports, and sensors. Carbon fiber poles were chosen to form the main support for the UAV's motors because of their excellent strength-to-weight ratio, and were fitted with specially designed 3D printed mounts to mate with the motors. The poles and internal systems were secured within the UAV using 3D printed housings.
 	
-\subsubsection*{Motor}
-The motors selected needed to provide both efficient hover and minimal power draw while cruising in fixed wing mode. As such, the \textit{Turnigy SK3 3542 800kv} motors were chosen, as they are efficient, well priced, and well reviewed. In addition, they were also used by \cite{ref:fireflyinstruction} to fly approximately 20km.
+\subsubsection*{Motors}
+The motors selected needed to provide both efficient hover and minimal power draw while cruising in fixed wing mode. As such, the \textit{Turnigy SK3 3542 800kv} motors were chosen, as they are efficient, well priced, and well reviewed. In addition, they were also used by \cite{ref:fireflyinstruction} to fly approximately 155km.
 	
 \subsubsection*{Propellers}
 Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less weight and drag), but larger propellers are better suited for VTOL (more thrust), with modelling presented in Appendix \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber, to perform testing on.
@@ -34,7 +33,7 @@ Servo-motors were required to make up the front transition system and the back y
 \subsubsection*{Batteries}
 The primary method for maximizing flight time and range is by reducing weight. \textit{Multistar 8000 mAh} batteries were selected as they have a much higher capacity-to-weight ratio than conventional Lithium Polymer batteries. The prototype UAV made use of two of these batteries connected in parallel, adding extra weight, but providing significantly greater power capacity.
 
-\subsubsection*{Proposed Design}
+\subsection{Overall Design}
 Based on these discussions and design decisions, the initial prototype design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, discussed in Section \ref{sec:sensing}, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.\\
 
 Figure \ref{fig:hardwarearch} shows a high level overview of the hardware architecture planned for the current and future teams. Boxes coloured in gray are aspects of the design that were out of the scope of the \ID team and thus not fully implemented on the prototype UAV. The remaining components will be discussed in detail in the following sections.
@@ -46,8 +45,15 @@ Figure \ref{fig:hardwarearch} shows a high level overview of the hardware archit
 	\label{fig:hardwarearch}
 \end{figure}
 
+\subsection{Component and Design Validation}
+Estimations of the flight performance for the overall design was modelled using eCalc \cite{ref:ecalc}, examples of the modelling process can be found in Appendix \ref{sec:ecalc}, with detailed performance estimations on the selected overall design shown in Figures \ref{fig:fixed} and \ref{fig:vtol}.\\
+
+The configuration selected has an estimated 17.5 minutes of hover time, a surplus of time for the two vertical take off and landing manoeuvres required, thus leaving enough power to fulfill the 60km fixed wing flight requirement. Estimations for flight time and range during low power cruising fixed wing flight are not available through eCalc and must be done empirically.\\
+
+Additional calculations (see Appendix \ref{sec:stall}), verified fixed wing flight with the overall design. A worst case stall speed with the selected airframe's minimum coefficient of lift for level flight was determined to be at 45.5km/h. As the air will be forced over the wing by the motors during fixed wing flight, it is believed this should aid in creating additional lift.
+
 \subsection{3D Printing}
-In order to provide stable and robust mounting of all motors and mounting systems, 3D printing was utilized to create custom parts to fit within the X8 frame. The final versions of the major 3D printed parts (motor mounts, and the front and back mounting systems), parts that underwent the most designing, are presented below. Minor systems, and all design iterations for 3D printed parts, are provided in Appendix \ref{sec:print}.\\
+In order to provide stable and robust mounting of all motors and mounting systems, 3D printing was utilized to create custom parts to fit within the X8 frame. The final versions of the major 3D printed parts (motor mounts, and the front and back mounting systems), parts that underwent the most designing, are presented below. Minor systems, and all design iterations for 3D printed parts, are provided in Appendix \ref{sec:print}.
 
 \subsubsection*{Motor Mounts}
 The motor mounts were required to secure each motor to its corresponding mounting pole. While the basic design was straight forward, several design iterations were required in order to develop a truly robust design. The carbon fiber pole is inserted into the motor mount, with cylindrical inserts (also 3D printed) providing additional strength, preventing the carbon fiber from being crushed in the event of over tightening the fasteners. Hose clamps were also used to ensure that an equally distributed squeezing force was applied from the mount to the pole.
