@@ -98,13 +98,11 @@ The center of gravity (CoG) of the UAV may be changed by repositioning the batte
 \end{itemize}
 	
 \subsubsection*{Electronic Speed Controllers Calibration}
-Following the manufacturer's manual, the receiver and PixHawk signals were calibrated into the electronic speed controllers (ESCs) by setting a minimum and maximum motor throttle.
-\todomessage{Alex: Elaborate - What does calibration achieve? What improves?}
+Following the manufacturer's manual, the receiver and PixHawk signals were calibrated into the electronic speed controllers (ESCs) by setting a minimum and maximum motor throttle. This allowed for the maximum throttle range of the controller, and most importantly, the use of the motors at full speed.
 
 \subsubsection*{PixHawk Calibration}
-\todomessage{This section doesn't really say anything...}
-The inbuilt compass and accelerometer of the PixHawk required tuning each time the internal configuration of the aircraft changed in order to ensure level flight. This is achieved through performing specific calibration points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required, to ensure correct battery monitoring, and input. 
-\todomessage{add more complexity of task, more paramaters}
+Many parameters on the PixHawk required setting and calibration, such as fail safes, input directions, output maximums and minimums, and radio end points. The inbuilt compass and accelerometer required tuning each time the internal configuration of the aircraft changed in order to ensure level flight. This is achieved through performing specific calibration points in the open source program, Mission Planner. A once off power module voltage and radio calibration were also required to ensure correct battery monitoring. 
+
 
 \subsubsection*{PID Tuning}
 The PixHawk comes with in-built PID parameters that may be tuned for specific applications. Basic tuning was performed for the UAV by first setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. The UAV was then launched (without wings) and placed into an auto-tune flight mode, allowing the PixHawk to perform a series of pre-programmed maneuvers to find the best possible PID values for the custom aircraft.\\
