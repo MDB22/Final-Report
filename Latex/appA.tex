@@ -60,9 +60,17 @@ Worst case coefficient of lift when attempting to climb (see Figure \ref{fig:lif
 
 \subsection{Gyroscopic Effects}
 \label{sec:gyro}
-Angular momentum of propellers: $H = I\omega$\\
+Angularion momentum: $H = I\omega$\\
+
 Maximum motor speed $\omega = 800\times16.8\times\frac{2\pi}{60} = 1407.45rads^{-1}$\\
-Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimate, as it assumes equally distributed mass, and constant width)\\\\
+
+Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overestimation as it assumes equally distributed mass, and constant width)\\
+
+$\omega_p$ = Maximum servo rotation speed (procession) = $\frac{60^o}{0.11s} = 9.52rads^{-1}$\\
+
+Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
+
+$\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\
 
 \begin{figure}[!ht]
 	\centering
@@ -71,9 +79,7 @@ Prop Inertia $I = \frac{1}{12}\times M(L^2+B^2) = 1.16\times10^{-4}kgm^2$ (Overe
 	\label{fig:momentum}
 \end{figure}
 
-Using a small angle approximation $\Delta H = \omega_p \times\Delta t \times I \times \omega$\\ 
-$\omega_p$ = Maximum servo rotation speed (procession) = $frac{60^o}{0.11s} = 9.52rads^{-1}$\\
-$\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
+Since the two front propellers are rotating in opposite directions, the change in angular momentum of each propeller during transition also acts in opposite directions, and the UAV is prevented from yawing (and possibly spinning out of control). This opposition also results in zero net force acting on the transition system.\\
 
 \begin{figure}[!ht]
 	\centering
@@ -82,10 +88,7 @@ $\frac{dH}{dt} = \omega_p \times I \times \omega = M = 1.55Nm$\\\\
 	\label{fig:moments}
 \end{figure}
 
- Counter-rotating propellers stop the drone from yawing (and possibly spinning out of control on transition), as the moments act in opposite directions. They also act to make gyroscopic forces on the servo negligible due to them counteracting each other in a twist motion when the drone rolls fast, rather than placing a moment on the servos.\\\\
-Max moment in the centre of the front shaft is $2M = 3.1Nm$. If this is less than the moment on the front bar at hover ($2/3$ $\times M \times d$) then the shaft should be capable of withstanding the gyroscopic effects, as the moment created is less than that created by the weight of the plane at hover.\\
-
-$3.1Nm < 9.156Nm$, therefore It should be able to withstand the gyroscopic moments easilly.
+However, the pole will experience a bending moment during transition. The maximum moment is exactly in the center of the front shaft, with magnitude $2M = 3.1Nm$. Since this is less than the moment on the front bar at hover ($2/3$ $\times M \times d = 9.156Nm$) the shaft should be capable of withstanding the gyroscopic effects.\\
 
 \subsection{eCalc Modelling}
 \label{sec:ecalc}
