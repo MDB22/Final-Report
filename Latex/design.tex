@@ -33,12 +33,12 @@ Modelling using eCalc suggested that smaller propellers provide better performan
 Servo-motors were required to make up the front transition system and the back yaw system. Both servos chosen were \textit{Turnigy TGY-4409MDs}, capable of 8.65kg.cm of torque at 5V, more than the required amount to overcome the force of the motors. 
 		
 \subsubsection*{Batteries}
-The primary method for maximizing flight time and range is by reducing weight. \textit{Multistar 8000 mAh} batteries were selected as they have a much higher capacity-to-weight ratio than conventional Lithium Polymer batteries. The prototype UAV made use of two of these batteries connected in parallel, adding extra weight, but providing significantly greater power capacity.
+The primary method for maximising flight time and range is by reducing weight. \textit{Multistar 8000 mAh} batteries were selected as they have a much higher capacity-to-weight ratio than conventional Lithium Polymer batteries. The prototype UAV made use of two of these batteries connected in parallel, adding extra weight, but providing significantly greater power capacity.
 
 \subsection{Overall Design}
 Based on these discussions and design decisions, the initial prototype design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, discussed in Section \ref{sec:sensing}, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.\\
 
-Figure \ref{fig:hardwarearch} shows a high level overview of the hardware architecture planned for the current and future teams. Boxes coloured in gray are aspects of the design that were out of the scope of the \ID team and thus not fully implemented on the prototype UAV. The remaining components will be discussed in detail in the following sections.
+Figure \ref{fig:hardwarearch} shows a high level overview of the hardware architecture planned for the current and future teams. The boxes coloured in gray are aspects of the design that were out of the scope of the \ID team and thus not fully implemented on the prototype UAV. The remaining components will be discussed in detail in the following sections.
 
 \begin{figure}[!h]
 	\centering
@@ -68,7 +68,7 @@ The motor mounts were required to secure each motor to its corresponding mountin
 \end{figure}
 	
 \subsubsection*{Front Mounting System}
-The front mounting system was required to incorporate the transition system, while also being stable enough to withstand disturbances associated with supporting two motors. As such, it was designed to fit completely within the Skywalker X8's front recess to ensure that the entire system was supported, and that any lateral load on the front mounting pole (i.e. incoming wind) would be transferred through the entire aircraft and not just the front mounting system itself. A servo is also mounted here to facilitate the transition system.
+The front mounting system was required to incorporate the transition system, and also needed to be stable enough to withstand disturbances associated with supporting two motors. As such, it was designed to fit completely within the Skywalker X8's front recess to ensure that the entire system was supported, and that any lateral load on the front mounting pole (i.e. incoming wind) would be transferred through the entire aircraft and not just the front mounting system itself. A servo is also mounted here to facilitate the transition system.
 
 \begin{figure}[!ht]
 	\centering
@@ -132,7 +132,7 @@ The PixHawk comes with in-built PID parameters that may be tuned for specific ap
 	\label{fig:tune1}
 \end{figure}
 
-Figure \ref{fig:tune1} shows log data collected by the PixHawk during the tuning flight. Figure \ref{fig:untunedroll} shows the performance of the UAV before tuning, and Figure \ref{fig:tunedroll} shows its performance after tuning, showing that while the response is still quite noisy, tuning has reduced the intensity of overshooting. Figure \ref{fig:tune2} shows the results of a second flight, this time with the UAV being fitted with wings halfway through the flight. With the wings attached the inertia, disturbances and weight of the UAV changed significantly; without wings, the UAV's roll (red) shows light noise and small overshoots, while after the wings were added noise increases significantly. However, the altitude response (yellow) of the aircraft remains stable, indicating that the aircraft still performs well when fitted with wings.
+Figure \ref{fig:tune1} shows log data collected by the PixHawk during the tuning flight. Figure \ref{fig:untunedroll} shows the performance of the UAV before tuning, and Figure \ref{fig:tunedroll} shows its performance after tuning. While the response is still quite noisy, tuning has reduced the intensity of overshooting. Figure \ref{fig:tune2} shows the results of a second flight, this time with the UAV being fitted with wings halfway through the flight. With the wings attached to the frame the inertia, disturbances and weight of the UAV changed significantly; without wings, the UAV's roll (red) shows light noise and small overshoots, while after the wings were added noise increases significantly. However, the altitude response (yellow) of the aircraft remains stable, indicating that the aircraft still performs well when fitted with wings.
 
 \begin{figure}[!ht]
 	\centering

@@ -14,7 +14,7 @@ Figure \ref{fig:sensing} outlines the on-board sensing capabilities that are ava
 As discussed previously, the PixHawk flight controller will control the aircraft's flight functionality, such as controlling motors and ailerons, and executing flight paths and commands.
 
 \subsubsection*{Raspberry Pi}
-The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; to enable higher level behaviour, such as path planning and sensing, requires a separate microcontroller such as a Raspberry Pi. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
+The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; to enable higher level behaviour, such as path planning and sensing, a separate microcontroller such as a Raspberry Pi is required. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
 
 \subsection{Vertical Take-Off and Landing (M1)}
 \subsubsection*{Ultrasonic Sensor}
@@ -42,7 +42,7 @@ The only information provided to teams regarding Outback Joe is his love of Akub
 
 \subsection{Testing}
 \subsubsection*{Ultrasonic and LiDAR}
-To test the performance of the distance sensors, both sensors were placed in front of a series of obstacles at distances of 50cm, 1m and 5m, and 100 data points were collected at each distance. The sensors were able to measure distances within $\pm$10cm and $\pm$2cm for the ultrasonic and LiDAR respectively, but the performance of the LiDAR was noticeably better at measuring object far away, as expected.  
+To test the performance of the distance sensors, both sensors were placed in front of a series of obstacles at distances of 50cm, 1m and 5m, and 100 data points were collected at each distance. The sensors were able to measure distances within $\pm$10cm and $\pm$2cm for the ultrasonic and LiDAR respectively, but the performance of the LiDAR was noticeably better at measuring far away objects, as expected.  
 	
 \subsubsection*{GPS and Compass}  
 During several flight tests it became evident that the data provided by the GPS and compass were wildly inaccurate, giving measurements that varied by up to $\pm$20m and $\pm$15$^\circ$ respectively. At any point during flight there may be up to 120A passing through the aircraft's internal circuitry, creating a large EM disturbance, in addition to the EM radiation from the other electronics. Given that both of these devices are susceptible to EM radiation \cite{ref:gpsinterference}, the module was mounted outside of the drone shell (as suggested by \cite{ref:gpsposition}), away from the electronics, resulting in the expected performance of $\pm$5m and $\pm$5$^\circ$ respectively.
