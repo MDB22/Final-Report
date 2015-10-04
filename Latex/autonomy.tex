@@ -1,9 +1,9 @@
 \subsection{Software Development}
 Any aircraft participating in the UAV Challenge must be autonomous, only interacting with a human to be armed or disarmed at the beginning and end of the mission. A framework for autonomous flight was developed in Python for the Raspberry Pi, based on the following considerations:
 \begin{itemize}
-	\item Extendibility: Software is designed so that future teams can easily add functionality to the autonomous systems
-	\item Concurrency: Software launches several parallel processes, enabling real-time interaction between the many subsystems of the aircraft and software
-	\item Low-Latency: All processes must have little to no delay in communication, allowing for real-time operation 
+	\item \textbf{Extendibility:} Software is designed so that future teams can easily add functionality to the autonomous systems
+	\item \textbf{Concurrency:} Software launches several parallel processes, enabling real-time interaction between the many subsystems of the aircraft and software
+	\item \textbf{Low-Latency:} All processes must have little to no delay in communication, allowing for real-time operation 
 \end{itemize}
 
 Figure \ref{fig:softwarearchitecture} shows the software architecture for the autonomous flight and intelligence systems implemented on the Raspberry Pi, consisting of a number of parallel processes, two objects to monitor the state of the aircraft, and objects to facilitate inter-process communication. Each process shown in Figure \ref{fig:softwarearchitecture} performs a specific function:
@@ -46,11 +46,11 @@ Before being implemented on the prototype aircraft, the autonomous flight module
 \end{figure}
 
 \subsubsection*{Substitute Aircraft}
-After the successful SITL test, the autonomous flight systems were validated by performing the automated takeoff and landing procedure on a separate aircraft that was also powered by a PixHawk flight controller; the Y650 Scorpion model, shown in Figure \ref{fig:alex}, was chosen as it has performed several dozen hours of successful flight. The Scorpion was able to successfully execute the flight plan above, providing a proof-of-concept for the autonomous flight controls.
+After the successful SITL test, the autonomous flight systems were validated by performing the automated takeoff and landing procedure on a separate aircraft that was also powered by a PixHawk flight controller; the Y650 model, shown in Figure \ref{fig:Y650}, was chosen as it has performed several dozen hours of successful flight. The Y650 was able to successfully execute the flight plan above, providing a proof-of-concept for the autonomous flight controls.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=200pt]{\IMAGEPATH /Prototype/alex}
+	\includegraphics[width=200pt]{\IMAGEPATH /Prototype/Y650}
  	\caption{Test platform for autonomous flight}
- 	\label{fig:alex}
+ 	\label{fig:Y650}
 \end{figure}

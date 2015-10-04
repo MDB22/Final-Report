@@ -1,25 +1,5 @@
-\red{\textbf{COMPLETE THIS SECTION LAST}
-
-The Executive Summary offers a succinct statement of your findings and contributions.
-
-It will summarise the project description and your contributions to the associated discipline.  
-
-This section can be based on key sentences and paragraphs from your Scope of Works and Progress Report documents, and your Conclusions and Recommendations section.
-
-No more than five pages of text and images.
-
-Introduction section begins the story of your project.  Include a clear statement of objectives and the scope of the project (the Scope of Works document can be used as a basis). Your report can then begin with the starting point of the project – the “need” or “want”. \\
-
-WHAT DOES OUR AIRCRAFT BRING TO THE RESEARCH COMMUNITY:
-\begin{itemize}
-	\item Low cost autonomous aircraft (compare to Sony, defence drones, DJI and Parrot)
-	\item Hybrid aircraft with transition capability (novel flight capabilities)
-	\item Long range AND long flight time in a single unit (best of both aircraft)
-	\item Foundations for intelligent drone flight (not just ``follow me'' behaviour)
-	\item Uncountable applications beyond medical transport (list)
-\end{itemize}}
 \todo{finish this and use the sections as a guide}
-\subsection{Objectives and Scope}
+
 \subsection{Context}
 The UAV Challenge \cite{ref:challenge}, organised by the Queensland University of Technology and the CSIRO, is a biennial competition that aims to push the boundaries of current autonomous aircraft technology. The 2016 challenge is titled ``Medical Express'', and charges teams with solving the issues raised above.\\
 
@@ -47,6 +27,28 @@ It is anticipated that there will be several Capstone student teams continuing d
 
 The remaining sections of the report will discuss the work conducted by \ID in developing a working prototype for the UAV Challenge, beginning with a brief review of existing approaches that motivated the design of the UAV developed in this project. The following sections will discuss the various development domains of the UAV, including its design, flight and planning systems, and sensing systems, with a particular focus on the novel transition system developed for hybrid flight.
 
+\subsection{Mission Breakdown}
+\label{sec:flightmaneuvers}
+The Medical Express mission can be broken down into three distinct flight maneuvers:
+\begin{enumerate}[label=\bfseries M\arabic*:] \itemsep-2pt
+	\item Hover flight, including vertical take-off to cruising height, and landing
+	\item Fixed-wing flight, navigating through waypoints and keeping within GeoFence boundaries
+	\item Aerial search
+\end{enumerate}
+
+Using these maneuvers, completing the mission can be described as completing the sequence of actions\\
+\begin{tabular}{r l l}
+	1. & Mission start after being armed & (\textbf{M1}) \\ 
+	2. & Navigate to Joe's location & (\textbf{M2}) \\ 
+	3. & Aerial search to identify Joe & (\textbf{M3}) \\ 
+	4. & Land near Joe to collect blood & (\textbf{M1}) \\ 
+	5. & Take-off after being re-armed & (\textbf{M1}) \\ 
+	6. & Navigate back to base & (\textbf{M2}) \\ 
+	7. & Land at base & (\textbf{M1}) \\ 
+\end{tabular}\\
+
+Executing this mission on a purely fixed-wing or rotor-based aircraft is unlikely to be successful; instead, teams will need to design an aircraft that makes use of both flight modes.
+
 \subsection{Proposed Design}
 The initial prototype design for this project will use a PixHawk flight controller in a Skywalker X8 airframe, mounted with three motors in a tri-coptor configuration. The aircraft will also be fitted with a transition system, to rotate the front motors and enable the aircraft to fly in both VTOL and fixed-wing modes. Finally, the aircraft will be mounted with various sensors, discussed in Section \ref{sec:sensing}, including a camera and LiDAR, to provide sensing capabilities for planning, obstacle detection and autonomous flight.\\
 
@@ -65,9 +67,9 @@ In order for the UAV to complete the objectives listed previously, it must be ca
 \subsection{Software Development}
 Any aircraft participating in the UAV Challenge must be autonomous, only interacting with a human to be armed or disarmed at the beginning and end of the mission. A framework for autonomous flight was developed in Python for the Raspberry Pi, based on the following considerations:
 \begin{itemize}
-	\item Extendibility: Software is designed so that future teams can easily add functionality to the autonomous systems
-	\item Concurrency: Software launches several parallel processes, enabling real-time interaction between the many subsystems of the aircraft and software
-	\item Low-Latency: All processes must have little to no delay in communication, allowing for real-time operation 
+	\item \textbf{Extendibility:} Software is designed so that future teams can easily add functionality to the autonomous systems
+	\item \textbf{Concurrency:} Software launches several parallel processes, enabling real-time interaction between the many subsystems of the aircraft and software
+	\item \textbf{Low-Latency:} All processes must have little to no delay in communication, allowing for real-time operation 
 \end{itemize}
 
 Figure \ref{fig:softwarearchitecture-exec} shows the software architecture for the autonomous flight and intelligence systems implemented on the Raspberry Pi, consisting of a number of parallel processes, two objects to monitor the state of the aircraft, and objects to facilitate inter-process communication. Each process shown in Figure \ref{fig:softwarearchitecture-exec} performs a specific function:
@@ -98,6 +100,8 @@ One of the biggest dangers in parallel processing communication is data corrupti
 	\label{fig:softwareinteraction-exec}
 \end{figure}
 
+\subsection{Sensing}
+
 Figure \ref{fig:sensing-exec} outlines the on-board sensing capabilities that are available to the aircraft. The sections below detail the motivation and use of each sensor, and are separated according to the different stages of the UAV Challenge's mission, as introduced in Section \ref{sec:flightmaneuvers}. At the time of writing, only some of the sensors mentioned below have been physically mounted to the aircraft, but each sensor's position on the aircraft has been incorporated into the aircraft's design.
 
 \begin{figure}[!ht]
@@ -107,36 +111,5 @@ Figure \ref{fig:sensing-exec} outlines the on-board sensing capabilities that ar
 	\label{fig:sensing-exec}
 \end{figure}
 
-\subsection{All Stages}
-
-\subsubsection*{PixHawk Flight Controller}
-As discussed previously, the PixHawk flight controller will control the aircraft's flight functionality, such as controlling motors and ailerons, and executing flight paths and commands.
-
-\subsubsection*{Raspberry Pi}
-The PixHawk is only capable of controlling the behaviour of the aircraft in response to input; to enable higher level behaviour, such as path planning and sensing, requires a separate microcontroller such as a Raspberry Pi. The Raspberry Pi will act as the aircraft's on-board computing platform, providing autonomy by giving flight commands to the flight controller, as well as the processing and intelligence for path planning and object detection. It will also retrieve flight data from the PixHawk and other sensors, and generate detailed flight logs for later review.
-
-\subsection{Vertical Take-Off and Landing (M1)}
-\subsubsection*{Ultrasonic Sensor}
-The PixHawk comes equipped with a GPS module and altimeter, both of which can provide measure during flight. However, GPS is inherently inaccurate (up to $\pm$5m), and the performance of the altimeter depends heavily on environmental factors such as temperature. To augment these measurements, an ultrasonic sensor will be mounted underneath the aircraft. The ultrasonic sensor will be controlled by the Raspberry Pi, and will provide a more reliable and controllable height measurement during rotor-based flight, assisting with search and landing.
-
-\subsection{Fixed-Wing Flight (M2)}
-\subsubsection*{PixHawk Sensors}
-During fixed-wing flight, it is imperative that the aircraft maintain a reliable measurement of its position to avoid the GeoFence boundaries specified in the Challenge. If at any point an aircraft breaches a boundary, it must immediately terminate its flight. In addition to the GPS and altimeter mentioned above, the PixHawk is also equipped with a 3-axis accelerometer and compass. Each of these sensors will enable the PixHawk to monitor the aircraft's position during flight.
-
-\subsection{Aerial Search (M3)}
-\subsubsection*{LiDAR}
-During the aerial search stage the aircraft will be in low-altitude flight, putting it at risk of collision with trees, buildings, and other obstacles. To mitigate this risk, the aircraft will need to map the world around it to identify hazards. A LiDAR was chosen over a second ultrasonic sensor as it is capable of measuring larger distances, and with greater accuracy.\\
-
-The LiDAR will be mounted in the nose of the aircraft. As it can only measure the range of objects directly in front of it, the LiDAR will be fixed to a system of two servos, as shown in Figure \ref{fig:lidar-exec}, that will allow it to sweep a hemisphere in front of the aircraft. This will allow the generation of a 3D map of the environment around the aircraft, and will assist in path planning and obstacle avoidance.
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=100pt]{\IMAGEPATH /Prototype/lidar}
-	\caption{LiDAR mounting}
-	\label{fig:lidar-exec}
-\end{figure}
-
-\subsubsection*{Webcam}
-The only information provided to teams regarding Outback Joe is his love of Akubra hats and blue jeans. In order to detect Joe, the aircraft must be mounted with a visual sensor, such as a webcam. The webcam will be mounted beneath the nose of the aircraft, and will form the basis for identifying Joe using his hat and blue jeans, as well as providing real-time vision for the aircraft's obstacle avoidance maneuvers.
 
 \subsection{Achievements, conclusion and recommendations}
