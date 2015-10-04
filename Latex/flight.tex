@@ -55,11 +55,17 @@ As previously mentioned, the 3D printed motor mounts underwent several design ch
 
 The direction in which a design is 3D printed plays a vital role in where its strengths and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied. It was found that printing the layers on the same plane as both the bar and the direction of force gave the most strength, as the layer plane is in the same direction as the moment and they are not being pulled apart in any way.\\
 
-Circular parts were also a significant issue. In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. 
-\todomessage{Alex/Wes: Give screenshot of example ring}
+Circular parts were also a significant issue. In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone (see \ref{fig:innerring}). 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=150pt]{\IMAGEPATH Modelling/inner_ring}
+	\caption{The inner rings of the front and back pole mounts}
+	\label{fig:innerring}
+\end{figure}
 
 \subsubsection*{Gears}
-Initially a 1:2 gear ratio was chosen for both front and back gear systems. Through testing however, it became evident that the torque provided by the servos was enough to overcome the friction and forces experienced during flight, so a 1:1 system which allowed for larger teeth and hence overall strength (shown in Table \ref{tab:minor}) was developed.
+Initially a 1:2 gear ratio was chosen for both front and back gear systems. Through testing however, it became evident that the torque provided by the servos was enough to overcome the friction and forces experienced during flight, so a 1:1 system which allowed for larger teeth and hence overall strength (shown in Table \ref{tab:minor} in Appendix \ref{sec:print}) was developed.
 
 \subsubsection*{Wires and Soldering}
 A major problem was that the high current passing through the electronics generated a significant amount of heat, resulting in soldered connections melting and power being disconnected from all systems. This was resolved by changing to non-lead based solder, increased melting temperatures by 40 degrees, ventilating the craft, and using higher spec wiring. 
