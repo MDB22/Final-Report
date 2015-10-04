@@ -1,8 +1,17 @@
+\label{sec:futurework}
 While \ID made strong progress in the development of a UAV for the 2016 UAV Challenge, there still remain several tasks for future teams to complete.
 
 \subsubsection*{UAV Challenge Tasks}
-\label{sec:futurework}
-As shown in Table \ref{tab:challenge}, the remaining deadlines for the Challenge occur outside the scope of this project. It is then the responsibility of future teams to submit Deliverables \#2 and \#3. The UAV Challenge also specifies that all aircraft must fly within GeoFence boundaries, and immediately terminate flight if a crossing occurs. This capability does not exist on the current prototype. Of paramount importance though, is a successful transition test flight, which was unfortunately not achieved this year.
+As shown in Table \ref{tab:challenge}, the remaining deadlines for the Challenge occur outside the scope of this project. It is then the responsibility of future teams to submit Deliverables \#2 and \#3.  Of paramount importance though, is a successful transition test flight, which was unfortunately not achieved this year.
+
+\subsubsection*{Capability Testing}
+The Dragonfly prototype, and its associated equipment, have never been tested at full capacity, so the maximum capabilities of the aircraft are unclear. For example, the endurance of the batteries, particularly with different prop configurations, is unknown, and would impact the maximum range and endurance of the aircraft.
+
+\subsubsection*{Flight Controls}
+In order to achieve transition with the PixHawk, a new, custom flight mode was added to the PX4 firmware. To enable further flight capabilities, this firmware must be modified to include a fixed-wing flight controller that will perform control, stabilisation and autopiloting after the UAV has been transition from VTOL mode. The UAV Challenge also requires that all aircraft must fly within specified GeoFence boundaries, and immediately terminate flight if a crossing occurs; this capability does not exist on the current prototype.
+
+\subsubsection*{Communications}
+It is also a requirement of the UAV Challenge that all aircraft must remain in contact with the base station for the duration of the mission. As of yet, there is no method of communicating with the aircraft outside of sight range, so a long range communication system must be developed. 
 
 \subsubsection*{Electronics}
 The internal wiring for motors, PixHawk modules and especially sensors remains exposed and vulnerable within the X8's storage compartment. The electronics therefore need to be upgraded, either through the development of printed circuit boards, or by better storage and routing of cables within the airframe.

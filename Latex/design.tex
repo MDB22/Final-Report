@@ -4,7 +4,9 @@ Given the aircraft presented previously, the most suitable design for this proje
 
 The Skywalker X8 \cite{ref:x8} is a commonly used airframe that can easily be used to replicate the FireFLY6's motor configuration, and has been shown to be capable of up to 155km of flight \cite{ref:range}, which far exceeds the requirements for the UAV Challenge. In addition, the X8 is purpose designed to mount various sensors (such as a camera) to its frame, with large under canopy storage for components, and the best wingspan to weight ratio of the airframes researched for development.\\
 
-Appendix \ref{sec:selection} presents a detailed analysis of several design options, comparing the purchase of various FireFLY6 models to several designs based on the X8. Estimations of the X8's flight performance was modeled using eCalc \cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations. The X8 configuration was shown to be the most suitable option, outperforming the FireFLY6 in cost, flight time, and manoeuvrability, with an expected payload of 3.5kg. Even if requirements are not met, this prototype will none the less form a strong basis for competing in the UAV Challenge and continued development \\
+Appendix \ref{sec:selection} presents a detailed analysis of several design options, comparing the purchase of various FireFLY6 models to several designs based on the X8. An estimate of the X8's flight performance was modeled using eCalc \cite{ref:ecalc}, a commonly used web tool in the aircraft building community for calculating the performance of aerial vehicles. This site has a vast collection of empirical data for motors, propellers, batteries and aircraft configurations and boasts an accuracy of $\pm$10\% for all calculations.\\
+
+The X8 configuration was shown to be the most suitable option, outperforming the FireFLY6 in cost, flight time, and maneuverability, with an expected payload of 3.5kg. Even if requirements are not met, this prototype will none the less form a strong basis for continued development, and competing in the UAV Challenge.\\
 
 
 \subsubsection*{Flight Control}
@@ -22,7 +24,7 @@ The front motors were designed to be mounted such that they could be rotated for
 The airframe was designed to incorporate a combination of off-the-shelf carbon fiber parts and 3D printed plastic parts to provide the frame needed to mount the motors, internal supports, and sensors. Carbon fiber poles were chosen to form the main support for the UAV's motors because of their excellent strength-to-weight ratio, and were fitted with specially designed 3D printed mounts to mate with the motors. The poles and internal systems were secured within the UAV using 3D printed housings.
 	
 \subsubsection*{Motors}
-The motors selected needed to provide both efficient hover and minimal power draw while cruising in fixed wing mode. As such, the \textit{Turnigy SK3 3542 800kv} motors were chosen, as they are efficient, well priced, and well reviewed. In addition, they were also used by \cite{ref:fireflyinstruction} to fly approximately 155km.
+The motors selected needed to provide both efficient hover and minimal power draw while cruising in fixed wing mode. As such, the \textit{Turnigy SK3 3542 800kv} motors were chosen, as they are efficient, well priced, and well reviewed. In addition, they were also used by \cite{ref:fireflyinstruction} to fly approximately 155km with an X8 airframe.
 	
 \subsubsection*{Propellers}
 Modelling using eCalc suggested that smaller propellers provide better performance in fixed wing flight (less weight and drag), but larger propellers are better suited for VTOL (more thrust), with modelling presented in Appendix \ref{sec:ecalc}. As such, two sets of propellers were purchased (11$\times$5.5 and 12$\times$6) in both plastic and carbon fiber, to perform testing on.
@@ -46,9 +48,9 @@ Figure \ref{fig:hardwarearch} shows a high level overview of the hardware archit
 \end{figure}
 
 \subsection{Component and Design Validation}
-Estimations of the flight performance for the overall design was modelled using eCalc \cite{ref:ecalc}, examples of the modelling process can be found in Appendix \ref{sec:ecalc}, with detailed performance estimations on the selected overall design shown in Figures \ref{fig:fixed} and \ref{fig:vtol}.\\
+Estimates of the flight performance for the new UAV design were modelled using eCalc \cite{ref:ecalc}, and examples of the modelling process can be found in Appendix \ref{sec:ecalc}, with detailed performance estimations on the selected overall design shown in Figures \ref{fig:fixed} and \ref{fig:vtol}.\\
 
-The configuration selected has an estimated 17.5 minutes of hover time, a surplus of time for the two vertical take off and landing manoeuvres required, thus leaving enough power to fulfill the 60km fixed wing flight requirement. Estimations for flight time and range during low power cruising fixed wing flight are not available through eCalc and must be done empirically.\\
+The configuration selected has an estimated 17.5 minutes of hover time, a surplus of time for the two vertical take off and landing manoeuvres required, thus leaving enough power to fulfill the 60km fixed wing flight requirement. Estimations for flight time and range during low power cruising flight in fixed-wing mode are not available through eCalc, and must be done empirically. However, given the observed capabilities and performance of other aircraft based on the X8, the design of the prototype is expected to be suitable for the Challenge.\\
 
 Additional calculations (see Appendix \ref{sec:stall}), verified fixed wing flight with the overall design. A worst case stall speed with the selected airframe's minimum coefficient of lift for level flight was determined to be at 45.5km/h. As the air will be forced over the wing by the motors during fixed wing flight, it is believed this should aid in creating additional lift.
 
