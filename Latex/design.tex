@@ -47,7 +47,7 @@ Figure \ref{fig:hardwarearch} shows a high level overview of the hardware archit
 \end{figure}
 
 \subsection{3D Printing}
-In order to enable proper stable and robust mounting of all motors and mounting systems, 3D printing was utilized to create custom parts to fit within the X8 frame. The final versions of the major 3D printed parts (motor mounts, and the front and back mounting systems) are presented below. Minor systems, and all design iterations for 3D printed parts, are provided in Appendix \ref{sec:print}.\\
+In order to enable proper stable and robust mounting of all motors and mounting systems, 3D printing was utilized to create custom parts to fit within the X8 frame. The final versions of the major 3D printed parts (motor mounts, and the front and back mounting systems), parts that underwent the most redesigning, are presented below. Minor systems, and all design iterations for 3D printed parts, are provided in Appendix \ref{sec:print}.\\
 
 \subsubsection*{Motor Mounts}
 The motor mounts were required to secure each motor to it's corresponding mounting pole. While the basic design was straight forward, several design iterations were required in order to develop a truly robust design. The carbon fiber pole is inserted into the motor mount, with cylindrical inserts (also 3D printed) providing additional strength, preventing the carbon fiber from being crushed in the event of over tightening the fasteners. Hose clamps were also used to ensure that an equally distributed squeezing force was applied from the mount to the pole, again to prevent the pole from being crushed.
@@ -78,13 +78,6 @@ The back mounting system was required to incorporate the yaw servo-motor system 
 	\caption{Current iteration of the Back Mounting System}
 	\label{fig:designbackmount}
 \end{figure}
-		
-\subsubsection*{Problems}
-The direction in which a design is 3D printed plays a vital role in where its strengths and weaknesses lie. Each print was orientated to maximise the strength of the layers against the most likely mode of failure from the forces and moments being applied.\\
-\todomessage{Alex/Wes: Elaborate, give an example of a part and your decision for which orientation to print}
-
-In order to achieve a ``true'' circle shape and thus lower friction for mated parts, critical ring shapes in designs were replaced by flatly printed ring inserts. These ring inserts were then either press fit into other printed components or ``merged'' onto other printed components using acetone. 
-\todomessage{Alex/Wes: Give screenshot of example ring}
 
 \subsection{Calibration}
 \subsubsection*{Motor and Propeller Balancing}
@@ -103,7 +96,7 @@ The center of gravity (CoG) of the UAV may be changed by repositioning the batte
 
 \begin{itemize}
 	\item The center of mass had to be at the center of thrust of the VTOL. Due to the triangular nature of the propeller setup, this meant the CoG would be one third of the distance from the front propellers to the back propeller (approximately 30cm from the front motors), resulting in an equal moment about the center of gravity. This would allow all motors to produce the same amount of thrust withoutcausing an undesired tilt in the UAV.
-	\item The center of mass also had to be at the center of lift, which for the Skywalker X8 is given as 44cm from the nose of the aircraft \red{Link?}. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.
+	\item The center of mass also had to be at the center of lift, which for the Skywalker X8 is given as 44cm from the nose of the aircraft\cite{ref:x8kit}. The distance of the front motors from the nose of the aircraft is approximately 14cm. With the center of mass positioned 30cm from the front motors, the center mass and center of lift are coincident.
 \end{itemize}
 	
 \subsubsection*{Electronic Speed Controllers Calibration}
@@ -118,19 +111,16 @@ The inbuilt compass and accelerometer of the PixHawk required tuning each time t
 \subsubsection*{PID Tuning}
 The PixHawk comes with in-built PID parameters that may be tuned for specific applications. Basic tuning was performed for the UAV by first setting the roll, pitch, and throttle gains and sensitivities to ensure stable and responsive flight controls. The UAV was then launched (without wings) and placed into an auto-tune flight mode, allowing the PixHawk to perform a series of pre-programmed maneuvers to find the best possible PID values for the custom aircraft.\\
 
-Figure \ref{fig:tune1} shows log data collected by the PixHawk during the tuning flight. Figure \ref{fig:untunedroll} shows the performance of the UAV before tuning, and Figure \ref{fig:tunedroll} shows its performance after tuning, showing that while the response is still quite noisy, tuning has reduced the intensity of overshooting. Figure \ref{fig:tune2} shows the results of a second flight, this time with the UAV being fitted with wings halfway through the flight. With the wings attached the inertia, disturbances and weight of the UAV changed significantly; without wings, the UAV's roll (red) shows light noise and small overshoots, while after the wings were added noise increases significantly. However, the altitude response (yellow) of the aircraft remains stable, indicating that the aircraft still performs well when fitted with wings.
-
 \begin{figure}[!ht]
 	\centering
-	\begin{subfigure}{.4\textwidth}
-		\centering
-		\includegraphics[width=200pt]{\IMAGEPATH /Data/untuned}
+	\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=240pt]{\IMAGEPATH /Data/untuned}
 		\caption{Untuned roll with significant overshoot}
 		\label{fig:untunedroll}
 	\end{subfigure}%
-	\begin{subfigure}{.4\textwidth}
+	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=200pt]{\IMAGEPATH /Data/tuned}
+		\includegraphics[width=240pt]{\IMAGEPATH /Data/tuned}
 		\caption{Tuned roll}
 		\label{fig:tunedroll}
 	\end{subfigure}
@@ -138,11 +128,11 @@ Figure \ref{fig:tune1} shows log data collected by the PixHawk during the tuning
 	\label{fig:tune1}
 \end{figure}
 
+Figure \ref{fig:tune1} shows log data collected by the PixHawk during the tuning flight. Figure \ref{fig:untunedroll} shows the performance of the UAV before tuning, and Figure \ref{fig:tunedroll} shows its performance after tuning, showing that while the response is still quite noisy, tuning has reduced the intensity of overshooting. Figure \ref{fig:tune2} shows the results of a second flight, this time with the UAV being fitted with wings halfway through the flight. With the wings attached the inertia, disturbances and weight of the UAV changed significantly; without wings, the UAV's roll (red) shows light noise and small overshoots, while after the wings were added noise increases significantly. However, the altitude response (yellow) of the aircraft remains stable, indicating that the aircraft still performs well when fitted with wings.
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=500pt]{\IMAGEPATH /Data/tune_wings}
 	\caption{Left half: Without wings. Right half: With wings.\\ Orange = Altitude, Red = Roll}
 	\label{fig:tune2}
 \end{figure}
-
-
