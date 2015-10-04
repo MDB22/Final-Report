@@ -36,7 +36,7 @@ One of the biggest dangers in parallel processing communication is data corrupti
 
 \subsection{Testing}
 \subsubsection*{Software in the Loop}
-Before being implemented on the prototype aircraft, the autonomous flight modules were first tested in a simulated aircraft using ArduPilot's Software in the Loop capabilities \cite{ref:sitl}. Figure \ref{fig:sitl} shows a screenshot of the Software in the Loop testing. The virtual aircraft was successfully tested with the software discussed above, executing a simple mission consisting of a series of \textbf{M1} commands; takeoff to 10m, forward flight of 10m, and landing.
+Before being implemented on the prototype aircraft, the autonomous flight modules were first tested in a simulated aircraft using ArduPilot's Software in the Loop capabilities \cite{ref:sitl}; a screenshot is shown in Figure \ref{fig:sitl}. The virtual aircraft was successfully tested with the software discussed above, executing a simple mission consisting of a series of \textbf{M1} commands; takeoff to 10m, forward flight of 10m, and landing.
 
 \begin{figure}[H]
 	\centering
@@ -46,7 +46,7 @@ Before being implemented on the prototype aircraft, the autonomous flight module
 \end{figure}
 
 \subsubsection*{Substitute Aircraft}
-After the successful SITL test, the autonomous flight systems were validated by performing the automated takeoff and landing procedure on a separate aircraft that was also powered by a PixHawk flight controller; the Y650 model, shown in Figure \ref{fig:Y650}, was chosen as it has performed several dozen hours of successful flight. The Y650 was able to successfully execute the flight plan above, providing a proof-of-concept for the autonomous flight controls.
+After the successful SITL test, the autonomous flight systems were validated on a separate aircraft with proven flight records in order to protect the Dragonfly prototype. The automated takeoff and landing procedure was executed on a Y650 model, shown in Figure \ref{fig:Y650}, which was able to successfully execute the flight plan above, providing a proof-of-concept for the autonomous flight controls.
 
 \begin{figure}[H]
 	\centering
